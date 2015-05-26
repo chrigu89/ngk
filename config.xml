@@ -58,7 +58,7 @@
 
 
 	<!-- GENERAL -->
-		<preference name="phonegap-version" value="3.6.3" />
+		<preference name="phonegap-version" value="3.7.0" />
 		<preference name="orientation" value="default" /><!-- landscape, portrait, default (both) -->
 		<preference name="fullscreen" value="true" /><!-- true, false, supported for iOS6 and Android -->
 
