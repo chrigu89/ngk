@@ -4,7 +4,7 @@ function external(url) {
 
 function pdf(url) {
     if (navigator.userAgent.match(/(Android)/)) {
-		showLink = "file:///data/data/de.design_busse.superapp/files/" + url;
+		showLink = "file:///data/data/de.design_busse.neussergk/files/" + url;
 		cordova.plugins.fileOpener2.open(
 			showLink,
 			'application/pdf', {
