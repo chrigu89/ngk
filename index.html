@@ -1,0 +1,202 @@
+<!doctype html>
+<head>
+	<title>Neuss Grenadierkorps von 1823</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="apple-mobile-web-app-capable" content="no">
+	<meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0, maximum-scale=1.0"/>
+	
+	<link href="style/font-awesome.css" rel="stylesheet" type="text/css">
+	<link href="style/bootstrap.css" rel="stylesheet" type="text/css">
+	<link href="style/style.css" rel="stylesheet" type="text/css">
+	<link href="style/swipe.css" rel="stylesheet" type="text/css">
+	
+	<script src="termine_array.js" type="text/javascript"></script>
+	<script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+	<script src="js/jquery-ui-min.js" type="text/javascript"></script>
+		
+	<script src="js/swipe.js" type="text/javascript"></script>
+	
+	<script language="JavaScript">
+	  // Ziel-Datum in MEZ
+	  var jahr=2015, monat=8, tag=29, stunde=12, minute=0, sekunde=0;
+	  var zielDatum=new Date(jahr,monat-1,tag,stunde,minute,sekunde);
+
+	  function countdown() {
+		startDatum=new Date(); // Aktuelles Datum
+
+		//
+		if(startDatum<zielDatum)  {
+
+		  var tage=0, stunden=0, minuten=0, sekunden=0;
+
+		  // Tage
+		  while(startDatum.getTime()+(24*60*60*1000)<zielDatum) {
+			tage++;
+			startDatum.setTime(startDatum.getTime()+(24*60*60*1000));
+		  }
+
+		  // Stunden
+		  stunden=Math.floor((zielDatum-startDatum)/(60*60*1000));
+		  startDatum.setTime(startDatum.getTime()+stunden*60*60*1000);
+
+		  // Minuten
+		  minuten=Math.floor((zielDatum-startDatum)/(60*1000));
+		  startDatum.setTime(startDatum.getTime()+minuten*60*1000);
+
+		  // Sekunden
+		  sekunden=Math.floor((zielDatum-startDatum)/1000);
+
+		  // Anzeige formatieren
+		  (tage!=1)?tage=tage:tage=tage;
+		  (stunden!=1)?stunden=stunden:stunden=stunden;
+		  (minuten!=1)?minuten=minuten:minuten=minuten;
+		  if(sekunden<10) sekunden="0"+sekunden;
+		  (sekunden!=1)?sekunden=sekunden:sekunden=sekunden;
+			
+		  document.getElementById('tage').innerHTML=tage;
+		  document.getElementById('stunden').innerHTML=stunden;
+		  document.getElementById('minuten').innerHTML=minuten;
+		  document.getElementById('sekunden').innerHTML=sekunden;
+		  document.getElementById('countdown').style.display='block';
+
+		  setTimeout('countdown()',0);
+		} else {
+			 document.getElementById('countdown').innerHTML='<span class="button"><span class="right"></span>ZOG ZOG!</span>';
+		}
+	  }
+	</script>
+	
+	
+	<script src="cordova.js"></script>
+	<script type="text/javascript" src="PushNotification.js"></script>
+	
+</head>
+<body onload="countdown()">
+
+
+<div id="home">
+	<div id="app-status-div">
+		<ul id="app-status-ul">
+		</ul>
+	</div>
+</div>
+
+<a id="load_" class="loader_img"></a>
+<div id="content">
+	<img src="images/header.jpg" width="100%">
+	<div class="container-fluid">
+		<div class="row">
+			<table>
+				<tr>
+					<td width="30%"><p><img src="images/start.png" width="100%" style="margin-right: 5%;"></p></td>
+					<td class="center">
+						<h3>Janz an de Spetz ...</h3> 
+						<p>... süht mer mascheere<br>
+						en Reih on Jlied, on Zog an Zog,<br>
+						dat send die Nüsser Jrenadeere! ...</p>
+						
+						<div style="color: rgb(157, 10, 15); font: 14px Comic Sans MS, Comic Sans MS5, cursive;">Es sind noch ...</div>		
+						<div id="countdown" style="display: none;">
+							<span class="button"><span class="right"></span><span id="tage"></span> <span class="info">tag</span></span>
+							<span class="button"><span class="right"></span><span id="stunden"></span> <span class="info">std</span></span>
+							<span class="button"><span class="right"></span><span id="minuten"></span> <span class="info">min</span></span>
+							<span class="button"><span class="right"></span><span id="sekunden"></span> <span class="info">sek</span></span>
+						</div>
+						<div style="color: rgb(157, 10, 15); font: 14px Comic Sans MS, Comic Sans MS5, cursive;">...bis zum Neusser Schützenfest</div>
+					</td>
+				
+				</tr>
+			</table>
+			<div class="col-md-6">				
+					<h2>Nächste Termine</h2>
+
+					<script type="text/javascript">
+					var heute_date = new Date();	
+					akt_str='';
+					lange=0;
+					if(termine_array.length>2){
+						lange=3;	
+					}
+						var heute_date = new Date();
+						termine_array_datum = new Array();	
+						for (var i = 0; i < termine_array.length; ++i){
+								tmp_array1 = new Array();
+								tmp_array2 = new Array();
+								tmp_array3 = new Array();
+							
+								tmp_array1 = termine_array[i]["datum"].split('.');
+								str_=tmp_array1.join(':');
+								tmp_array2=str_.split(':');
+								str_=tmp_array2.join(' ');
+								tmp_array3=str_.split(' ');
+								fr_startDate = new Date(tmp_array3[2],(tmp_array3[1]-1),tmp_array3[0],tmp_array3[3],tmp_array3[4],0,0,0);
+														
+							
+							
+							if(fr_startDate>heute_date){
+								termine_array_datum.push( {datum: fr_startDate, datum_str: termine_array[i]["datum"], title: termine_array[i]["title"]});
+							}
+				}
+				
+				var termine_array_datum_sort = termine_array_datum.sort(function (p1, p2) {
+					return p2.datum + p1.datum;
+				});
+	
+				for (var i = 0; i < 3; ++i){
+						if(termine_array_datum_sort[i]["datum"]>heute_date){
+						akt_str+='<p><span class="red">'+termine_array_datum_sort[i]["datum_str"]+'</span><br>'+termine_array_datum_sort[i]["title"]+'</p>';
+						}
+				}
+				document.write(akt_str);
+				</script>
+				<center>
+				<br>
+				<span class="button">
+					<span class="right"></span><a href="termine.html">&raquo; Aktuelle Termine auf's Handy</a>
+				</span>
+				</center>
+			</div>
+			<div class="col-md-6">		
+					<h2>letzte News</h2>
+					<iframe  id="server_news" scrolling="no" frameborder="0" src="http://www.neusser-grenadierkorps.de/webapp/news_php_sql.php"></iframe>
+			</div>
+			<div class="col-md-12">	
+				<h2 style="color: #5ea9dd;"><a  rel="https://twitter.com/NGK1823" class="onclick_external"><img src="images/twitter.png" style="margin-top: -5px;" width="22"> Twitternachrichten</a></h2>
+				<a rel="https://twitter.com/NGK1823" class="onclick_external">@NGK1823 on Twitter</a><br>
+				<iframe id="akt_news" scrolling="no" frameborder="0" src="http://www.neusser-grenadierkorps.de/webapp/_twitter.php"></iframe>
+			</div>
+		</div>
+	</div>
+	
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	
+
+	</div>
+	
+	
+	 
+</div><!--content -->
+
+<div class="menu"> 
+	<script type="text/javascript"> activ=0; </script> 
+	<script type="text/javascript"src="_menu.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/scripts.js"></script>
+
+</div>
+
+<div id="navigation">
+	<ul>
+		<li class="close"><a class="close" ><i class="fa fa-navicon"></i><br>Menü schliessen</a></li>
+		<li><a rel="jahrbuch.html" href="jahrbuch.html" ><i class="fa fa-book"></i><br>Jahrbuch</a></li>
+		<li><a rel="korpsschiessen.html" href="korpsschiessen.html" ><i class="fa fa-tasks"></i><br>Korpsschiessen</a></li>
+		<li><a rel="vorstand.html" href="vorstand.html" ><i class="fa fa-male"></i><br>Vorstand</a></li>
+		<li><a rel="achterausschuss.html" href="achterausschuss.html" ><i class="fa fa-male"></i><br>Achterausschuss</a></li>
+		<li><a rel="settings.html" href="settings.html" ><i class="fa fa-cog"></i><br>Einstellungen</a></li>
+	</ul>
+</div>
+
+
+</body>
+</html>
