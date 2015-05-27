@@ -50,10 +50,7 @@ var init = {
 			alert(txt); 
 		} 
 
-
 		window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, onFail);  // TEMPORARY oder PERSISTENT
-		window.resolveLocalFileSystemURI("file:///readme.txt", onResolveSuccess, onFail);
-
 
 
 	},
@@ -77,11 +74,6 @@ function onFileSystemSuccess(fileSystem) {
 	);
 	
 }
-
-function onResolveSuccess(fileEntry) {
-	alert(fileEntry.name);
-}
-
 
 //  Hole Root Verzeichnis
 function onGetFileSuccess(fileEntry) {
