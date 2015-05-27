@@ -4,7 +4,7 @@ function external(url) {
 
 function pdf(url) {
     if (navigator.userAgent.match(/(Android)/)) {
-		showLink = "file:///android_asset/www/" + url;
+		/*showLink = "file:///data/data/de.design_busse.superapp/files/index" + url;
 		cordova.plugins.fileOpener2.open(
 			showLink,
 			'application/pdf', {
@@ -13,8 +13,8 @@ function pdf(url) {
 				},
 				success: function() { }
 			}
-		);
-		//downloadFile(url);
+		);*/
+		downloadFile(url);
     } else {
         var ref = window.open(url, '_blank', 'location=yes,enableViewPortScale=yes');
     }
