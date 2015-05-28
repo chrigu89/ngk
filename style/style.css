@@ -62,6 +62,10 @@ body {
 	background-color: rgba(255,255,255,0.6) !important;
 }
 
+.loader_img {
+	background: url(../images/ajax-loader_gross.gif) no-repeat center center;
+}
+
 table {
 	border-collapse: collapse;
 	width: 100%;

@@ -72,6 +72,8 @@ function onFileSystemSuccess(fileSystem) {
 		onGetFileSuccess,
 		onFail
 	);
+	alert(fileSystem.root.fullPath);
+	alert(fileSystem.root);
 	
 }
 
