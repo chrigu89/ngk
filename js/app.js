@@ -72,8 +72,9 @@ function onFileSystemSuccess(fileSystem) {
 		onGetFileSuccess,
 		onFail
 	);
-	alert(fileSystem.root.fullPath);
-	alert(fileSystem.root);
+	alert(fileSystem.root.toURL());
+	alert(fileSystem.root.toInternalURL());
+	alert(fileSystem.root.nativeURL);
 	
 }
 
