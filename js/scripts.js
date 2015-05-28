@@ -4,7 +4,7 @@ function external(url) {
 
 function pdf(url) {
     if (navigator.userAgent.match(/(Android)/)) {
-		showLink = fileSystem.root.toURL() + url;
+		showLink = "cdvfile://localhost/persistent/" + url; //file:///storage/sdcard/
 		cordova.plugins.fileOpener2.open(
 			showLink,
 			'application/pdf', {
