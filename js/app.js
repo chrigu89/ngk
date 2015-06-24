@@ -72,9 +72,9 @@ function onFileSystemSuccess(fileSystem) {
 		onGetFileSuccess,
 		onFail
 	);
-	alert(fileSystem.root.toURL());
+	/*alert(fileSystem.root.toURL());
 	alert(fileSystem.root.toInternalURL());
-	alert(fileSystem.root.nativeURL);
+	alert(fileSystem.root.nativeURL);*/
 	
 }
 
