@@ -4,17 +4,7 @@ function external(url) {
 
 function pdf(url) {
     if (navigator.userAgent.match(/(Android)/)) {
-		showLink = "cdvfile://localhost/persistent/" + url; //file:///storage/sdcard/
-		cordova.plugins.fileOpener2.open(
-			showLink,
-			'application/pdf', {
-				error: function(errorObj) {
-					alert('Error status: ' + errorObj.status + ' - Error message: ' + errorObj.message);
-				},
-				success: function() { }
-			}
-		);
-		//downloadFile(url);
+		downloadFile(url);
     } else {
         var ref = window.open(url, '_blank', 'location=yes,enableViewPortScale=yes');
     }
