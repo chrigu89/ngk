@@ -351,10 +351,10 @@ var onTwitter = function() {
 			var ausgabe = '<ul>';
 			for (var i=0; i < news.length; i++) {
 				var current = news[i];
-				ausgabe += '<li><strong>'+current.date+'</strong><br>'+current.subheadline+'<br>'+current.text+'</li>';
+				ausgabe += '<li><strong>'+current.date+'</strong><br>'+current.text+'</li>';
 			}
 			ausgabe += '<ul>';
-			$( "#news" ).html( ausgabe );
+			$( "#twitter" ).html( ausgabe );
 			
 		}
 	});
