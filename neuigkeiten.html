@@ -71,7 +71,7 @@
 	<script type="text/javascript" src="PushNotification.js"></script>
 	
 </head>
-<body onload="countdown(); onNews();">
+<body onload="onNews();onTwitter();">
 
 
 <div id="home">
@@ -92,112 +92,22 @@
 					Neusser Grenadierkorps<br><small>von 1823</small></p>
 				</div>
 			</div>
-		
 		</div>
 	</div>
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-md-6 mb-30">
-				<div class="bg_grey  mb-30">
-				<table class="">
-					<tr>
-						<td width="30%"><p><img src="images/start.png" width="100%" style="margin-right: 5%;"></p></td>
-						<td class="center">
-							<h3>Janz an de Spetz ...</h3> 
-							<p>... süht mer mascheere<br>
-							en Reih on Jlied, on Zog an Zog,<br>
-							dat send die Nüsser Jrenadeere! ...</p>
-						</td>
-					
-					</tr>
-				</table>
-				</div>
-			
-				<h2 class="headline">bis zum Neusser Schützenfest</h2>
-				<div class="bg_grey">						
-						<div id="countdown" style="display: none;">
-							<span class="button"><span class="right"></span><span id="tage"></span> <span class="info">tag</span></span>
-							<span class="button"><span class="right"></span><span id="stunden"></span> <span class="info">std</span></span>
-							<span class="button"><span class="right"></span><span id="minuten"></span> <span class="info">min</span></span>
-							<span class="button"><span class="right"></span><span id="sekunden"></span> <span class="info">sek</span></span>
-						</div>
-					</div>
-			</div>
-			<div class="col-md-6">
-				<h2 class="headline">Nächste Termine</h2>
-				<div class="bg_grey mb-30">	
-	
-					<script type="text/javascript">
-					var heute_date = new Date();	
-					akt_str='';
-					lange=0;
-					if(termine_array.length>2){
-						lange=3;	
-					}
-						var heute_date = new Date();
-						termine_array_datum = new Array();	
-						for (var i = 0; i < termine_array.length; ++i){
-								tmp_array1 = new Array();
-								tmp_array2 = new Array();
-								tmp_array3 = new Array();
-							
-								tmp_array1 = termine_array[i]["datum"].split('.');
-								str_=tmp_array1.join(':');
-								tmp_array2=str_.split(':');
-								str_=tmp_array2.join(' ');
-								tmp_array3=str_.split(' ');
-								fr_startDate = new Date(tmp_array3[2],(tmp_array3[1]-1),tmp_array3[0],tmp_array3[3],tmp_array3[4],0,0,0);
-														
-							
-							
-							if(fr_startDate>heute_date){
-								termine_array_datum.push( {datum: fr_startDate, datum_str: termine_array[i]["datum"], title: termine_array[i]["title"]});
-							}
-					}
-					
-					var termine_array_datum_sort = termine_array_datum.sort(function (p1, p2) {
-						return p2.datum + p1.datum;
-					});
-		
-					for (var i = 0; i < 3; ++i){
-							if(termine_array_datum_sort[i]["datum"]>heute_date){
-							akt_str+='<p><span class="red">'+termine_array_datum_sort[i]["datum_str"]+'</span><br>'+termine_array_datum_sort[i]["title"]+'</p>';
-							}
-					}
-					document.write(akt_str);
-					</script>
-					<center>
-					<br>
-					<span class="button">
-						<span class="right"></span><a href="termine.html">&raquo; Termine herunterladen</a>
-					</span>
-					</center>
-				</div>
+			<div class="col-md-12">
 				
 				<h2 class="headline">Neuigkeiten</h2>
 				<div class="bg_grey mb-30">	
-					<p>Alle Neuigkeiten finden sich ausführlich im Bereich "Neuigkeiten"</p>
-				</div>
-				
-				<h2 class="headline" style="color: #5ea9dd;"><a rel="https://twitter.com/NGK1823" class="onclick_external"><img src="images/twitter.png" style="margin-top: -5px;" width="22"> Twitternachrichten</a></h2>
-				<div class="bg_grey">	
-					<a rel="https://twitter.com/NGK1823" class="onclick_external">@NGK1823 on Twitter</a>
-					<div id="twitter">
+					<div id="news">
 						<p style="text-align: center;"><img src="images/ajax-loader_dark.gif"></p>
 					</div>
 				</div>
+				
 			</div>
 		</div>
-	</div>
-	
-	<p>&nbsp;</p>
-	<p>&nbsp;</p>
-	
-
-	</div>
-	
-	
-	 
+	</div>	 
 </div><!--content -->
 
 <div id="navigation"> 
