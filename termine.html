@@ -28,12 +28,24 @@
 <a id="load_" class="loader_img"></a>
 
 <div id="content">
-	<img src="images/header.jpg" width="100%">
+	<div class="header">
+		<a class="toogle"><i class="fa fa-navicon"></i></a>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-10">
+					<p><img class="logo" src="images/logo.png">
+					Neusser Grenadierkorps<br><small>von 1823</small></p>
+				</div>
+			</div>
+		
+		</div>
+	</div>
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12">
-				<h2>aktuelle Termine</h2>
-			</div>
+				<h2 class="headline">aktuelle Termine</h2>
+				
+				<div class="bg_grey">
 		<script type="text/javascript">
 			term_str='';
 			var heute_date = new Date();	
@@ -78,24 +90,13 @@ document.write(term_str);
 	</div>
 	 
 </div><!--content -->
-
-<div class="menu"> 
+<div id="navigation">
 	<script type="text/javascript"> activ=1; </script> 
 	<script type="text/javascript" src="_menu.js"></script>
-	<script src="js/app.js"></script>
-	<script src="js/scripts.js"></script>
 </div>
 
-<div id="navigation">
-	<ul>
-		<li class="close"><a class="close" ><i class="fa fa-navicon"></i><br>Menü schliessen</a></li>
-		<li><a rel="jahrbuch.html" href="jahrbuch.html" ><i class="fa fa-book"></i><br>Jahrbuch</a></li>
-		<li><a rel="korpsschiessen.html" href="korpsschiessen.html" ><i class="fa fa-tasks"></i><br>Korpsschiessen</a></li>
-		<li><a rel="vorstand.html" href="vorstand.html" ><i class="fa fa-male"></i><br>Vorstand</a></li>
-		<li><a rel="achterausschuss.html" href="achterausschuss.html" ><i class="fa fa-male"></i><br>Achterausschuss</a></li>
-		<li><a rel="settings.html" href="settings.html" ><i class="fa fa-cog"></i><br>Einstellungen</a></li>
-	</ul>
-</div>
+<script src="js/app.js"></script>
+<script src="js/scripts.js"></script>
 
 </body>
 </html>

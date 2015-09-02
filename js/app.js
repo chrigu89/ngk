@@ -307,3 +307,58 @@ $('.status').click(function(){
 	}
 	
 });
+
+var onNews = function() {
+		
+
+	$.ajax({
+		type: 'GET',
+		dataType: "json",
+		url: 'http://neusser-grenadierkorps.de/webapp/api.php',
+		data:  { "action": "news" },
+		crossDomain: true,
+		cache: false,
+		success: function(response) {
+			
+			var news = response;
+			var ausgabe = '<ul>';
+			for (var i=0; i < news.length; i++) {
+				var current = news[i];
+				ausgabe += '<li><strong>'+current.date+'</strong><br>'+current.subheadline+'<br>'+current.text+'</li>';
+			}
+			ausgabe += '<ul>';
+			$( "#news" ).html( ausgabe );
+			
+		}
+	});
+
+	return;
+};
+
+var onTwitter = function() {
+		
+
+	$.ajax({
+		type: 'GET',
+		dataType: "json",
+		url: 'http://neusser-grenadierkorps.de/webapp/api.php',
+		data:  { "action": "twitter" },
+		crossDomain: true,
+		cache: false,
+		success: function(response) {
+			
+			var news = response;
+			var ausgabe = '<ul>';
+			for (var i=0; i < news.length; i++) {
+				var current = news[i];
+				ausgabe += '<li><strong>'+current.date+'</strong><br>'+current.subheadline+'<br>'+current.text+'</li>';
+			}
+			ausgabe += '<ul>';
+			$( "#news" ).html( ausgabe );
+			
+		}
+	});
+
+	return;
+};
+

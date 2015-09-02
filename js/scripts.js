@@ -246,16 +246,12 @@ var onReady = function() {
                             pdf(this.rel);
                         } else if (this.className.indexOf('toogle') >= 0) {
 							$('#navigation').animate({
-								right: '0'
-							}, 800, "swing", function() {
-								$('#navigation').css('right','0');	
+								height: "toggle"
 							});
 							return false;
                         } else if (this.className.indexOf('close') >= 0) {
 							$('#navigation').animate({
-								right: '-25%'
-							}, 800, "swing", function() {
-								$('#navigation').css('right','-25%');	
+								height: "toggle"
 							});
 							return false;
 						} else {

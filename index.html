@@ -71,7 +71,7 @@
 	<script type="text/javascript" src="PushNotification.js"></script>
 	
 </head>
-<body onload="countdown()">
+<body onload="countdown(); onNews();">
 
 
 <div id="home">
@@ -83,18 +83,37 @@
 
 <a id="load_" class="loader_img"></a>
 <div id="content">
-	<img src="images/header.jpg" width="100%">
+	<div class="header">
+		<a class="toogle"><i class="fa fa-navicon"></i></a>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-10">
+					<p><img class="logo" src="images/logo.png">
+					Neusser Grenadierkorps<br><small>von 1823</small></p>
+				</div>
+			</div>
+		
+		</div>
+	</div>
 	<div class="container-fluid">
 		<div class="row">
-			<table>
-				<tr>
-					<td width="30%"><p><img src="images/start.png" width="100%" style="margin-right: 5%;"></p></td>
-					<td class="center">
-						<h3>Janz an de Spetz ...</h3> 
-						<p>... süht mer mascheere<br>
-						en Reih on Jlied, on Zog an Zog,<br>
-						dat send die Nüsser Jrenadeere! ...</p>
-						
+			<div class="col-md-6 mb-30">
+				<div class="bg_grey">
+				<table class="">
+					<tr>
+						<td width="30%"><p><img src="images/start.png" width="100%" style="margin-right: 5%;"></p></td>
+						<td class="center">
+							<h3>Janz an de Spetz ...</h3> 
+							<p>... süht mer mascheere<br>
+							en Reih on Jlied, on Zog an Zog,<br>
+							dat send die Nüsser Jrenadeere! ...</p>
+						</td>
+					
+					</tr>
+				</table>
+				</div>
+			
+				<div class="bg_grey mt-30">						
 						<div style="color: rgb(157, 10, 15); font: 14px Comic Sans MS, Comic Sans MS5, cursive;">Es sind noch ...</div>		
 						<div id="countdown" style="display: none;">
 							<span class="button"><span class="right"></span><span id="tage"></span> <span class="info">tag</span></span>
@@ -103,13 +122,12 @@
 							<span class="button"><span class="right"></span><span id="sekunden"></span> <span class="info">sek</span></span>
 						</div>
 						<div style="color: rgb(157, 10, 15); font: 14px Comic Sans MS, Comic Sans MS5, cursive;">...bis zum Neusser Schützenfest</div>
-					</td>
-				
-				</tr>
-			</table>
-			<div class="col-md-6">				
-					<h2>Nächste Termine</h2>
-
+					</div>
+			</div>
+			<div class="col-md-6">
+				<h2 class="headline">Nächste Termine</h2>
+				<div class="bg_grey mb-30">	
+	
 					<script type="text/javascript">
 					var heute_date = new Date();	
 					akt_str='';
@@ -136,34 +154,41 @@
 							if(fr_startDate>heute_date){
 								termine_array_datum.push( {datum: fr_startDate, datum_str: termine_array[i]["datum"], title: termine_array[i]["title"]});
 							}
-				}
+					}
+					
+					var termine_array_datum_sort = termine_array_datum.sort(function (p1, p2) {
+						return p2.datum + p1.datum;
+					});
+		
+					for (var i = 0; i < 3; ++i){
+							if(termine_array_datum_sort[i]["datum"]>heute_date){
+							akt_str+='<p><span class="red">'+termine_array_datum_sort[i]["datum_str"]+'</span><br>'+termine_array_datum_sort[i]["title"]+'</p>';
+							}
+					}
+					document.write(akt_str);
+					</script>
+					<center>
+					<br>
+					<span class="button">
+						<span class="right"></span><a href="termine.html">&raquo; Aktuelle Termine auf's Handy</a>
+					</span>
+					</center>
+				</div>
 				
-				var termine_array_datum_sort = termine_array_datum.sort(function (p1, p2) {
-					return p2.datum + p1.datum;
-				});
-	
-				for (var i = 0; i < 3; ++i){
-						if(termine_array_datum_sort[i]["datum"]>heute_date){
-						akt_str+='<p><span class="red">'+termine_array_datum_sort[i]["datum_str"]+'</span><br>'+termine_array_datum_sort[i]["title"]+'</p>';
-						}
-				}
-				document.write(akt_str);
-				</script>
-				<center>
-				<br>
-				<span class="button">
-					<span class="right"></span><a href="termine.html">&raquo; Aktuelle Termine auf's Handy</a>
-				</span>
-				</center>
-			</div>
-			<div class="col-md-6">		
-					<h2>letzte News</h2>
-					<iframe id="server_news" scrolling="no" frameborder="0" src="http://www.neusser-grenadierkorps.de/webapp/news_php_sql.php"></iframe>
-			</div>
-			<div class="col-md-12">	
-				<h2 style="color: #5ea9dd;"><a rel="https://twitter.com/NGK1823" class="onclick_external"><img src="images/twitter.png" style="margin-top: -5px;" width="22"> Twitternachrichten</a></h2>
-				<a rel="https://twitter.com/NGK1823" class="onclick_external">@NGK1823 on Twitter</a><br>
-				<iframe id="akt_news" scrolling="no" frameborder="0" src="http://www.neusser-grenadierkorps.de/webapp/_twitter.php"></iframe>
+				<h2 class="headline">Neuigkeiten</h2>
+				<div class="bg_grey mb-30">	
+					<div id="news">
+						<p style="text-align: center;"><img src="images/ajax-loader_dark.gif"></p>
+					</div>
+				</div>
+				
+				<h2 class="headline" style="color: #5ea9dd;"><a rel="https://twitter.com/NGK1823" class="onclick_external"><img src="images/twitter.png" style="margin-top: -5px;" width="22"> Twitternachrichten</a></h2>
+				<div class="bg_grey">	
+					<a rel="https://twitter.com/NGK1823" class="onclick_external">@NGK1823 on Twitter</a>
+					<div id="twitter">
+						<p style="text-align: center;"><img src="images/ajax-loader_dark.gif"></p>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -178,25 +203,15 @@
 	 
 </div><!--content -->
 
-<div class="menu"> 
+<div id="navigation"> 
 	<script type="text/javascript"> activ=0; </script> 
 	<script type="text/javascript"src="_menu.js"></script>
-	<script src="js/app.js"></script>
-	<script src="js/scripts.js"></script>
 
 </div>
 
-<div id="navigation">
-	<ul>
-		<li class="close"><a class="close" ><i class="fa fa-navicon"></i><br>Menü schliessen</a></li>
-		<li><a rel="jahrbuch.html" href="jahrbuch.html" ><i class="fa fa-book"></i><br>Jahrbuch</a></li>
-		<li><a rel="korpsschiessen.html" href="korpsschiessen.html" ><i class="fa fa-tasks"></i><br>Korpsschiessen</a></li>
-		<li><a rel="vorstand.html" href="vorstand.html" ><i class="fa fa-male"></i><br>Vorstand</a></li>
-		<li><a rel="achterausschuss.html" href="achterausschuss.html" ><i class="fa fa-male"></i><br>Achterausschuss</a></li>
-		<li><a rel="settings.html" href="settings.html" ><i class="fa fa-cog"></i><br>Einstellungen</a></li>
-	</ul>
-</div>
 
+<script src="js/app.js"></script>
+<script src="js/scripts.js"></script>
 
 </body>
 </html>
