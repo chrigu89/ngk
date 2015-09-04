@@ -331,6 +331,7 @@ var onNews = function() {
 			
 		}
 	});
+	onReady();
 
 	return;
 };

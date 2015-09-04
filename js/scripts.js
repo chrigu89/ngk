@@ -4,6 +4,7 @@ function external(url) {
 
 function pdf(url) {
     if (navigator.userAgent.match(/(Android)/)) {
+		alert("Der Download wird gestartet - bitte einen Moment Geduld");
 		downloadFile(url);
     } else {
         var ref = window.open(url, '_blank', 'location=yes,enableViewPortScale=yes');
@@ -11,7 +12,7 @@ function pdf(url) {
 }
 
 function image(url) {
-    var ref = window.open(url, '_blank', 'location=yes,enableViewPortScale=yes');
+    var ref = window.open(url, '_blank', 'location=no,enableViewPortScale=yes');
 }
 
 function downloadFile(url){
@@ -28,13 +29,16 @@ function downloadFile(url){
 					"http://apps.design-busse.de/ngk/" + url,
 					sPath  + url,
 					function(theFile) {
-						alert("Der Download wird gestartet - bitte einen Moment Geduld");
 						showLink = theFile.toURI();
 						cordova.plugins.fileOpener2.open(
 							showLink,
 							'application/pdf', {
 								error: function(errorObj) {
-									alert('Error status: ' + errorObj.status + ' - Error message: ' + errorObj.message);
+									if(errorObj.status == 9) {
+										alert('Sorry - Sie besitzen kein Programm, um PDF Dateien anzusehen.');
+									} else {
+										alert('Error status: ' + errorObj.status + ' - Error message: ' + errorObj.message);
+									}
 								},
 								success: function() { }
 							}
@@ -74,7 +78,7 @@ function kalender(dat) {
         return false;
     };
     var error = function(message) {
-        alert("Sorry, es ist ein Fehler aufgetreten. Bitte wende dich an Christian Busse <cb@design-busse.de>");
+        alert("Sorry, es ist ein Fehler aufgetreten. Bitte wenden Sie sich an Christian Busse <cb@design-busse.de>");
         return false;
     };
     window.plugins.calendar.createEvent(title, location, notes, startDate, endDate, success, error);
@@ -116,27 +120,12 @@ function NachOben() {
 }
 
 $(window).ready(function() {
-
-    $(".menu").css({
-        "opacity": 1
-    });
     $("#content").css({
         "opacity": 1
     });
-    $(".content").css({
-        "opacity": 1
-    });
-    $(".txt").css({
-        "opacity": 1
-    });
-
-
     $("#load_").delay(350).fadeOut(300, 'easeInQuart', function() {
         $('#load_').removeClass("loader_img");
     });
-
-
-
 })
 
 
@@ -165,15 +154,6 @@ var onReady = function() {
     $(".content").css({
         "min-height": xHeight + 20
     });
-
-
-
-    function men_display(nb) {
-
-        $(".menu").css({
-            'display': nb
-        });
-    }
 
     //LinkToutch--------------------------------------------------------------------------------------------
     bewegung = false;
