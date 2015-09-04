@@ -329,9 +329,10 @@ var onNews = function() {
 			ausgabe += '<ul>';
 			$( "#news" ).html( ausgabe );
 			
+			onReady();
+			
 		}
 	});
-	onReady();
 
 	return;
 };
