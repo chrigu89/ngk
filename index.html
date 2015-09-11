@@ -62,6 +62,7 @@
 		  setTimeout('countdown()',0);
 		} else {
 			 document.getElementById('countdown').innerHTML='<span class="button"><span class="right"></span>ZOG ZOG!</span>';
+			 document.getElementById('countdown').style.display='block';
 		}
 	  }
 	</script>
@@ -115,63 +116,61 @@
 			
 				<h2 class="headline">bis zum Neusser Schützenfest</h2>
 				<div class="bg_grey">						
-						<div id="countdown" style="display: none;">
-							<span class="button"><span class="right"></span><span id="tage"></span> <span class="info">tag</span></span>
-							<span class="button"><span class="right"></span><span id="stunden"></span> <span class="info">std</span></span>
-							<span class="button"><span class="right"></span><span id="minuten"></span> <span class="info">min</span></span>
-							<span class="button"><span class="right"></span><span id="sekunden"></span> <span class="info">sek</span></span>
-						</div>
+					<div id="countdown" style="display: none;">
+						<span class="button"><span class="right"></span><span id="tage"></span> <span class="info">tag</span></span>
+						<span class="button"><span class="right"></span><span id="stunden"></span> <span class="info">std</span></span>
+						<span class="button"><span class="right"></span><span id="minuten"></span> <span class="info">min</span></span>
+						<span class="button"><span class="right"></span><span id="sekunden"></span> <span class="info">sek</span></span>
 					</div>
+				</div>
 			</div>
 			<div class="col-md-6">
 				<h2 class="headline">Nächste Termine</h2>
 				<div class="bg_grey mb-30">	
 	
 					<script type="text/javascript">
+					term_str='';
 					var heute_date = new Date();	
-					akt_str='';
-					lange=0;
-					if(termine_array.length>2){
-						lange=3;	
-					}
-						var heute_date = new Date();
-						termine_array_datum = new Array();	
-						for (var i = 0; i < termine_array.length; ++i){
-								tmp_array1 = new Array();
-								tmp_array2 = new Array();
-								tmp_array3 = new Array();
-							
-								tmp_array1 = termine_array[i]["datum"].split('.');
-								str_=tmp_array1.join(':');
-								tmp_array2=str_.split(':');
-								str_=tmp_array2.join(' ');
-								tmp_array3=str_.split(' ');
-								fr_startDate = new Date(tmp_array3[2],(tmp_array3[1]-1),tmp_array3[0],tmp_array3[3],tmp_array3[4],0,0,0);
-														
-							
-							
-							if(fr_startDate>heute_date){
-								termine_array_datum.push( {datum: fr_startDate, datum_str: termine_array[i]["datum"], title: termine_array[i]["title"]});
-							}
-					}
+					var j = 0;
+					for (var i = 0; i < termine_array.length; ++i){	
 					
-					var termine_array_datum_sort = termine_array_datum.sort(function (p1, p2) {
-						return p2.datum + p1.datum;
-					});
+					tmp_array1 = new Array();
+					tmp_array2 = new Array();
+					tmp_array3 = new Array();
+					
+					tmp_array1 = termine_array[i]["datum"].split('.');
+					str_=tmp_array1.join(':');
+					tmp_array2=str_.split(':');
+					str_=tmp_array2.join(' ');
+					tmp_array3=str_.split(' ');
+					fr_startDate = new Date(tmp_array3[2],(tmp_array3[1]-1),tmp_array3[0],tmp_array3[3],tmp_array3[4],0,0,0);
+					
+					fr_DateDay = tmp_array3[0] + '.' + tmp_array3[1];
+					fr_DateHours = tmp_array3[3] + ':' +tmp_array3[4];
+					fr_DateYear = tmp_array3[2] ;
 		
-					for (var i = 0; i < 3; ++i){
-							if(termine_array_datum_sort[i]["datum"]>heute_date){
-							akt_str+='<p><span class="red">'+termine_array_datum_sort[i]["datum_str"]+'</span><br>'+termine_array_datum_sort[i]["title"]+'</p>';
+					if(fr_startDate>heute_date){													
+						term_str+='<div class="row border_b"><div class="col-xs-4 col-md-3 text-center">'
+							+'<div class="termin"><span class="day">'+fr_DateDay+'</span><span class="time">'+fr_DateHours+'</span></div>'
+							+'</div>'
+							+'<div class="col-xs-8 col-md-9"><strong>'+termine_array[i]["title"]+' '+fr_DateYear+'</strong><br>';
+							if(termine_array[i]["teaser"].length>=2){
+							
+								term_str+=termine_array[i]["teaser"]+'<br>';
 							}
+									if(termine_array[i]["location"].length>=2){
+							
+								term_str+= 'Ort: '+termine_array[i]["location"];
+							}
+								term_str+='</div></div>';
+						j++;
+						if(j == 2) {
+							break;
+						}
 					}
-					document.write(akt_str);
+				}
+				document.write(term_str);
 					</script>
-					<center>
-					<br>
-					<span class="button">
-						<span class="right"></span><a href="termine.html">&raquo; Termine herunterladen</a>
-					</span>
-					</center>
 				</div>
 				
 				<h2 class="headline">News</h2>
@@ -192,12 +191,8 @@
 	
 	<p>&nbsp;</p>
 	<p>&nbsp;</p>
-	
+</div>
 
-	</div>
-	
-	
-	 
 </div><!--content -->
 
 <div id="navigation"> 

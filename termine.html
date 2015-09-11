@@ -33,9 +33,8 @@
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-12">
-			<h2 class="headline">aktuelle Termine</h2>
+			<h2 class="headline">nächste Termine</h2>
 			<div class="bg_grey">
-				<div class="row"> 
 					<script type="text/javascript">
 			term_str='';
 			var heute_date = new Date();	
@@ -52,12 +51,16 @@
 			str_=tmp_array2.join(' ');
 			tmp_array3=str_.split(' ');
 			fr_startDate = new Date(tmp_array3[2],(tmp_array3[1]-1),tmp_array3[0],tmp_array3[3],tmp_array3[4],0,0,0);
+			
+			fr_DateDay = tmp_array3[0] + '.' + tmp_array3[1];
+			fr_DateHours = tmp_array3[3] + ':' +tmp_array3[4];
+			fr_DateYear = tmp_array3[2] ;
 		
 	if(fr_startDate>heute_date){													
-	term_str+='<div class="col-xs-4 col-md-4">'
-						+'<span class="red">'+termine_array[i]["datum"]+' Uhr</span>'
+	term_str+='<div class="row border_b"><div class="col-xs-4 col-md-2 text-center">'
+						+'<div class="termin"><span class="day">'+fr_DateDay+'</span><span class="time">'+fr_DateHours+'</span></div>'
 						+'</div>'
-						+'<div class="col-xs-8 col-md-8"><strong>'+termine_array[i]["title"]+'</strong><br>';
+						+'<div class="col-xs-8 col-md-10"><strong>'+termine_array[i]["title"]+' '+fr_DateYear+'</strong><br>';
 						if(termine_array[i]["teaser"].length>=2){
 						
 							term_str+=termine_array[i]["teaser"]+'<br>';
@@ -65,14 +68,13 @@
 								if(termine_array[i]["location"].length>=2){
 						
 							term_str+= 'Ort: '+termine_array[i]["location"]+'<br>'
-+'<a  class="kalender" href="termine.html" rel="'+termine_array[i]["datum"]+'!+!'+termine_array[i]["title"]+'!+!'+termine_array[i]["teaser"]+'!+!'+termine_array[i]["location"]+'">&raquo; Termin auf´s Handy</a><br>&nbsp;';
++'<a  class="kalender" href="termine.html" rel="'+termine_array[i]["datum"]+'!+!'+termine_array[i]["title"]+'!+!'+termine_array[i]["teaser"]+'!+!'+termine_array[i]["location"]+'"><i class="fa fa-calendar"></i> Termin eintragen</a>';
 						}
-							term_str+='</div>';
+							term_str+='</div></div>';
 	}
 								}
 document.write(term_str);	
 </script> 
-				</div>
 			</div>
 		</div>
 	</div>
