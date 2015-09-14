@@ -15,64 +15,16 @@
 	<script src="js/jquery-ui-min.js" type="text/javascript"></script>
 		
 	<script src="js/swipe.js" type="text/javascript"></script>
-	
-	<script language="JavaScript">
-	  // Ziel-Datum in MEZ
-	  var jahr=2016, monat=8, tag=27, stunde=12, minute=0, sekunde=0;
-	  var zielDatum=new Date(jahr,monat-1,tag,stunde,minute,sekunde);
-
-	  function countdown() {
-		startDatum=new Date(); // Aktuelles Datum
-
-		//
-		if(startDatum<zielDatum)  {
-
-		  var tage=0, stunden=0, minuten=0, sekunden=0;
-
-		  // Tage
-		  while(startDatum.getTime()+(24*60*60*1000)<zielDatum) {
-			tage++;
-			startDatum.setTime(startDatum.getTime()+(24*60*60*1000));
-		  }
-
-		  // Stunden
-		  stunden=Math.floor((zielDatum-startDatum)/(60*60*1000));
-		  startDatum.setTime(startDatum.getTime()+stunden*60*60*1000);
-
-		  // Minuten
-		  minuten=Math.floor((zielDatum-startDatum)/(60*1000));
-		  startDatum.setTime(startDatum.getTime()+minuten*60*1000);
-
-		  // Sekunden
-		  sekunden=Math.floor((zielDatum-startDatum)/1000);
-
-		  // Anzeige formatieren
-		  (tage!=1)?tage=tage:tage=tage;
-		  (stunden!=1)?stunden=stunden:stunden=stunden;
-		  (minuten!=1)?minuten=minuten:minuten=minuten;
-		  if(sekunden<10) sekunden="0"+sekunden;
-		  (sekunden!=1)?sekunden=sekunden:sekunden=sekunden;
-			
-		  document.getElementById('tage').innerHTML=tage;
-		  document.getElementById('stunden').innerHTML=stunden;
-		  document.getElementById('minuten').innerHTML=minuten;
-		  document.getElementById('sekunden').innerHTML=sekunden;
-		  document.getElementById('countdown').style.display='block';
-
-		  setTimeout('countdown()',0);
-		} else {
-			 document.getElementById('countdown').innerHTML='<span class="button"><span class="right"></span>ZOG ZOG!</span>';
-		}
-	  }
-	</script>
-	
-	
+		
 	<script src="cordova.js"></script>
 	<script type="text/javascript" src="PushNotification.js"></script>
 	
 </head>
 <body onload="onNews();">
 
+<div id="offline">
+	Sie sind zurzeit offline!
+</div>
 
 <div id="home">
 	<div id="app-status-div">

@@ -6,15 +6,15 @@
 		xmlns:gap = "http://phonegap.com/ns/1.0"
 		xmlns:android = "http://schemas.android.com/apk/res/android"
 		id        = "de.design-busse.neussergk"
-		versionCode = "331"
-		version   = "1.3.1">
+		versionCode = "332"
+		version   = "1.3.2">
 		
 	<name>NGK1823</name>
 	<description>Termine auf's Handy, Twitter, News und mehr.. Neusser Grenadierkorps 1823</description>
 	<author href="http://www.design-busse.de" email="cb@design-busse.de">Christian Busse</author>
 
 	<gap:config-file platform="ios" parent="CFBundleShortVersionString">
-		<string>331</string>
+		<string>332</string>
 	</gap:config-file>
 
 	<gap:platform name="ios" />

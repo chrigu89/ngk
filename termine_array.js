@@ -2,72 +2,6 @@ termine_array = new Array();
 
 termine_array = [
 		{
-			'datum'			: "18.07.2015 19:00",
-			'title'			: 'Bürgerversammlung',
-			'teaser'		: "",
-			'location'		: "Stadthalle Neuss",
-		},
-		{
-			'datum'			: "01.08.2015 19:00",
-			'title'			: 'Majorsehrenabend',
-			'teaser'		: "Große Korpsversammlung Jubilarehrung, anschl. Heimgeleit des Majors und Biwak am Grenadier-Schützen-Denkmal",
-			'location'		: "Stadthalle Neuss",
-		},
-		{
-			'datum'			: "03.08.2015 19:00",
-			'title'			: 'Marschübung',
-			'teaser'		: "",
-			'location'		: "Parkplatz Rennbahn / Globe Theater",
-		},
-		{
-			'datum'			: "08.08.2015 18:30",
-			'title'			: 'Oberstehrenabend',
-			'teaser'		: "",
-			'location'		: "Stadthalle Neuss",
-		},
-		{
-			'datum'			: "10.08.2015 20:00",
-			'title'			: 'Zugführerbesprechung',
-			'teaser'		: "",
-			'location'		: "Marienhaus, Kapitelstaße 36",
-		},
-		{
-			'datum'			: "15.08.2015 17:30",
-			'title'			: 'Königsehrenabend',
-			'teaser'		: "",
-			'location'		: "Stadthalle Neuss",
-		},
-		{
-			'datum'			: "23.08.2015 11:00",
-			'title'			: 'Promenadenkonzert des NGK',
-			'teaser'		: "",
-			'location'		: "Platz am Weißen Haus",
-		},
-		{
-			'datum'			: "24.08.2015 17:30",
-			'title'			: 'Fackelbesichtigung',
-			'teaser'		: "",
-			'location'		: "Fackelbauhalle Zietzschmannhalle",
-		},
-		{
-			'datum'			: "28.08.2015 17:00",
-			'title'			: 'Kirmesplatz Eröffnung',
-			'teaser'		: "",
-			'location'		: "Hessentorbrücke",
-		},
-		{
-			'datum'			: "28.08.2015 - 01.09.2015",
-			'title'			: "Neusser Bürger-Schützenfest",
-			'teaser'		: "",
-			'location'		: "",
-		},
-		{
-			'datum'			: "05.09.2015 18:00",
-			'title'			: 'Krönungszug / Krönungsball',
-			'teaser'		: "",
-			'location'		: "Stadthalle Neuss",
-		},
-		{
 			'datum'			: "15.09.2015 20:00",
 			'title'			: 'Chargiertenversammlung',
 			'teaser'		: "",
@@ -161,7 +95,7 @@ termine_array = [
 			'location'		: "Marienhaus, Kapitelstaße 36",
 		},
 		{
-			'datum'			: "12.08.2016 17:30",
+			'datum'			: "13.08.2016 17:30",
 			'title'			: 'Königsehrenabend',
 			'teaser'		: "",
 			'location'		: "Stadthalle Neuss",

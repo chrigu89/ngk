@@ -129,25 +129,13 @@ function onFail(error){
 
 
 function onOnline() {
-	console.warn('NETWORK: Device is now online');
-	
-	document.getElementById('server_news').src='http://www.neusser-grenadierkorps.de/webapp/news_php_sql.php';
-	document.getElementById('akt_news').src='http://apps.design-busse.de/ngk/_twitter.php';
-		
-	/*$(".onclick_pdf").each(function() {
-		$(this).attr("href", $(this).attr("title"));
-	});*/
+	document.getElementById('offline').css('display', 'none');
 }
 
 function onOffline() {
-	console.warn('NETWORK: Device is now offline');
+	
 	if(activ==0){
-		document.getElementById('server_news').src='kein_www_akt_news.html';
-		document.getElementById('akt_news').src='kein_www_akt_twitter.html';
-		/*$(".onclick_pdf").each(function() {
-			$(this).attr("title", $(this).attr("href"));
-			$(this).attr("href", "javascript:alert('Du hast derzeit keine Internetverbindung');");
-		});*/
+		document.getElementById('offline').css('display', 'block');
 	}
 	
 }

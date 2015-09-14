@@ -367,3 +367,18 @@ h1, h2, h3, h4, h5, h6 {
 		background-image: url(../images/on.png);
 	}
 	
+#offline {
+	display: none;
+	background: rgba(255, 0, 0, 0.5);
+	color: #fff;
+	text-align: center;
+	line-height: 50px;
+	font-size: 30px;
+	margin-top: 50px;
+	font-weight: 300;
+	position: relative;
+	width: 100%;
+	left: 0px;
+	width: 100%;
+	z-index: 10;
+}
