@@ -52,11 +52,11 @@ termine_array = [
 			'teaser'		: "",
 			'location'		: "Marienhaus, Kapitelstraße 36",
 		},
-		{
+		{ 	
 			'datum'			: "10.05.2016 20:00",
 			'title'			: 'Fackelbaubesprechung',
 			'teaser'		: "",
-			'location'		: "Scheibenstand, Scheibendamm",
+			'location'		: "Marienhaus, Kapitelstraße 36",
 		},
 		{
 			'datum'			: "26.06.2016 10:00",
