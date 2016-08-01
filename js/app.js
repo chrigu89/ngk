@@ -161,7 +161,7 @@ function onNotificationAPN(e) {
 
 // handle GCM notifications for Android
 function onNotification(e) {
-	
+	alert('onNotification');
 	switch( e.event )
 	{
 		case 'registered':
@@ -169,6 +169,7 @@ function onNotification(e) {
 		{
 			// Token für Android
 			final_token = e.regid;
+			alert(final_token);
 			window.localStorage.setItem("token", final_token);
 			
 			$.ajax({
