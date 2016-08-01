@@ -257,6 +257,7 @@ var onSettings = function() {
 			} else {
 				$('.status').addClass('off');
 			}
+			$('.id').text(response.id);
 			
 		}
 	});
