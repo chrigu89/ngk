@@ -242,7 +242,6 @@ function errorHandler (error) {
 
 var onSettings = function() {
 	var token = window.localStorage.getItem("token");
-	alert(token);
 	$.ajax({
 		type: 'GET',
 		dataType: "json",
