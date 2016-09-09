@@ -133,11 +133,11 @@
 		<plugin name="cordova-plugin-splashscreen" />
 		<plugin name="xenious-cordova-plugin-statusbar" />
 
-	<!-- IOS -->
+	<!-- IOS 
 		<preference name="StatusBarOverlaysWebView" value="true" />
 		<preference name="UIStatusBarHidden" value="true" />
 		<preference name="UIViewControllerBasedStatusBarAppearance" value="false" />
-	
+	-->
 
 
 	<!-- ANDROID -->	
