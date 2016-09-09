@@ -125,13 +125,15 @@
 		<plugin name="phonegap-plugin-push" source="npm">
 			<param name="SENDER_ID" value="245131791687" />
 		</plugin>
+		
+		
 
 		<gap:plugin name="io.github.pwlin.cordova.plugins.fileopener2" version="1.0.11" />
 		<plugin name="cordova-plugin-calendar" />
+		<plugin name="cordova-plugin-filer" />
+		<plugin name="cordova-plugin-file-transfer" />
+		<plugin name="cordova-plugin-inappbrowser" />
 		
-		<gap:plugin name="org.apache.cordova.file" version="1.3.3" />
-		<gap:plugin name="org.apache.cordova.file-transfer" version="0.5.0" />	
-		<gap:plugin name="org.apache.cordova.inappbrowser" version="0.6.0" />
 		
 		<gap:plugin name="org.apache.cordova.network-information" version="0.2.15" />
 		<gap:plugin name="org.apache.cordova.splashscreen" version="1.0.0" />
