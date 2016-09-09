@@ -130,7 +130,7 @@
 		<plugin name="cordova-plugin-file-transfer" />
 		<plugin name="cordova-plugin-inappbrowser" />
 		<plugin name="cordova-plugin-network-information" />
-		<plugin name="cordova-plugin-splashscreen" />
+		<!--<plugin name="cordova-plugin-splashscreen" />-->
 		
 
 	<!-- IOS 
