@@ -116,18 +116,19 @@
 		<access origin="debug.phonegap.com" /> <!-- see: http://community.phonegap.com/nitobi/topics/error_whitelist_rejection -->
 		
 	<!-- PG 3.0 Plugins-->
+		<preference name="android-build-tool" value="gradle" />
 	
 		<gap:plugin name="org.apache.cordova.device" version=" 0.3.0" />
 		<gap:plugin name="com.phonegap.plugin.statusbar" version="1.1.0" />
 		
-		<preference name="android-build-tool" value="gradle" />
 		
 		<plugin name="phonegap-plugin-push" source="npm">
 			<param name="SENDER_ID" value="245131791687" />
 		</plugin>
 
 		<gap:plugin name="io.github.pwlin.cordova.plugins.fileopener2" version="1.0.11" />
-		<gap:plugin name="nl.x-services.plugins.calendar" version="4.2.4" />
+		<plugin name="cordova-plugin-calendar" />
+		
 		<gap:plugin name="org.apache.cordova.file" version="1.3.3" />
 		<gap:plugin name="org.apache.cordova.file-transfer" version="0.5.0" />	
 		<gap:plugin name="org.apache.cordova.inappbrowser" version="0.6.0" />
