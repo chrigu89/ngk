@@ -131,9 +131,10 @@
 		<plugin name="cordova-plugin-inappbrowser" />
 		<plugin name="cordova-plugin-network-information" />
 		<plugin name="cordova-plugin-splashscreen" />
-		<plugin name="xenious-cordova-plugin-statusbar" />
+		
 
 	<!-- IOS 
+		<plugin name="xenious-cordova-plugin-statusbar" />
 		<preference name="StatusBarOverlaysWebView" value="true" />
 		<preference name="UIStatusBarHidden" value="true" />
 		<preference name="UIViewControllerBasedStatusBarAppearance" value="false" />
