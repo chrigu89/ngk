@@ -128,8 +128,8 @@
 		
 		
 
-		<gap:plugin name="io.github.pwlin.cordova.plugins.fileopener2" version="1.0.11" />
 		<plugin name="cordova-plugin-calendar" />
+		<plugin name="cordova-plugin-fileopener" />
 		<plugin name="cordova-plugin-file" />
 		<plugin name="cordova-plugin-file-transfer" />
 		<plugin name="cordova-plugin-inappbrowser" />
