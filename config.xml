@@ -27,32 +27,34 @@
 
 
 	<!-- SPLASH SCREENS -->
-		<gap:splash src="splash.png"/>
-
-		<!-- iPhone and iPod touch -->
-		<gap:splash gap:platform="ios" src="gfx/splash/ios/iphone-portrait.png" width="320" height="480" />
-		<gap:splash gap:platform="ios" src="gfx/splash/ios/iphone-portrait.png" width="640" height="960" />
-		<!-- iPad -->
-		<gap:splash gap:platform="ios" src="gfx/splash/ios/ipad-portrait.png" width="768" height="1024" />
-		<gap:splash gap:platform="ios" src="gfx/splash/ios/ipad-landscape.png" width="1024" height="768" />
-		<!-- iPhone 5 / iPod Touch (5th Generation) -->
-		<gap:splash gap:platform="ios" src="gfx/splash/ios/iphone-5-portrait.png" width="640" height="1136" />
-		<!-- Retina iPad -->
-		<gap:splash gap:platform="ios" src="gfx/splash/ios/ipad-portrait.png" width="1536" height="2048" />
-		<gap:splash gap:platform="ios" src="gfx/splash/ios/ipad-landscape.png" width="2048" height="1536" />
-
+		<platform name="ios">
+			<splash src="gfx/splash/ios/iphone-portrait.png" width="320" height="480" />
+			<splash src="gfx/splash/ios/iphone-portrait.png" width="640" height="960" />
+			<splash src="gfx/splash/ios/ipad-portrait.png" width="768" height="1024" />
+			<splash src="gfx/splash/ios/ipad-landscape.png" width="1024" height="768" />
+			<splash src="gfx/splash/ios/iphone-5-portrait.png" width="640" height="1136" />
+			<splash src="gfx/splash/ios/ipad-portrait.png" width="1536" height="2048" />
+			<splash src="gfx/splash/ios/ipad-landscape.png" width="2048" height="1536" />
+		</platform>
 
 		<!-- Android -->
-		<gap:splash gap:platform="android" src="gfx/splash/android/ldpi.9.png" gap:qualifier="ldpi" width="240" height="320"/>
-		<gap:splash gap:platform="android" src="gfx/splash/android/mdpi.9.png" gap:qualifier="mdpi" width="320" height="480"/>
-		<gap:splash gap:platform="android" src="gfx/splash/android/hdpi.9.png" gap:qualifier="hdpi" width="480" height="720"/>
-		<gap:splash gap:platform="android" src="gfx/splash/android/xhdpi.9.png" gap:qualifier="nodpi" width="640" height="960"/>
-		<gap:splash gap:platform="android" src="gfx/splash/android/xhdpi.9.png" gap:qualifier="xhdpi" width="640" height="960"/>
-		<gap:splash gap:platform="android" src="gfx/splash/android/xxhdpi.9.png" gap:qualifier="xxhdpi" width="960" height="1440"/>
+		<platform name="android">
+			<splash src="gfx/splash/android/ldpi.9.png" gap:qualifier="ldpi" width="240" height="320"/>
+			<splash src="gfx/splash/android/mdpi.9.png" gap:qualifier="mdpi" width="320" height="480"/>
+			<splash src="gfx/splash/android/hdpi.9.png" gap:qualifier="hdpi" width="480" height="720"/>
+			<splash src="gfx/splash/android/xhdpi.9.png" gap:qualifier="nodpi" width="640" height="960"/>
+			<splash src="gfx/splash/android/xhdpi.9.png" gap:qualifier="xhdpi" width="640" height="960"/>
+			<splash src="gfx/splash/android/xxhdpi.9.png" gap:qualifier="xxhdpi" width="960" height="1440"/>
+		</platform>
+		
+		<preference name="AutoHideSplashScreen" value="true" />
+		<preference name="SplashScreenDelay" value="1500" />
+		<preference name="SplashShowOnlyFirstTime" value="true" />
+		
 		<!-- 
-		<gap:splash gap:platform="android" src="fr-xhdpi.png" gap:qualifier="fr-xhdpi" />
-		<gap:splash gap:platform="android" src="portrait-xxhdpi.png" gap:qualifier="port-xxhdpi" />
-		<gap:splash gap:platform="android" src="landscape-xxhdpi.png" gap:qualifier="land-xxhdpi" /> 
+		<splash src="fr-xhdpi.png" gap:qualifier="fr-xhdpi" />
+		<splash src="portrait-xxhdpi.png" gap:qualifier="port-xxhdpi" />
+		<splash src="landscape-xxhdpi.png" gap:qualifier="land-xxhdpi" /> 
 		-->
 
 
@@ -71,17 +73,15 @@
 		<preference name="deployment-target" value="6.0" />
 
 
-		<preference name="show-splash-screen-spinner" value="false" />
-		<preference name="auto-hide-splash-screen" value="false" /> <!-- navigator.splashscreen.hide() should be called on device ready -->
 		<preference name="webviewbounce" value="false" /><!-- default:true -->
 		<!-- https://github.com/phonegap/build/issues/191 -->
 		<preference name="BackupWebStorage" value="none" /> <!-- default:cloud, none, local -->
 
 
 	<!-- ANDROID ONLY -->
-		<preference name="android-minSdkVersion" value="9" />	<!-- 2.1 and up -->
+		<preference name="android-minSdkVersion" value="13" />
 		<preference name="splash-screen-duration" value="99999"/>
-		 <preference name="AndroidPersistentFileLocation" value="Compatibility" /> <!--Compatibility / Internal -->
+		<preference name="AndroidPersistentFileLocation" value="Compatibility" /> <!--Compatibility / Internal -->
 		<preference name="InAppBrowserStorageEnabled" value="true"/>
 		<preference name="AndroidExtraFilesystems" value="files,files-external,documents,cache,cache-external,root" />
 
@@ -90,20 +90,20 @@
 	<!-- ICONS -->
 		<icon src="icon.png" gap:role="default" />
 
-		<icon gap:platform="ios" src="icons/ios/icon-57.png" width="57" height="57" />
-		<icon gap:platform="ios" src="icons/ios/icon-72.png" width="72" height="72" />
-		<icon gap:platform="ios" src="icons/ios/icon-76.png" width="76" height="76" />
-		<icon gap:platform="ios" src="icons/ios/icon-114.png" width="114" height="114" />
-		<icon gap:platform="ios" src="icons/ios/icon-144.png" width="144" height="144" />
-		<icon gap:platform="ios" src="icons/ios/icon-152.png" width="152" height="152" />
+		<icon src="icons/ios/icon-57.png" width="57" height="57" />
+		<icon src="icons/ios/icon-72.png" width="72" height="72" />
+		<icon src="icons/ios/icon-76.png" width="76" height="76" />
+		<icon src="icons/ios/icon-114.png" width="114" height="114" />
+		<icon src="icons/ios/icon-144.png" width="144" height="144" />
+		<icon src="icons/ios/icon-152.png" width="152" height="152" />
 
-		<icon gap:platform="android" src="icons/android/icon-36-ldpi.png" gap:qualifier="ldpi" width="36" height="36"/>
-		<icon gap:platform="android" src="icons/android/icon-48-mdpi.png" gap:qualifier="mdpi" width="48" height="48"/>
-		<icon gap:platform="android" src="icons/android/icon-72-hdpi.png" gap:qualifier="hdpi" width="72" height="72"/>
-		<icon gap:platform="android" src="icons/android/icon-96-xhdpi.png" gap:qualifier="nodpi" width="96" height="96"/>
-		<icon gap:platform="android" src="icons/android/icon-96-xhdpi.png" gap:qualifier="xhdpi" width="96" height="96"/>
-		<icon gap:platform="android" src="icons/android/icon-144-xxhdpi.png" gap:qualifier="xxhdpi" width="144" height="144"/>
-		<icon gap:platform="android" src="icons/android/icon-192-xxxhdpi.png" gap:qualifier="xxxhdpi" width="192" height="192"/>
+		<icon src="icons/android/icon-36-ldpi.png" gap:qualifier="ldpi" width="36" height="36"/>
+		<icon src="icons/android/icon-48-mdpi.png" gap:qualifier="mdpi" width="48" height="48"/>
+		<icon src="icons/android/icon-72-hdpi.png" gap:qualifier="hdpi" width="72" height="72"/>
+		<icon src="icons/android/icon-96-xhdpi.png" gap:qualifier="nodpi" width="96" height="96"/>
+		<icon src="icons/android/icon-96-xhdpi.png" gap:qualifier="xhdpi" width="96" height="96"/>
+		<icon src="icons/android/icon-144-xxhdpi.png" gap:qualifier="xxhdpi" width="144" height="144"/>
+		<icon src="icons/android/icon-192-xxxhdpi.png" gap:qualifier="xxxhdpi" width="192" height="192"/>
 
 		<icon gap:platform="winphone" src="icon.png" />
 
@@ -130,15 +130,14 @@
 		<plugin name="cordova-plugin-file-transfer" />
 		<plugin name="cordova-plugin-inappbrowser" />
 		<plugin name="cordova-plugin-network-information" />
-		<!--<plugin name="cordova-plugin-splashscreen" />-->
-		
-
-	<!-- IOS 
 		<plugin name="xenious-cordova-plugin-statusbar" />
+
+	<!-- IOS -->
+		
 		<preference name="StatusBarOverlaysWebView" value="true" />
 		<preference name="UIStatusBarHidden" value="true" />
 		<preference name="UIViewControllerBasedStatusBarAppearance" value="false" />
-	-->
+	
 
 
 	<!-- ANDROID -->	

@@ -24,7 +24,6 @@ var init = {
 		
 		
 		console.log('init.onDeviceReady ❤ running on DEVICE');
-		navigator.splashscreen.hide();
 		init.run();
 
 		document.addEventListener("online", onOnline, false);
