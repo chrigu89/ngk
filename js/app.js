@@ -96,6 +96,7 @@ function onFileSystemSuccess(fileSystem) {
 //  Hole Root Verzeichnis
 function onGetFileSuccess(fileEntry) {
 	var path = fileEntry.toURL().replace('index.html', ''); // URL der offenen Datei!
+	alert(path);
 	/*
 		Download starten
 	
