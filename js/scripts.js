@@ -5,7 +5,7 @@ function external(url) {
 function pdf(url) {
 	
 	if (navigator.userAgent.match(/(Android)/)) {
-		url = fileEntry.toURL().replace('index.html', '') ."". + url;
+		url = cordova.file.dataDirectory + "" + url;
 		alert(url);
 		open(url, alert('Success'), alert(code));
 		
