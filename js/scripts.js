@@ -5,8 +5,10 @@ function external(url) {
 function pdf(url) {
 	
 	if (navigator.userAgent.match(/(Android)/)) {
-		//url = cordova.file.dataDirectory + "" + url;
-       downloadFile(url);
+		if (navigator.userAgent.match(/(Android)/)) {
+		alert("Der Download wird gestartet - bitte einen Moment Geduld");
+		downloadFile(url);
+		downloadFile(url);
 		
 		
     } else {
@@ -33,6 +35,7 @@ function downloadFile(url){
 					sPath  + url,
 					function(theFile) {
 						showLink = theFile.toURI();
+						alert(showLink);
 						cordova.plugins.fileOpener2.open(
 							showLink,
 							'application/pdf', {
