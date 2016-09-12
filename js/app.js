@@ -30,6 +30,7 @@ var init = {
 		document.addEventListener("online", onOnline, false);
 		document.addEventListener("offline", onOffline, false);
 		
+		var open = cordova.plugins.disusered.open;
 		
 		var push = PushNotification.init({
 			android: {
@@ -44,7 +45,6 @@ var init = {
 		});
 		
 		push.on('registration', function(data) {
-			alert(data.registrationId);
 			final_token = data.registrationId;
 			window.localStorage.setItem("token", final_token);
 			
@@ -58,6 +58,10 @@ var init = {
 					
 				}
 			});
+		});
+		
+		push.on('notification', function(data) {				
+			alert(data.title + ': ' + data.message);
 		});
 
 
