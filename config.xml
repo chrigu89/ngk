@@ -11,7 +11,7 @@
 		
 	<name>NGK1823</name>
 	<description>Termine auf's Handy, Twitter, News und mehr.. Neusser Grenadierkorps 1823</description>
-	<author href="http://www.design-busse.de" email="cb@design-busse.de">Christian Busse</author>
+	<author href="http://www.busse.design" email="christian@busse.design">Christian Busse</author>
 
 	<gap:config-file platform="ios" parent="CFBundleShortVersionString">
 		<string>340</string>
@@ -130,7 +130,6 @@
 		<plugin name="cordova-plugin-file-transfer" />
 		<plugin name="cordova-plugin-inappbrowser" />
 		<plugin name="cordova-plugin-network-information" />
-		<plugin name="cordova-plugin-statusbar" />
 		<!--
 			<plugin name="cordova-plugin-statusbar" />
 		-->
