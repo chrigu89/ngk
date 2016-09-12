@@ -1,7 +1,44 @@
 termine_array = new Array();
 
 termine_array = [
+	
 		{
+			'datum'			: "13.09.2016 20:00",
+			'title'			: 'Chargiertenversammlung',
+			'teaser'		: "",
+			'location'		: "Marienhaus, Kapitelstraße 36",
+		},
+		{
+			'datum'			: "24.09.2016 18:00",
+			'title'			: 'NGK Oktoberfest',
+			'teaser'		: "",
+			'location'		: "TÜV Platz Neuss",
+		},
+		{
+			'datum'			: "23.10.2016 09:30",
+			'title'			: 'Herbstkorpsschießen',
+			'teaser'		: "",
+			'location'		: "S.S.V. Neuss 1962 e.V., Further Straße (Eingang hinter dem Parkhaus rechts)",
+		},
+		{
+			'datum'			: "11.11.2016 20:00",
+			'title'			: 'Jahreshauptversammlung NGK',
+			'teaser'		: "",
+			'location'		: "Marienhaus, Kapitelstraße 36",
+		},
+		{
+			'datum'			: "13.11.2016 11:30",
+			'title'			: 'Volkstrauertag',
+			'teaser'		: "",
+			'location'		: "Hauptfriedhof, Rheydter Straße",
+		},
+		{
+			'datum'			: "18.11.2016 20:00",
+			'title'			: 'Jahreshauptversammlung NBS',
+			'teaser'		: "Neusser Bürger-Schützen-Verein",
+			'location'		: "Sparkassen – Forum Haus II, Sparkasse Neuss Michaelstraße",
+		},
+{
 			'datum'			: "05.03.2017 09:30",
 			'title'			: 'Korpsschießen',
 			'teaser'		: "",

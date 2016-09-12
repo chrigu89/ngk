@@ -6,8 +6,8 @@ function pdf(url) {
 	
 	if (navigator.userAgent.match(/(Android)/)) {
 		url = cordova.file.dataDirectory + "" + url;
-		alert(url);
-		open(url, alert('Success'), alert(code));
+        var ref = window.open(url, '_blank', 'location=yes,enableViewPortScale=yes');
+		
 		
     } else {
         var ref = window.open(url, '_blank', 'location=yes,enableViewPortScale=yes');
@@ -15,7 +15,7 @@ function pdf(url) {
 }
 
 function image(url) {
-    var ref = window.open(url, '_self', 'location=no,enableViewPortScale=yes');
+    var ref = window.open(url, '_blank', 'location=no,enableViewPortScale=yes');
 }
 
 function downloadFile(url){

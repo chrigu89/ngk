@@ -30,7 +30,6 @@ var init = {
 		document.addEventListener("online", onOnline, false);
 		document.addEventListener("offline", onOffline, false);
 		
-		var open = cordova.plugins.disusered.open;
 		
 		var push = PushNotification.init({
 			android: {
@@ -96,7 +95,6 @@ function onFileSystemSuccess(fileSystem) {
 //  Hole Root Verzeichnis
 function onGetFileSuccess(fileEntry) {
 	var path = fileEntry.toURL().replace('index.html', ''); // URL der offenen Datei!
-	alert(path);
 	/*
 		Download starten
 	
