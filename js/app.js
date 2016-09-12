@@ -325,8 +325,9 @@ var onNews = function() {
 };
 
 var onTwitter = function() {
-		
-	alert('test');
+	
+	$( ".bg_grey" ).css( 'display', 'none' );
+		alert('test');
 	$.ajax({
 		type: 'GET',
 		dataType: "json",
