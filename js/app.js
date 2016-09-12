@@ -66,8 +66,7 @@ var init = {
 
 
 		window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, onFail);  // TEMPORARY oder PERSISTENT
-		alert(cordova.file.dataDirectory);
-		alert(cordova.file.documentsDirectory );
+		alert('dataDirectory:'+cordova.file.dataDirectory);
 
 	},
 	onDomReady: function() {
@@ -98,7 +97,6 @@ function onFileSystemSuccess(fileSystem) {
 //  Hole Root Verzeichnis
 function onGetFileSuccess(fileEntry) {
 	var path = fileEntry.toURL().replace('index.html', ''); // URL der offenen Datei!
-	alert(path);
 }
 function onResolveSuccess(fileEntry){
 	alert(fileEntry.name);	
