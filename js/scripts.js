@@ -5,11 +5,8 @@ function external(url) {
 function pdf(url) {
 	
 	if (navigator.userAgent.match(/(Android)/)) {
-		if (navigator.userAgent.match(/(Android)/)) {
 		alert("Der Download wird gestartet - bitte einen Moment Geduld");
 		downloadFile(url);
-		downloadFile(url);
-		
 		
     } else {
         var ref = window.open(url, '_blank', 'location=yes,enableViewPortScale=yes');
