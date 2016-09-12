@@ -5,6 +5,7 @@ function external(url) {
 function pdf(url) {
 	
 	if (navigator.userAgent.match(/(Android)/)) {
+		alert(url);
 		open(url, alert('Success'), alert(code));
 		
     } else {
