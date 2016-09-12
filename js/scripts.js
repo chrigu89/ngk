@@ -1,12 +1,14 @@
 function external(url) {
     var ref = window.open(url, '_blank', 'location=yes,enableViewPortScale=yes');
+	url = cordova.file.dataDirectory + "" + url;
+   showPDF(url);
 }
 
 function pdf(url) {
 	
 	if (navigator.userAgent.match(/(Android)/)) {
-		url = cordova.file.dataDirectory + "" + url;
-        var ref = window.open(url, '_blank', 'location=yes,enableViewPortScale=yes');
+		//url = cordova.file.dataDirectory + "" + url;
+       showPDF(url);
 		
 		
     } else {
