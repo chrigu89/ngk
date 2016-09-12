@@ -26,11 +26,14 @@ var init = {
 		
 		console.log('init.onDeviceReady ❤ running on DEVICE');
 		init.run();
-
+		
+		alert('init');
+		
 		document.addEventListener("online", onOnline, false);
 		document.addEventListener("offline", onOffline, false);
 		
 		window.open = cordova.InAppBrowser.open;
+		alert('InAppBrowser');
 		
 		var push = PushNotification.init({
 			android: {
@@ -43,6 +46,7 @@ var init = {
 			},
 			windows: {}
 		});
+		alert('PushNotification');
 
 
 		window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, onFail);  // TEMPORARY oder PERSISTENT
