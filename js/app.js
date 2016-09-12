@@ -243,6 +243,7 @@ function errorHandler (error) {
 
 var onSettings = function() {
 	var token = window.localStorage.getItem("token");
+	alert(token);
 	$.ajax({
 		type: 'GET',
 		dataType: "json",
@@ -328,7 +329,6 @@ var onNews = function() {
 
 var onTwitter = function() {
 	
-	$( ".bg_grey" ).css( 'display', 'none' );
 	$.ajax({
 		type: 'GET',
 		dataType: "json",

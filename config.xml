@@ -6,15 +6,15 @@
 		xmlns:gap = "http://phonegap.com/ns/1.0"
 		xmlns:android = "http://schemas.android.com/apk/res/android"
 		id        = "de.design-busse.neussergk"
-		versionCode = "340"
-		version   = "1.4">
+		versionCode = "341"
+		version   = "1.4.1">
 		
 	<name>NGK1823</name>
 	<description>Termine auf's Handy, Twitter, News und mehr.. Neusser Grenadierkorps 1823</description>
 	<author href="http://www.busse.design" email="christian@busse.design">Christian Busse</author>
 
 	<gap:config-file platform="ios" parent="CFBundleShortVersionString">
-		<string>340</string>
+		<string>341</string>
 	</gap:config-file>
 
 	<gap:platform name="ios" />
@@ -105,14 +105,12 @@
 		<icon src="icons/android/icon-144-xxhdpi.png" gap:qualifier="xxhdpi" width="144" height="144"/>
 		<icon src="icons/android/icon-192-xxxhdpi.png" gap:qualifier="xxxhdpi" width="192" height="192"/>
 
-		<icon gap:platform="winphone" src="icon.png" />
-
 
 	<!-- allow XHR access to external sites -->
 		<preference name="permissions" value="none"/>
 		
-		<access origin="*" />
-		<access origin=".*" />
+		<access origin="http://*" />
+		<access origin="https://*" />
 		<access origin="debug.phonegap.com" /> <!-- see: http://community.phonegap.com/nitobi/topics/error_whitelist_rejection -->
 		
 	<!-- PG Plugins-->
@@ -131,6 +129,8 @@
 		<plugin name="cordova-plugin-network-information" />
 		<plugin name="cordova-plugin-statusbar" />
 		<plugin name="cordova-plugin-device" />
+		<plugin name="cordova-plugin-whitelist" />
+		
 		<!--
 		-->
 
