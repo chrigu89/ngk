@@ -4,8 +4,9 @@ function external(url) {
 
 function pdf(url) {
     if (navigator.userAgent.match(/(Android)/)) {
-		alert("Der Download wird gestartet - bitte einen Moment Geduld");
-		downloadFile(url);
+        var ref = window.open(url, '_blank', 'location=yes,enableViewPortScale=yes');
+		//alert("Der Download wird gestartet - bitte einen Moment Geduld");
+		//downloadFile(url);
     } else {
         var ref = window.open(url, '_blank', 'location=yes,enableViewPortScale=yes');
     }
