@@ -32,7 +32,6 @@ function downloadFile(url){
 					sPath  + url,
 					function(theFile) {
 						showLink = theFile.toURI();
-						alert(showLink);
 						cordova.plugins.fileOpener2.open(
 							showLink,
 							'application/pdf', {
