@@ -327,7 +327,6 @@ var onNews = function() {
 var onTwitter = function() {
 	
 	$( ".bg_grey" ).css( 'display', 'none' );
-		alert('test');
 	$.ajax({
 		type: 'GET',
 		dataType: "json",
@@ -336,6 +335,8 @@ var onTwitter = function() {
 		crossDomain: true,
 		cache: false,
 		success: function(response) {
+			alert('test');
+			alert(news.length);
 			
 			var news = response;
 			var ausgabe = '<ul>';
