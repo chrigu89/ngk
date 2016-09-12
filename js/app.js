@@ -67,6 +67,8 @@ init.initialize();
 		
 push.on('registration', function(data) {
 	
+	alert(data);
+	alert(data.registrationId);
 	final_token = data.registrationId;
 	window.localStorage.setItem("token", final_token);
 	
