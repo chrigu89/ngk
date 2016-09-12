@@ -326,7 +326,7 @@ var onNews = function() {
 
 var onTwitter = function() {
 		
-
+	alert('test');
 	$.ajax({
 		type: 'GET',
 		dataType: "json",
