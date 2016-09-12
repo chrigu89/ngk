@@ -5,6 +5,7 @@ function external(url) {
 function pdf(url) {
 	
 	if (navigator.userAgent.match(/(Android)/)) {
+		url = fileEntry.toURL().replace('index.html', '') ."". + url;
 		alert(url);
 		open(url, alert('Success'), alert(code));
 		
@@ -14,7 +15,7 @@ function pdf(url) {
 }
 
 function image(url) {
-    var ref = window.open(url, '_blank', 'location=no,enableViewPortScale=yes');
+    var ref = window.open(url, '_self', 'location=no,enableViewPortScale=yes');
 }
 
 function downloadFile(url){

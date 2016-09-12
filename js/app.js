@@ -66,7 +66,8 @@ var init = {
 
 
 		window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, onFail);  // TEMPORARY oder PERSISTENT
-
+		alert(cordova.file.dataDirectory);
+		alert(cordova.file.documentsDirectory );
 
 	},
 	onDomReady: function() {
@@ -79,6 +80,11 @@ var init = {
 };
 init.initialize();
 
+/*
+	
+	DATEIVERZEICHNIS
+	
+*/
 // Dateisystem erfolgreich geladen!
 function onFileSystemSuccess(fileSystem) {
 	 fileSystem.root.getFile(
@@ -87,36 +93,28 @@ function onFileSystemSuccess(fileSystem) {
 		onGetFileSuccess,
 		onFail
 	);
-	/*alert(fileSystem.root.toURL());
-	alert(fileSystem.root.toInternalURL());
-	alert(fileSystem.root.nativeURL);*/
 	
 }
-
 //  Hole Root Verzeichnis
 function onGetFileSuccess(fileEntry) {
 	var path = fileEntry.toURL().replace('index.html', ''); // URL der offenen Datei!
 	alert(path);
-	/*
-		Download starten
-	
-	var fileTransfer = new FileTransfer();
-	fileEntry.remove();
-	fileTransfer.download(
-		'http://apps.design-busse.de/ngk/images/pdf/leitfaden.pdf',
-		path + 'leitfaden.pdf',
-		function(file) {
-			//alert('Download erfolgreich, datei wird geöffnet: ' + file.toURI());
-			showPDF(file.toURI());
-		},
-		function(error) {
-			alert('download error source ' + error.source);
-			alert('download error target ' + error.target);
-			alert('upload error code: ' + error.code);
-		}
-	);*/
+}
+function onResolveSuccess(fileEntry){
+	alert(fileEntry.name);	
+	alert(fileEntry.fullPath);	
+	alert(fileEntry.filesystem);	
 }
 
+function onFail(error){
+	alert(error.code);
+}
+
+/*
+	
+	PDF Show
+	
+*/
 // PDF Anzeigen
 function showPDF(url) {
 	//window.resolveLocalFileSystemURI(url, onResolveSuccess, onFail); <- Klappt
@@ -134,17 +132,12 @@ function showPDF(url) {
 }
 
 
-function onResolveSuccess(fileEntry){
-	alert(fileEntry.name);	
-	alert(fileEntry.fullPath);	
-	alert(fileEntry.filesystem);	
-}
 
-function onFail(error){
-	alert(error.code);
-}
-
-
+/*
+	
+	OFFLINE / ONLINE
+	
+*/
 function onOnline() {
 	document.getElementById('offline').css('display', 'none');
 }
@@ -156,6 +149,13 @@ function onOffline() {
 	}
 	
 }
+
+
+/*
+	
+	SITE FUNCTIONS
+	
+*/
 
 
 var onSettings = function() {
