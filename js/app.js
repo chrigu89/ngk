@@ -26,14 +26,10 @@ var init = {
 		
 		console.log('init.onDeviceReady ❤ running on DEVICE');
 		init.run();
-		
-		alert('init');
-		
+
 		document.addEventListener("online", onOnline, false);
 		document.addEventListener("offline", onOffline, false);
 		
-		window.open = cordova.InAppBrowser.open;
-		alert('InAppBrowser');
 		
 		var push = PushNotification.init({
 			android: {
@@ -46,7 +42,23 @@ var init = {
 			},
 			windows: {}
 		});
-		alert('PushNotification');
+		
+		push.on('registration', function(data) {
+			alert(data.registrationId);
+			final_token = data.registrationId;
+			window.localStorage.setItem("token", final_token);
+			
+			$.ajax({
+				type: 'GET',
+				url: 'http://apps.design-busse.de/ngk/ios/api.php?rquest=set_device',
+				data:  { os: 2, token: final_token },
+				crossDomain: true,
+				cache: false,
+				success: function(response) {
+					
+				}
+			});
+		});
 
 
 		window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, onFail);  // TEMPORARY oder PERSISTENT
@@ -62,31 +74,6 @@ var init = {
 	}
 };
 init.initialize();
-
-
-		
-push.on('registration', function(data) {
-	
-	alert(data);
-	alert(data.registrationId);
-	final_token = data.registrationId;
-	window.localStorage.setItem("token", final_token);
-	
-	$.ajax({
-		type: 'GET',
-		url: 'http://apps.design-busse.de/ngk/ios/api.php?rquest=set_device',
-		data:  { os: 2, token: final_token },
-		crossDomain: true,
-		cache: false,
-		success: function(response) {
-			
-		}
-	});
-});
-
-push.on('notification', function(data) {
-	alert(data.title + ': ' + data.message);
-});
 
 // Dateisystem erfolgreich geladen!
 function onFileSystemSuccess(fileSystem) {
@@ -165,7 +152,78 @@ function onOffline() {
 	
 }
 
+// handle APNS notifications for iOS
+function onNotificationAPN(e) {
+	if (e.alert) {
+		// $("#app-status-ul").append('<li>push-notification: ' + e.alert + '</li>');
+		 // showing an alert also requires the org.apache.cordova.dialogs plugin
+		 navigator.notification.alert(e.alert);
+	}
+		
+	if (e.sound) {
+		// playing a sound also requires the org.apache.cordova.media plugin
+		var snd = new Media(e.sound);
+		snd.play();
+	}
+	
+	if (e.badge) {
+		pushNotification.setApplicationIconBadgeNumber(successHandler, e.badge);
+	}
+}
 
+// handle GCM notifications for Android
+function onNotification(e) {
+	switch( e.event )
+	{
+		case 'registered':
+		if ( e.regid.length > 0 )
+		{
+			// Token für Android
+			final_token = e.regid;
+			window.localStorage.setItem("token", final_token);
+			
+			$.ajax({
+				type: 'GET',
+				url: 'http://apps.design-busse.de/ngk/ios/api.php?rquest=set_device',
+				data:  { os: 2, token: final_token },
+				crossDomain: true,
+				cache: false,
+				success: function(response) {
+					
+				}
+			});
+			
+	
+		}
+		break;
+		
+		case 'message':
+			if (e.foreground)
+			{
+				//$("#app-status-ul").append('<li>--INLINE NOTIFICATION--' + '</li>');
+				// var my_media = new Media("/android_asset/www/"+ soundfile);
+				// my_media.play();
+			} else {
+				if (e.coldstart) {
+					//$("#app-status-ul").append('<li>--COLDSTART NOTIFICATION--' + '</li>');
+				} else {
+					//$("#app-status-ul").append('<li>--BACKGROUND NOTIFICATION--' + '</li>');
+				}
+			}
+			
+			alert(e.payload.title + ': ' + e.payload.message);
+			
+		break;
+		
+		case 'error':
+			//$("#app-status-ul").append('<li>ERROR -> MSG:' + e.msg + '</li>');
+		break;
+		
+		default:
+			//$("#app-status-ul").append('<li>EVENT -> Unknown, an event was received and we do not know what it is</li>');
+		break;
+	}
+}
 
 function tokenHandler (result) {
 	// Token für iOS
