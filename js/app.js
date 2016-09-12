@@ -22,6 +22,7 @@ var init = {
 	},
 	onDeviceReady: function() {
 		
+		$.support.cors = true;
 		
 		console.log('init.onDeviceReady ❤ running on DEVICE');
 		init.run();
@@ -115,6 +116,7 @@ function showPDF(url) {
 		}
 	);
 }
+
 
 function onResolveSuccess(fileEntry){
 	alert(fileEntry.name);	
@@ -335,8 +337,6 @@ var onTwitter = function() {
 		crossDomain: true,
 		cache: false,
 		success: function(response) {
-			alert('test');
-			alert(news.length);
 			
 			var news = response;
 			var ausgabe = '<ul>';
