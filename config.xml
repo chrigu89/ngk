@@ -105,6 +105,7 @@
 		<icon src="icons/android/icon-144-xxhdpi.png" gap:qualifier="xxhdpi" width="144" height="144"/>
 		<icon src="icons/android/icon-192-xxxhdpi.png" gap:qualifier="xxxhdpi" width="192" height="192"/>
 
+		<hook type="before_build" src="../scripts/ios_before_build.sh" />
 
 	<!-- allow XHR access to external sites -->
 		<preference name="permissions" value="none"/>
@@ -137,6 +138,9 @@
 	<!-- IOS -->
 		
 		<preference name="StatusBarOverlaysWebView" value="false" />
+		<preference name="StatusBarBackgroundColor" value="#000000" />
+		<preference name="StatusBarStyle" value="lightcontent" />
+		
 		<preference name="UIStatusBarHidden" value="true" />
 		<preference name="UIViewControllerBasedStatusBarAppearance" value="false" />
 	
