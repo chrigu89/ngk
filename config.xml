@@ -136,7 +136,7 @@
 
 	<!-- IOS -->
 		
-		<preference name="StatusBarOverlaysWebView" value="true" />
+		<preference name="StatusBarOverlaysWebView" value="false" />
 		<preference name="UIStatusBarHidden" value="true" />
 		<preference name="UIViewControllerBasedStatusBarAppearance" value="false" />
 	
