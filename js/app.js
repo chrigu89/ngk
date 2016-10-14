@@ -46,11 +46,17 @@ var init = {
 		push.on('registration', function(data) {
 			final_token = data.registrationId;
 			window.localStorage.setItem("token", final_token);
-			
+			var os = 1;
+			if(final_token.length > 64) {
+				os = 1;
+				//Apple
+			} else {
+				os = 2;
+			}
 			$.ajax({
 				type: 'GET',
 				url: 'http://apps.design-busse.de/ngk/ios/api.php?rquest=set_device',
-				data:  { os: 2, token: final_token },
+				data:  { os: os, token: final_token },
 				crossDomain: true,
 				cache: false,
 				success: function(response) {
