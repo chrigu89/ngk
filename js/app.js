@@ -54,8 +54,7 @@ var init = {
 				os = 2;
 				//Android
 			}
-			alert(final_token);
-			alert(os);
+			
 			$.ajax({
 				type: 'GET',
 				url: 'http://apps.design-busse.de/ngk/ios/api.php?rquest=set_device',
