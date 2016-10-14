@@ -47,11 +47,12 @@ var init = {
 			final_token = data.registrationId;
 			window.localStorage.setItem("token", final_token);
 			var os = 1;
-			if(final_token.length > 64) {
+			if(final_token.length = 64) {
 				os = 1;
 				//Apple
 			} else {
 				os = 2;
+				//Android
 			}
 			$.ajax({
 				type: 'GET',
