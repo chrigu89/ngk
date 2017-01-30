@@ -162,10 +162,10 @@ termine_array = [
 			'location'		: "Hauptfriedhof, Rheydter Straße",
 		},
 		{
-			'datum'			: "03.09.2016 18:00",
-			'title'			: 'Jahreshauptversammlung',
-			'teaser'		: "Neusser Bürger-Schützen-Verein",
-			'location'		: "Sparkassen – Forum Haus II, Sparkasse Neuss Michaelstraße",
+			'datum'			: "02.02.2018 20:00",
+			'title'			: 'Jahreshauptversammlung NGK',
+			'teaser'		: "",
+			'location'		: "Marienhaus, Kapitelstraße 36",
 		},
 
 	];
