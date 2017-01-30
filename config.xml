@@ -6,15 +6,15 @@
 		xmlns:gap = "http://phonegap.com/ns/1.0"
 		xmlns:android = "http://schemas.android.com/apk/res/android"
 		id        = "de.design-busse.neussergk"
-		versionCode = "343"
-		version   = "1.4.3">
+		versionCode = "344"
+		version   = "1.4.4">
 		
 	<name>NGK1823</name>
 	<description>Termine auf's Handy, Twitter, News und mehr.. Neusser Grenadierkorps 1823</description>
 	<author href="http://www.busse.design" email="christian@busse.design">Christian Busse</author>
 
 	<gap:config-file platform="ios" parent="CFBundleShortVersionString">
-		<string>343</string>
+		<string>344</string>
 	</gap:config-file>
 
 	<gap:platform name="ios" />
@@ -133,7 +133,20 @@
 		<plugin name="cordova-plugin-whitelist" />
 		
 		<!--
+			Kalender Freigabe
 		-->
+		
+		<platform name="ios">
+			<config-file parent="NSCalendarsUsageDescription" platform="ios" target="*-Info.plist">
+				<string>Advertisement would like to create a calendar event.</string>
+			</config-file>
+			<config-file parent="NSPhotoLibraryUsageDescription" platform="ios" target="*-Info.plist">
+				<string>Advertisement would like to store a photo.</string>
+			</config-file>
+			<config-file parent="NSBluetoothPeripheralUsageDescription" platform="ios" target="*-Info.plist">
+				<string>Advertisement would like to use bluetooth.</string>
+			</config-file>
+		</platform>
 
 	<!-- IOS -->
 		
