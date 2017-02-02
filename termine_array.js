@@ -19,7 +19,7 @@ termine_array = [
 			'title'			: 'Herbstkorpsschießen',
 			'teaser'		: "",
 			'location'		: "S.S.V. Neuss 1962 e.V., Further Straße (Eingang hinter dem Parkhaus rechts)",
-		},
+		},o
 		{
 			'datum'			: "11.11.2016 20:00",
 			'title'			: 'Jahreshauptversammlung NGK',
@@ -142,12 +142,6 @@ termine_array = [
 			'title'			: 'Chargiertenversammlung',
 			'teaser'		: "",
 			'location'		: "Marienhaus, Kapitelstraße 36",
-		},
-		{
-			'datum'			: "23.09.2017 18:30",
-			'title'			: 'NGK-Oktoberfest',
-			'teaser'		: "",
-			'location'		: "Erdinger Festzelt - Kirmesplatz",
 		},
 		{
 			'datum'			: "15.10.2017 09:30",
