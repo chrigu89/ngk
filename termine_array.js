@@ -19,7 +19,7 @@ termine_array = [
 			'title'			: 'Herbstkorpsschießen',
 			'teaser'		: "",
 			'location'		: "S.S.V. Neuss 1962 e.V., Further Straße (Eingang hinter dem Parkhaus rechts)",
-		},o
+		},
 		{
 			'datum'			: "11.11.2016 20:00",
 			'title'			: 'Jahreshauptversammlung NGK',
