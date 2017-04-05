@@ -6,15 +6,15 @@
 		xmlns:gap = "http://phonegap.com/ns/1.0"
 		xmlns:android = "http://schemas.android.com/apk/res/android"
 		id        = "de.design-busse.neussergk"
-		versionCode = "346"
-		version   = "1.4.6">
+		versionCode = "350"
+		version   = "1.5.0">
 		
 	<name>NGK1823</name>
 	<description>Termine auf's Handy, Twitter, News und mehr.. Neusser Grenadierkorps 1823</description>
 	<author href="https://apfel.gold" email="christian.busse@apfel.gold">Christian Busse</author>
 
 	<gap:config-file platform="ios" parent="CFBundleShortVersionString">
-		<string>346</string>
+		<string>350</string>
 	</gap:config-file>
 
 	<gap:platform name="ios" />
@@ -59,7 +59,7 @@
 
 
 	<!-- GENERAL -->
-		<preference name="phonegap-version" value="cli-6.3.0" /> <!-- Alte Version 3.7.0 -->
+		<preference name="phonegap-version" value="cli-6.5.0" /> <!-- Alte Version 3.7.0 -->
 		<preference name="orientation" value="default" /><!-- landscape, portrait, default (both) -->
 		<preference name="fullscreen" value="true" /><!-- true, false, supported for iOS6 and Android -->
 

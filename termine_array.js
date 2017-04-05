@@ -150,7 +150,7 @@ termine_array = [
 			'location'		: "S.S.V. Neuss 1962 e.V., Further Straße",
 		},
 		{
-			'datum'			: "12.11.2017 11:30",
+			'datum'			: "19.11.2017 11:30",
 			'title'			: "Volkstrauertag",
 			'teaser'		: "",
 			'location'		: "Hauptfriedhof, Rheydter Straße",
