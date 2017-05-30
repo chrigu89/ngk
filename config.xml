@@ -6,7 +6,7 @@
 		xmlns:gap = "http://phonegap.com/ns/1.0"
 		xmlns:android = "http://schemas.android.com/apk/res/android"
 		id        = "de.design-busse.neussergk"
-		versionCode = "350"
+		versionCode = "352"
 		version   = "1.5.2">
 		
 	<name>NGK1823</name>
