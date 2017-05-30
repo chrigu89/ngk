@@ -1,4 +1,5 @@
 <!doctype html>
+<html lang="de">
 <head>
 	<title>Neuss Grenadierkorps von 1823</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -67,7 +68,6 @@
 	  }
 	</script>
 	
-	
 	<script src="cordova.js"></script>
 	<script type="text/javascript" src="PushNotification.js"></script>
 	
@@ -105,7 +105,6 @@
 							en Reih on Jlied, on Zog an Zog,<br>
 							dat send die Nüsser Jrenadeere! ...</p>
 						</td>
-					
 					</tr>
 				</table>
 				</div>
@@ -125,47 +124,47 @@
 				<div class="bg_grey mb-30">	
 	
 					<script type="text/javascript">
-					term_str='';
-					var heute_date = new Date();	
-					var j = 0;
-					for (var i = 0; i < termine_array.length; ++i){	
-					
-					tmp_array1 = new Array();
-					tmp_array2 = new Array();
-					tmp_array3 = new Array();
-					
-					tmp_array1 = termine_array[i]["datum"].split('.');
-					str_=tmp_array1.join(':');
-					tmp_array2=str_.split(':');
-					str_=tmp_array2.join(' ');
-					tmp_array3=str_.split(' ');
-					fr_startDate = new Date(tmp_array3[2],(tmp_array3[1]-1),tmp_array3[0],tmp_array3[3],tmp_array3[4],0,0,0);
-					
-					fr_DateDay = tmp_array3[0] + '.' + tmp_array3[1];
-					fr_DateHours = tmp_array3[3] + ':' +tmp_array3[4];
-					fr_DateYear = tmp_array3[2] ;
-		
-					if(fr_startDate>heute_date){													
-						term_str+='<div class="row border_b"><div class="col-xs-4 col-md-3 text-center">'
-							+'<div class="termin"><span class="day">'+fr_DateDay+'</span><span class="time">'+fr_DateHours+'</span></div>'
-							+'</div>'
-							+'<div class="col-xs-8 col-md-9"><strong>'+termine_array[i]["title"]+' '+fr_DateYear+'</strong><br>';
-							if(termine_array[i]["teaser"].length>=2){
-							
-								term_str+=termine_array[i]["teaser"]+'<br>';
+						term_str='';
+						var heute_date = new Date();	
+						var j = 0;
+						for (var i = 0; i < termine_array.length; ++i){	
+
+						tmp_array1 = new Array();
+						tmp_array2 = new Array();
+						tmp_array3 = new Array();
+
+						tmp_array1 = termine_array[i]["datum"].split('.');
+						str_=tmp_array1.join(':');
+						tmp_array2=str_.split(':');
+						str_=tmp_array2.join(' ');
+						tmp_array3=str_.split(' ');
+						fr_startDate = new Date(tmp_array3[2],(tmp_array3[1]-1),tmp_array3[0],tmp_array3[3],tmp_array3[4],0,0,0);
+
+						fr_DateDay = tmp_array3[0] + '.' + tmp_array3[1];
+						fr_DateHours = tmp_array3[3] + ':' +tmp_array3[4];
+						fr_DateYear = tmp_array3[2] ;
+
+						if(fr_startDate>heute_date){													
+							term_str+='<div class="row border_b"><div class="col-xs-4 col-md-3 text-center">'
+								+'<div class="termin"><span class="day">'+fr_DateDay+'</span><span class="time">'+fr_DateHours+'</span></div>'
+								+'</div>'
+								+'<div class="col-xs-8 col-md-9"><strong>'+termine_array[i]["title"]+' '+fr_DateYear+'</strong><br>';
+								if(termine_array[i]["teaser"].length>=2){
+
+									term_str+=termine_array[i]["teaser"]+'<br>';
+								}
+										if(termine_array[i]["location"].length>=2){
+
+									term_str+= 'Ort: '+termine_array[i]["location"];
+								}
+									term_str+='</div></div>';
+							j++;
+							if(j == 2) {
+								break;
 							}
-									if(termine_array[i]["location"].length>=2){
-							
-								term_str+= 'Ort: '+termine_array[i]["location"];
-							}
-								term_str+='</div></div>';
-						j++;
-						if(j == 2) {
-							break;
 						}
 					}
-				}
-				document.write(term_str);
+					document.write(term_str);
 					</script>
 				</div>
 				
@@ -185,11 +184,10 @@
 	<p>&nbsp;</p>
 </div>
 
-</div><!--content -->
 
 <div id="navigation"> 
 	<script type="text/javascript"> activ=0; </script> 
-	<script type="text/javascript"src="_menu.js"></script>
+	<script type="text/javascript" src="_menu.js"></script>
 
 </div>
 

@@ -7,14 +7,14 @@
 		xmlns:android = "http://schemas.android.com/apk/res/android"
 		id        = "de.design-busse.neussergk"
 		versionCode = "350"
-		version   = "1.5.1">
+		version   = "1.5.2">
 		
 	<name>NGK1823</name>
 	<description>Termine auf's Handy, Twitter, News und mehr.. Neusser Grenadierkorps 1823</description>
 	<author href="https://apfel.gold" email="christian.busse@apfel.gold">Christian Busse</author>
 
 	<gap:config-file platform="ios" parent="CFBundleShortVersionString">
-		<string>351</string>
+		<string>352</string>
 	</gap:config-file>
 
 	<gap:platform name="ios" />
