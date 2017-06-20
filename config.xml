@@ -26,26 +26,26 @@
 	-->
 
 
-	<!-- SPLASH SCREENS -->
-		<platform name="ios">
-			<splash src="gfx/splash/ios/iphone-portrait.png" width="320" height="480" />
-			<splash src="gfx/splash/ios/iphone-portrait.png" width="640" height="960" />
-			<splash src="gfx/splash/ios/ipad-portrait.png" width="768" height="1024" />
-			<splash src="gfx/splash/ios/ipad-landscape.png" width="1024" height="768" />
-			<splash src="gfx/splash/ios/iphone-5-portrait.png" width="640" height="1136" />
-			<splash src="gfx/splash/ios/ipad-portrait.png" width="1536" height="2048" />
-			<splash src="gfx/splash/ios/ipad-landscape.png" width="2048" height="1536" />
-		</platform>
+		<!-- SPLASH SCREENS -->
+		<splash platform="ios" src="gfx/splash/ios/iphone-portrait.png" width="320" height="480" />
+		<splash platform="ios" src="gfx/splash/ios/iphone-portrait.png" width="640" height="960" />
+		<splash platform="ios" src="gfx/splash/ios/ipad-portrait.png" width="768" height="1024" />
+		<splash platform="ios" src="gfx/splash/ios/ipad-landscape.png" width="1024" height="768" />
+		<splash platform="ios" src="gfx/splash/ios/iphone-5-portrait.png" width="640" height="1136" />
+		<splash platform="ios" src="gfx/splash/ios/ipad-portrait.png" width="1536" height="2048" />
+		<splash platform="ios" src="gfx/splash/ios/ipad-landscape.png" width="2048" height="1536" />
 
 		<!-- Android -->
-		<platform name="android">
-			<splash src="gfx/splash/android/ldpi.9.png" gap:qualifier="ldpi" width="240" height="320"/>
-			<splash src="gfx/splash/android/mdpi.9.png" gap:qualifier="mdpi" width="320" height="480"/>
-			<splash src="gfx/splash/android/hdpi.9.png" gap:qualifier="hdpi" width="480" height="720"/>
-			<splash src="gfx/splash/android/xhdpi.9.png" gap:qualifier="nodpi" width="640" height="960"/>
-			<splash src="gfx/splash/android/xhdpi.9.png" gap:qualifier="xhdpi" width="640" height="960"/>
-			<splash src="gfx/splash/android/xxhdpi.9.png" gap:qualifier="xxhdpi" width="960" height="1440"/>
-		</platform>
+		<splash platform="android" src="gfx/splash/android/ldpi.9.png" gap:qualifier="ldpi" width="240" height="320"/>
+		<splash platform="android" src="gfx/splash/android/mdpi.9.png" gap:qualifier="mdpi" width="320" height="480"/>
+		<splash platform="android" src="gfx/splash/android/hdpi.9.png" gap:qualifier="hdpi" width="480" height="720"/>
+		<splash platform="android" src="gfx/splash/android/xhdpi.9.png" gap:qualifier="nodpi" width="640" height="960"/>
+		<splash platform="android" src="gfx/splash/android/xhdpi.9.png" gap:qualifier="xhdpi" width="640" height="960"/>
+		<splash platform="android" src="gfx/splash/android/xxhdpi.9.png" gap:qualifier="xxhdpi" width="960" height="1440"/>
+		<splash platform="android" src="gfx/splash/android/xxhdpi.9.png" gap:qualifier="fr-xhdpi" width="960" height="1440"/>
+		
+		
+		<splash src="gfx/splash/ios/ipad-landscape.png" />
 		
 		<preference name="AutoHideSplashScreen" value="true" />
 		<preference name="SplashScreenDelay" value="1500" />
