@@ -6,15 +6,15 @@
 		xmlns:gap = "http://phonegap.com/ns/1.0"
 		xmlns:android = "http://schemas.android.com/apk/res/android"
 		id        = "de.design-busse.neussergk"
-		versionCode = "352"
-		version   = "1.5.2">
+		versionCode = "354"
+		version   = "1.5.4">
 		
 	<name>NGK1823</name>
 	<description>Termine auf's Handy, Twitter, News und mehr.. Neusser Grenadierkorps 1823</description>
 	<author href="https://apfel.gold" email="christian.busse@apfel.gold">Christian Busse</author>
 
 	<gap:config-file platform="ios" parent="CFBundleShortVersionString">
-		<string>352</string>
+		<string>354</string>
 	</gap:config-file>
 
 	<gap:platform name="ios" />
@@ -34,6 +34,9 @@
 		<splash platform="ios" src="gfx/splash/ios/iphone-5-portrait.png" width="640" height="1136" />
 		<splash platform="ios" src="gfx/splash/ios/ipad-portrait.png" width="1536" height="2048" />
 		<splash platform="ios" src="gfx/splash/ios/ipad-landscape.png" width="2048" height="1536" />
+		<splash platform="ios" src="gfx/splash/ios/iphone6-landscape.png" width="2208" height="1242" />
+		<splash platform="ios" src="gfx/splash/ios/iphone6-portrait.png" width="1242" height="2208" />
+		<splash platform="ios" src="gfx/splash/ios/iphone6.png" width="750" height="1334" />
 
 		<!-- Android -->
 		<splash platform="android" src="gfx/splash/android/ldpi.9.png" gap:qualifier="ldpi" width="240" height="320"/>
@@ -98,6 +101,8 @@
 			<icon src="icons/ios/icon-114.png" width="114" height="114" />
 			<icon src="icons/ios/icon-144.png" width="144" height="144" />
 			<icon src="icons/ios/icon-152.png" width="152" height="152" />
+			<icon src="icons/ios/icon-167.png" width="167" height="167" />
+			<icon src="icons/ios/icon-180.png" width="180" height="180" />
 		</platform>
 		
 		<platform name="android">
