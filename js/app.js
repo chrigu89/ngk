@@ -20,12 +20,16 @@ var init = {
 			init.onDomReady();
 		}
 	},
+	
 	onDeviceReady: function() {
 		
 		$.support.cors = true;
 		
 		console.log('init.onDeviceReady ❤ running on DEVICE');
-		
+		init.run();
+
+		document.addEventListener("online", onOnline, false);
+		document.addEventListener("offline", onOffline, false);
 		
 		
 		var push = PushNotification.init({
@@ -40,10 +44,10 @@ var init = {
 			windows: {}
 		});
 		
-		push.on('registration', function(data) {	
-			final_token = data.registrationId;	
-			alert(final_token);
+		push.on('registration', function(data) {
+			final_token = data.registrationId;
 			window.localStorage.setItem("token", final_token);
+			alert(final_token);
 			var os = 1;
 			if(final_token.length == 64) {
 				os = 1;
@@ -69,10 +73,6 @@ var init = {
 			alert(data.title + ': ' + data.message);
 		});
 
-		
-		init.run();
-
-		
 
 		window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, onFail);  // TEMPORARY oder PERSISTENT
 
