@@ -126,7 +126,7 @@
 	<!-- PG Plugins-->
 		<preference name="android-build-tool" value="gradle" />
 		
-		<plugin name="phonegap-plugin-push" source="npm">
+		<plugin name="phonegap-plugin-push" source="npm" version="1.9.4">
 			<param name="SENDER_ID" value="245131791687" />
 		</plugin>
 
