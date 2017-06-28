@@ -63,12 +63,6 @@ termine_array = [
 			'location'		: "Heilige Messe – St. Marien",
 		},
 		{
-			'datum'			: "09.07.2017 09:30",
-			'title'			: 'Fußball-Turnier & Familienfest – Ludwig-Wolker-Sportanlage',
-			'teaser'		: "",
-			'location'		: "Ludwig-Wolker-Sportanlage",
-		},
-		{
 			'datum'			: "15.07.2017 19:00",
 			'title'			: 'Bürgerversammlung',
 			'teaser'		: "",
