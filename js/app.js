@@ -43,10 +43,10 @@ var init = {
 			windows: {}
 		});
 		
-		push.on('registration', function(data) {
-			final_token = data.registrationId;
-			window.localStorage.setItem("token", final_token);
+		push.on('registration', function(data) {	
+			final_token = data.registrationId;	
 			alert(final_token);
+			window.localStorage.setItem("token", final_token);
 			var os = 1;
 			if(final_token.length == 64) {
 				os = 1;
