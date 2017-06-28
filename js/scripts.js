@@ -80,7 +80,7 @@ function kalender(dat) {
         return false;
     };
     var error = function(message) {
-        alert("Sorry, es ist ein Fehler aufgetreten. Bitte wenden Sie sich an Christian Busse <cb@design-busse.de>");
+        alert("Sorry, es ist ein Fehler aufgetreten. Bitte wenden Sie sich an Christian Busse <christian.busse@apfel.gold>");
         return false;
     };
     window.plugins.calendar.createEvent(title, location, notes, startDate, endDate, success, error);
