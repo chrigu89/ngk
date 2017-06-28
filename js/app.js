@@ -24,6 +24,7 @@ var init = {
 		
 		$.support.cors = true;
 		
+			alert('test');
 		console.log('init.onDeviceReady ❤ running on DEVICE');
 		init.run();
 
