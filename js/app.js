@@ -25,10 +25,7 @@ var init = {
 		$.support.cors = true;
 		
 		console.log('init.onDeviceReady ❤ running on DEVICE');
-		init.run();
-
-		document.addEventListener("online", onOnline, false);
-		document.addEventListener("offline", onOffline, false);
+		
 		
 		
 		var push = PushNotification.init({
@@ -72,6 +69,10 @@ var init = {
 			alert(data.title + ': ' + data.message);
 		});
 
+		
+		init.run();
+
+		
 
 		window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, onFail);  // TEMPORARY oder PERSISTENT
 

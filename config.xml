@@ -131,10 +131,6 @@
 		</plugin>
 
 
-		<plugin name="cordova-plugin-calendar" />
-		<plugin name="cordova-plugin-file" />
-		<plugin name="cordova-plugin-file-transfer" />
-		<plugin name="cordova-plugin-file-opener2" />
 		
 		<!--
 			Kalender Freigabe
