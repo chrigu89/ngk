@@ -31,6 +31,7 @@ var init = {
 		document.addEventListener("online", onOnline, false);
 		document.addEventListener("offline", onOffline, false);
 		
+			alert('test2');
 		
 		var push = PushNotification.init({
 			android: {
