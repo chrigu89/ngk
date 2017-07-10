@@ -6,15 +6,15 @@
 		xmlns:gap = "http://phonegap.com/ns/1.0"
 		xmlns:android = "http://schemas.android.com/apk/res/android"
 		id        = "de.design-busse.neussergk"
-		versionCode = "360"
-		version   = "1.5.9">
+		versionCode = "361"
+		version   = "1.6.1">
 		
 	<name>NGK1823</name>
 	<description>Termine auf's Handy, Twitter, News und mehr.. Neusser Grenadierkorps 1823</description>
 	<author href="https://apfel.gold" email="christian.busse@apfel.gold">Christian Busse</author>
 
 	<gap:config-file platform="ios" parent="CFBundleShortVersionString">
-		<string>360</string>
+		<string>361</string>
 	</gap:config-file>
 
 	<gap:platform name="ios" />
@@ -128,13 +128,13 @@
 		
 	
 		<platform name="android">
-			<icon src="icons/android/icon-36-ldpi.png" gap:qualifier="ldpi" width="36" height="36"/>
-			<icon src="icons/android/icon-48-mdpi.png" gap:qualifier="mdpi" width="48" height="48"/>
-			<icon src="icons/android/icon-72-hdpi.png" gap:qualifier="hdpi" width="72" height="72"/>
-			<icon src="icons/android/icon-96-xhdpi.png" gap:qualifier="nodpi" width="96" height="96"/>
-			<icon src="icons/android/icon-96-xhdpi.png" gap:qualifier="xhdpi" width="96" height="96"/>
-			<icon src="icons/android/icon-144-xxhdpi.png" gap:qualifier="xxhdpi" width="144" height="144"/>
-			<icon src="icons/android/icon-192-xxxhdpi.png" gap:qualifier="xxxhdpi" width="192" height="192"/>
+			<icon src="gfx/icons/android/icon-36-ldpi.png" gap:qualifier="ldpi" width="36" height="36"/>
+			<icon src="gfx/icons/android/icon-48-mdpi.png" gap:qualifier="mdpi" width="48" height="48"/>
+			<icon src="gfx/icons/android/icon-72-hdpi.png" gap:qualifier="hdpi" width="72" height="72"/>
+			<icon src="gfx/icons/android/icon-96-xhdpi.png" gap:qualifier="nodpi" width="96" height="96"/>
+			<icon src="gfx/icons/android/icon-96-xhdpi.png" gap:qualifier="xhdpi" width="96" height="96"/>
+			<icon src="gfx/icons/android/icon-144-xxhdpi.png" gap:qualifier="xxhdpi" width="144" height="144"/>
+			<icon src="gfx/icons/android/icon-192-xxxhdpi.png" gap:qualifier="xxxhdpi" width="192" height="192"/>
 		</platform>
 
 

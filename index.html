@@ -72,7 +72,7 @@
 	<script type="text/javascript" src="PushNotification.js"></script>
 	
 </head>
-<body onload="countdown(); onTwitter();">
+<body onload="countdown(); onTwitter(); onNews();">
 
 <div id="offline">
 	Sie sind zurzeit offline!
@@ -155,7 +155,7 @@
 								}
 										if(termine_array[i]["location"].length>=2){
 
-									term_str+= 'Ort: '+termine_array[i]["location"];
+									term_str+= '<i class="fa fa-map-marker"></i> '+termine_array[i]["location"];
 								}
 									term_str+='</div></div>';
 							j++;
@@ -166,6 +166,9 @@
 					}
 					document.write(term_str);
 					</script>
+					<div style="clear: both;">
+						<a href="termine.html" class=""><i class="fa fa-calendar"></i> alle Termine</a>
+					</div>
 				</div>
 				
 				
@@ -176,6 +179,15 @@
 						<p style="text-align: center;"><img src="images/ajax-loader_dark.gif"></p>
 					</div>
 				</div>
+				
+				<h2 class="headline">Neuigkeiten der Webseite</h2>
+				<div class="bg_grey mb-30">	
+					<a rel="http://neusser-grenadierkorps.de" class="onclick_external">www.neusser-grenadierkorps.de</a>
+					<div id="news">
+						<p style="text-align: center;"><img src="images/ajax-loader_dark.gif"></p>
+					</div>
+				</div>
+				
 			</div>
 		</div>
 	</div>
