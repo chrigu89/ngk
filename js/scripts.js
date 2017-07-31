@@ -174,7 +174,7 @@ var onReady = function() {
 	function allEvents(dat) {
 
 		var success = function(message) {
-			alert("success");
+			alertObject(message);
 
 		};
 		
