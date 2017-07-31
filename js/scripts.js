@@ -150,7 +150,7 @@ var onReady = function() {
 
 	}
 	
-	/*
+	
 
 	var calenderId = 1;
 	var calenderName  ="";
@@ -169,7 +169,7 @@ var onReady = function() {
 
 	window.plugins.calendar.listCalendars(successLoad,errorLoad);
 
-	*/
+	
 
 	function allEvents(dat) {
 
@@ -183,7 +183,6 @@ var onReady = function() {
 			var heute_date = new Date();	
 
 			alert('vor for');
-			alert(termine_array.length);
 			for (var i = 0; i < termine_array.length; ++i){
 				var title = termine_array[i]["title"];
 				var location = termine_array[i]["location"];
@@ -199,8 +198,7 @@ var onReady = function() {
 				str_=tmp_array2.join(' ');
 				tmp_array3=str_.split(' ');
 
-				alert('vor calenderId');
-				alert(calenderId);
+				alert(calenderName);
 				//calOptions.calendarId = calenderId;
 				calOptions.calendarId = 6;
 
