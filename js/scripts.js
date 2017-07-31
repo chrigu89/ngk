@@ -179,9 +179,10 @@ var onReady = function() {
 		if(doAction == false) {
 			
 		} else {
-			var heute_date = new Date();	
 
 			for (var i = 0; i < termine_array.length; ++i){
+				var heute_date = new Date();	
+				
 				var title = termine_array[i]["title"];
 				var location = termine_array[i]["location"];
 				var notes = termine_array[i]["teaser"];
@@ -198,12 +199,15 @@ var onReady = function() {
 
 				//calOptions.calendarId = calenderId;
 				//calOptions.calendarId = 6;
-				alert(title);
+				alert('startDate');
+				alert(startDate);
+				alert(heute_date);
+				alert('heute_date');
 
 				var startDate = new Date(tmp_array3[2], (tmp_array3[1] - 1), tmp_array3[0], tmp_array3[3], tmp_array3[4], 0, 0, 0);
 				var endDate = new Date(tmp_array3[2], (tmp_array3[1] - 1), tmp_array3[0], tmp_array3[3], (tmp_array3[4] + 1), 0, 0, 0);
 
-				if(startDate > heute_date){		
+				if(startDate < heute_date){		
 					window.plugins.calendar.deleteEvent(title, location, notes, startDate, endDate, success, error);
 					window.plugins.calendar.createEvent(title, location, notes, startDate, endDate, success, error);
 				}

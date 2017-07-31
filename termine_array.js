@@ -11,7 +11,7 @@ termine_array = [
 		{
 			'datum'			: "29.07.2017 19:00",
 			'title'			: 'Majorsehrenabend',
-			'teaser'		: "",
+			'teaser'		: "Große Korpsversammlung Jubilarehrung, anschl. Heimgeleit des Majors und Biwak am Grenadier-Schützen-Denkmal",
 			'location'		: "Stadthalle Neuss",
 		},
 		{
