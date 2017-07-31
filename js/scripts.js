@@ -92,19 +92,22 @@ function kalender(dat) {
 
 function allEvents(dat) {
 	
-	  var calOptions = window.plugins.calendar.getCalendarOptions(); // grab the defaults 
-	  calOptions.firstReminderMinutes = 120; // default is 60, pass in null for no reminder (alarm) 
-	  calOptions.secondReminderMinutes = 5;
-	alert(calOptions.calendarName);
 	
 	var success = function(message) {
+		alert(message.calendarId);
+		alert(message.calendarName );
     };
     var error = function(message) {
         alert("Sorry, es ist ein Fehler aufgetreten. Bitte wenden Sie sich an Christian Busse <christian.busse@apfel.gold>");
         return false;
     };
-	confirm("Möchtest du alle Termine in deinen Kalender eintragen? Um Dublikate zu vermeiden werden alle NGK-Termine vorab gelöscht.");
-	var heute_date = new Date();	
+	
+	window.plugins.calendar.listCalendars(success,error);
+	
+	doAction = confirm("Möchtest du alle Termine in deinen Kalender eintragen? Um Dublikate zu vermeiden werden alle NGK-Termine vorab gelöscht.");
+	
+	if(doAction == true) {
+		var heute_date = new Date();	
 	
 		for (var i = 0; i < termine_array.length; ++i){	
 
@@ -130,8 +133,9 @@ function allEvents(dat) {
 
 
 		}
-	alert("Alle Termine wurden erfolgreich eingetragen.");
-	
+		alert("Alle Termine wurden erfolgreich eingetragen.");
+	} else {
+	}
 	return false;
     
 
