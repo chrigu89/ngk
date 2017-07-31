@@ -91,9 +91,13 @@ function kalender(dat) {
 
 
 function allEvents(dat) {
+	
+	  var calOptions = window.plugins.calendar.getCalendarOptions(); // grab the defaults 
+	  calOptions.firstReminderMinutes = 120; // default is 60, pass in null for no reminder (alarm) 
+	  calOptions.secondReminderMinutes = 5;
+	alert(calendarName.calendarName);
+	
 	var success = function(message) {
-        alert("Der Termin wurde erfolgrich eingetragen");
-        return false;
     };
     var error = function(message) {
         alert("Sorry, es ist ein Fehler aufgetreten. Bitte wenden Sie sich an Christian Busse <christian.busse@apfel.gold>");
@@ -121,14 +125,13 @@ function allEvents(dat) {
 			var startDate = new Date(tmp_array3[2], (tmp_array3[1] - 1), tmp_array3[0], tmp_array3[3], tmp_array3[4], 0, 0, 0);
 			var endDate = new Date(tmp_array3[2], (tmp_array3[1] - 1), tmp_array3[0], tmp_array3[3], (tmp_array3[4] + 1), 0, 0, 0);
 
-			alert('endDate');
 			window.plugins.calendar.deleteEvent(title, location, notes, startDate, endDate, success, error);
-			alert('alterDelete');
 			window.plugins.calendar.createEvent(title, location, notes, startDate, endDate, success, error);
 
 
 		}
-
+	alert("Alle Termine wurden erfolgreich eingetragen.");
+	
 	return false;
     
 
