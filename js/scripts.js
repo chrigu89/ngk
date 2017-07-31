@@ -93,28 +93,28 @@ function kalender(dat) {
 function alertObject(obj){      
 	for(var key in obj) {
 	alert('key: ' + key + '\n' + 'value: ' + obj[key]);
-	if( typeof obj[key] === 'object' ) {
-		alertObject(obj[key]);
-	}
+		if( typeof obj[key] === 'object' ) {
+			alertObject(obj[key]);
+		}
 	}
 }
 
+
+var calenderId = 1;
+
+var success = function(message) {
+	alertObject(message);
+	calenderId = message[0].id;
+};
+var error = function(message) {
+	alert("Sorry, es ist ein Fehler aufgetreten. Bitte wenden Sie sich an Christian Busse <christian.busse@apfel.gold>");
+	return false;
+};
+
+window.plugins.calendar.listCalendars(success,error);
+	
+
 function allEvents(dat) {
-	
-	
-		
-	var success = function(message) {
-		alert(message.toSource());
-		alert(message[0].id);
-		alertObject(message);
-		var calenderId = message[0].id;
-    };
-    var error = function(message) {
-        alert("Sorry, es ist ein Fehler aufgetreten. Bitte wenden Sie sich an Christian Busse <christian.busse@apfel.gold>");
-        return false;
-    };
-	
-	window.plugins.calendar.listCalendars(success,error);
 	
 	
     var error = function(message) {
