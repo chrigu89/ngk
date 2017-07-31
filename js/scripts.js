@@ -95,7 +95,7 @@ function allEvents(dat) {
 	  var calOptions = window.plugins.calendar.getCalendarOptions(); // grab the defaults 
 	  calOptions.firstReminderMinutes = 120; // default is 60, pass in null for no reminder (alarm) 
 	  calOptions.secondReminderMinutes = 5;
-	alert(calendarName.calendarName);
+	alert(calOptions.calendarName);
 	
 	var success = function(message) {
     };
