@@ -211,12 +211,13 @@ var onReady = function() {
 				var startDate = new Date(tmp_array3[2], (tmp_array3[1] - 1), tmp_array3[0], tmp_array3[3], tmp_array3[4], 0, 0, 0);
 				var endDate = new Date(tmp_array3[2], (tmp_array3[1] - 1), tmp_array3[0], tmp_array3[3], (tmp_array3[4] + 1), 0, 0, 0);
 
-				alert('startDate' + ' < ' +heute_date);
+				alert(startDate + ' < ' +heute_date);
 				
 				if(startDate < heute_date){		
 					alert('deleteEvent');
 					window.plugins.calendar.deleteEvent(title, location, notes, startDate, endDate, success, error);
-					alert('startDate');
+					alert(title);
+					alert(calenderName);
 					window.plugins.calendar.createEvent(title, location, notes, startDate, endDate, success, error);
 				}
 
