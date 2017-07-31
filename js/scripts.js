@@ -159,7 +159,6 @@ var onReady = function() {
 
 		var calender = message[0];
 		calenderId = calender["id"];
-		alert(calenderId);
 		calenderName = calender["name"];
 
 	};
@@ -177,7 +176,9 @@ var onReady = function() {
 
 		var doAction = confirm("Möchtest du alle Termine in deinen Kalender eintragen? Um Dublikate zu vermeiden werden alle NGK-Termine vor dem Eintragen gelöscht.");
 
-		if(doAction == true) {
+		if(doAction == false) {
+			alert('false');
+		} else {
 			var heute_date = new Date();	
 
 			for (var i = 0; i < termine_array.length; ++i){	
@@ -210,10 +211,12 @@ var onReady = function() {
 
 
 			}
+			
 			alert('Alle Termine wurden erfolgreich im Kalender "'+calenderName+'" eingetragen.');
-		} else {
+			
 
 		}
+		
 		return false;
 
 
