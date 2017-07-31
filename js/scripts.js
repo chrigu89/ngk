@@ -94,23 +94,20 @@ function allEvents(dat) {
 	
 	
 	var success = function(message) {
-		alert(message.calendarId);
-		alert(message.calendarName );
     };
+	
     var error = function(message) {
         alert("Sorry, es ist ein Fehler aufgetreten. Bitte wenden Sie sich an Christian Busse <christian.busse@apfel.gold>");
         return false;
     };
 	
-	window.plugins.calendar.listCalendars(success,error);
 	
 	doAction = confirm("Möchtest du alle Termine in deinen Kalender eintragen? Um Dublikate zu vermeiden werden alle NGK-Termine vorab gelöscht.");
 	
-	if(doAction == true) {
+	if(doAction === true) {
 		var heute_date = new Date();	
 	
 		for (var i = 0; i < termine_array.length; ++i){	
-
 			var title = termine_array[i]["title"];
 			var location = termine_array[i]["location"];
 			var notes = termine_array[i]["teaser"];
@@ -125,16 +122,22 @@ function allEvents(dat) {
 			str_=tmp_array2.join(' ');
 			tmp_array3=str_.split(' ');
 
+			
+			calOptions.calendarId = 1;
+			
 			var startDate = new Date(tmp_array3[2], (tmp_array3[1] - 1), tmp_array3[0], tmp_array3[3], tmp_array3[4], 0, 0, 0);
 			var endDate = new Date(tmp_array3[2], (tmp_array3[1] - 1), tmp_array3[0], tmp_array3[3], (tmp_array3[4] + 1), 0, 0, 0);
 
-			window.plugins.calendar.deleteEvent(title, location, notes, startDate, endDate, success, error);
-			window.plugins.calendar.createEvent(title, location, notes, startDate, endDate, success, error);
+			if(fr_startDate>heute_date){		
+				window.plugins.calendar.deleteEvent(title, location, notes, startDate, endDate, success, error);
+				window.plugins.calendar.createEventWithOptions(title, location, notes, startDate, endDate, calOptions, success, error);
+			}
 
 
 		}
 		alert("Alle Termine wurden erfolgreich eingetragen.");
 	} else {
+		
 	}
 	return false;
     
