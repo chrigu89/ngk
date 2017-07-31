@@ -93,7 +93,7 @@ function kalender(dat) {
 function allEvents(dat) {
 	
 	var heute_date = new Date();	
-kalende
+
 		for (var i = 0; i < termine_array.length; ++i){	
 
 			tmp_array1 = new Array();
