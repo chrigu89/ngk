@@ -240,7 +240,7 @@ var onReady = function() {
             if (!bewegung) {
                 if (this.className.indexOf("kalender") >= 0) {
                     kalender(this.rel);
-                } else if (this.className.indexOf("kalender_all") >= 0) {
+                } else if (this.className.indexOf("allEvents") >= 0) {
                     allEvents();
                 }
                 if (this.id == 'alert_btn') {
