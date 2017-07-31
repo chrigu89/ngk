@@ -199,14 +199,15 @@ var onReady = function() {
 
 				//calOptions.calendarId = calenderId;
 				//calOptions.calendarId = 6;
-				alert('startDate');
-				alert(startDate);
-				alert(heute_date);
-				alert('heute_date');
 
 				var startDate = new Date(tmp_array3[2], (tmp_array3[1] - 1), tmp_array3[0], tmp_array3[3], tmp_array3[4], 0, 0, 0);
 				var endDate = new Date(tmp_array3[2], (tmp_array3[1] - 1), tmp_array3[0], tmp_array3[3], (tmp_array3[4] + 1), 0, 0, 0);
 
+				alert('startDate');
+				alert(startDate);
+				alert(heute_date);
+				alert('heute_date');
+				
 				if(startDate < heute_date){		
 					window.plugins.calendar.deleteEvent(title, location, notes, startDate, endDate, success, error);
 					window.plugins.calendar.createEvent(title, location, notes, startDate, endDate, success, error);
