@@ -74,10 +74,10 @@ var init = {
 
 
 		
-
 		
 		window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, onFail);  // TEMPORARY oder PERSISTENT
 
+		onReady();
 
 	},
 	onDomReady: function() {
@@ -254,7 +254,6 @@ var onNews = function() {
 			ausgabe += '<ul>';
 			$( "#news" ).html( ausgabe );
 			
-			onReady();
 			
 		}
 	});
