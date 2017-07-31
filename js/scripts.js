@@ -179,10 +179,8 @@ var onReady = function() {
 		if(doAction == false) {
 			
 		} else {
-			alert('voryyyDate');
 			var heute_date = new Date();	
 
-			alert('vor for');
 			for (var i = 0; i < termine_array.length; ++i){
 				var title = termine_array[i]["title"];
 				var location = termine_array[i]["location"];
@@ -200,16 +198,15 @@ var onReady = function() {
 
 				alert(calenderName);
 				//calOptions.calendarId = calenderId;
-				calOptions.calendarId = 6;
+				//calOptions.calendarId = 6;
+				alert('vor startDate');
 
 				var startDate = new Date(tmp_array3[2], (tmp_array3[1] - 1), tmp_array3[0], tmp_array3[3], tmp_array3[4], 0, 0, 0);
 				var endDate = new Date(tmp_array3[2], (tmp_array3[1] - 1), tmp_array3[0], tmp_array3[3], (tmp_array3[4] + 1), 0, 0, 0);
 
-				alert(startDate);
-				alert(heute_date);
-				if(startDate>heute_date){		
+				if(startDate > heute_date){		
 					window.plugins.calendar.deleteEvent(title, location, notes, startDate, endDate, success, error);
-					window.plugins.calendar.createEventWithOptions(title, location, notes, startDate, endDate, calOptions, success, error);
+					window.plugins.calendar.createEvent(title, location, notes, startDate, endDate, success, error);
 				}
 
 
