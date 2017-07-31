@@ -102,28 +102,28 @@ function alertObject(obj){
 
 var calenderId = 1;
 
-var success = function(message) {
+var successLoad = function(message) {
 	alertObject(message);
 	calenderId = message[0].id;
 };
-var error = function(message) {
+var errorLoad = function(message) {
 	alert("Sorry, es ist ein Fehler aufgetreten. Bitte wenden Sie sich an Christian Busse <christian.busse@apfel.gold>");
 	return false;
 };
 
-window.plugins.calendar.listCalendars(success,error);
+window.plugins.calendar.listCalendars(successLoad,errorLoad);
 	
 
 function allEvents(dat) {
 	
+	var success = function(message) {
+	};
 	
     var error = function(message) {
-        alert("Sorry, es ist ein Fehler aufgetreten. Bitte wenden Sie sich an Christian Busse <christian.busse@apfel.gold>");
-        return false;
     };
 	
 	
-	doAction = confirm("Möchtest du alle Termine in deinen Kalender eintragen? Um Dublikate zu vermeiden werden alle NGK-Termine vorab gelöscht.");
+	var doAction = confirm("Möchtest du alle Termine in deinen Kalender eintragen? Um Dublikate zu vermeiden werden alle NGK-Termine vorab gelöscht.");
 	
 	if(doAction === true) {
 		var heute_date = new Date();	
