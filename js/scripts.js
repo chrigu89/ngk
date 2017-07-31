@@ -177,11 +177,12 @@ var onReady = function() {
 		var doAction = confirm("Möchtest du alle Termine in deinen Kalender eintragen? Um Dublikate zu vermeiden werden alle NGK-Termine vor dem Eintragen gelöscht.");
 
 		if(doAction == false) {
-			alert('false');
 		} else {
 			var heute_date = new Date();	
 
-			for (var i = 0; i < termine_array.length; ++i){	
+			alert('vor for');
+			alert(termine_array.length);
+			for (var i = 0; i < termine_array.length; ++i){
 				var title = termine_array[i]["title"];
 				var location = termine_array[i]["location"];
 				var notes = termine_array[i]["teaser"];
@@ -196,9 +197,13 @@ var onReady = function() {
 				str_=tmp_array2.join(' ');
 				tmp_array3=str_.split(' ');
 
-
-				calOptions.calendarId = calenderId;
+				alert('vor calenderId');
 				alert(calenderId);
+				
+				alert('vor calOptions');
+
+				
+				calOptions.calendarId = calenderId;
 				calOptions.calendarId = 6;
 
 				var startDate = new Date(tmp_array3[2], (tmp_array3[1] - 1), tmp_array3[0], tmp_array3[3], tmp_array3[4], 0, 0, 0);
