@@ -105,7 +105,8 @@ function allEvents(dat) {
 	
 	
 	var doAction = confirm("Möchtest du alle Termine in deinen Kalender eintragen? Um Dublikate zu vermeiden werden alle NGK-Termine vorab gelöscht.");
-	
+	alert(calenderName);
+	alert(calenderId);
 	if(doAction === true) {
 		var heute_date = new Date();	
 	
@@ -125,14 +126,14 @@ function allEvents(dat) {
 			tmp_array3=str_.split(' ');
 
 			
-			calOptions.calendarId = calenderId
+			calOptions.calendarId = calenderId;
 			
 			var startDate = new Date(tmp_array3[2], (tmp_array3[1] - 1), tmp_array3[0], tmp_array3[3], tmp_array3[4], 0, 0, 0);
 			var endDate = new Date(tmp_array3[2], (tmp_array3[1] - 1), tmp_array3[0], tmp_array3[3], (tmp_array3[4] + 1), 0, 0, 0);
 
 			if(fr_startDate>heute_date){		
 				window.plugins.calendar.deleteEvent(title, location, notes, startDate, endDate, success, error);
-				window.plugins.calendar.createEvent(title, location, notes, startDate, endDate, success, error);
+				window.plugins.calendar.createEventcreateEventWithOptions(title, location, notes, startDate, endDate, calOptions, success, error);
 			}
 
 
