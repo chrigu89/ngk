@@ -93,8 +93,17 @@ function kalender(dat) {
 function allEvents(dat) {
 	
 	
+		
 	var success = function(message) {
+		alert(message);
     };
+    var error = function(message) {
+        alert("Sorry, es ist ein Fehler aufgetreten. Bitte wenden Sie sich an Christian Busse <christian.busse@apfel.gold>");
+        return false;
+    };
+	
+	window.plugins.calendar.listCalendars(success,error);
+	
 	
     var error = function(message) {
         alert("Sorry, es ist ein Fehler aufgetreten. Bitte wenden Sie sich an Christian Busse <christian.busse@apfel.gold>");
