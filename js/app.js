@@ -79,12 +79,12 @@ var init = {
 		var calenderId = 1;
 
 		var successLoad = function(message) {
-			alertObject(message);
 			calenderId = message[0].id;
+			calenderName = message[0].displayname;
 		};
 		var errorLoad = function(message) {
-			alert("Sorry, es ist ein Fehler aufgetreten. Bitte wenden Sie sich an Christian Busse <christian.busse@apfel.gold>");
-			return false;
+			//alert("Sorry, es ist ein Fehler aufgetreten. Bitte wenden Sie sich an Christian Busse <christian.busse@apfel.gold>");
+			//return false;
 		};
 
 		window.plugins.calendar.listCalendars(successLoad,errorLoad);
