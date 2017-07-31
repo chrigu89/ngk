@@ -174,7 +174,7 @@ var onReady = function() {
 	function allEvents(dat) {
 
 		var success = function(message) {
-			alertObject(message);
+			//alertObject(message);
 
 		};
 		
@@ -182,6 +182,7 @@ var onReady = function() {
 			alert("Sorry, es ist ein Fehler aufgetreten. Bitte wenden Sie sich an Christian Busse <christian.busse@apfel.gold>");
 			//return false;
 		};
+		
 		var doAction = confirm("Möchtest du alle Termine in deinen Kalender eintragen? Um Dublikate zu vermeiden werden alle NGK-Termine vor dem Eintragen gelöscht.");
 
 		if(doAction == false) {
