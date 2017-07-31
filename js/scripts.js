@@ -92,7 +92,7 @@ function kalender(dat) {
 
 function alertObject(obj){      
 	for(var key in obj) {
-	alert('key: ' + key + '\n' + 'value: ' + obj[key]);
+		alert('key: ' + key + '\n' + 'value: ' + obj[key]);
 		if( typeof obj[key] === 'object' ) {
 			alertObject(obj[key]);
 		}

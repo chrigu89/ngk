@@ -77,11 +77,12 @@ var init = {
 		
 
 		var calenderId = 1;
-
+		var calenderName  ="";
+		
 		var successLoad = function(message) {
 			alertObject(message[0]);
 			calenderId = message[0][id];
-			calenderName = message[0][displayname];
+			calenderName = message[0][name];
 			alert(calenderId);
 			alert(calenderName);
 			
