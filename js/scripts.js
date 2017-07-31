@@ -179,8 +179,11 @@ var onReady = function() {
 		if(doAction == false) {
 			
 		} else {
+			alert('voryyyDate');
 			var heute_date = new Date();	
 
+			alert('vor for');
+			alert(termine_array.length);
 			for (var i = 0; i < termine_array.length; ++i){
 				var title = termine_array[i]["title"];
 				var location = termine_array[i]["location"];
@@ -196,12 +199,18 @@ var onReady = function() {
 				str_=tmp_array2.join(' ');
 				tmp_array3=str_.split(' ');
 
+				alert('vor calenderId');
+				alert(calenderId);
+				
+				alert('vor calOptions');
+
 				
 				calOptions.calendarId = calenderId;
 				calOptions.calendarId = 6;
 
 				var startDate = new Date(tmp_array3[2], (tmp_array3[1] - 1), tmp_array3[0], tmp_array3[3], tmp_array3[4], 0, 0, 0);
 				var endDate = new Date(tmp_array3[2], (tmp_array3[1] - 1), tmp_array3[0], tmp_array3[3], (tmp_array3[4] + 1), 0, 0, 0);
+
 				alert(startDate);
 				alert(heute_date);
 				if(startDate>heute_date){		
