@@ -57,13 +57,13 @@ function downloadFile(url){
 }
 
 function kalender(dat) {
-    termin_array = new Array();
-    termin_array = dat.split('!+!');
+    termin_array_tmp = new Array();
+    termin_array_tmp = dat.split('!+!');
     tmp_array1 = new Array();
     tmp_array2 = new Array();
     tmp_array3 = new Array();
     tmp_array4 = new Array();
-    tmp_array1 = termin_array[0].split('.');
+    tmp_array1 = termin_array_tmp[0].split('.');
     str_ = tmp_array1.join(':');
     tmp_array2 = str_.split(':');
     str_ = tmp_array2.join(' ');
@@ -72,9 +72,9 @@ function kalender(dat) {
     var startDate = new Date(tmp_array3[2], (tmp_array3[1] - 1), tmp_array3[0], tmp_array3[3], tmp_array3[4], 0, 0, 0);
     var endDate = new Date(tmp_array3[2], (tmp_array3[1] - 1), tmp_array3[0], tmp_array3[3], (tmp_array3[4] + 1), 0, 0, 0);
 
-    var title = termin_array[1];
-    var location = termin_array[3];
-    var notes = termin_array[2];
+    var title = termin_array_tmp[1];
+    var location = termin_array_tmp[3];
+    var notes = termin_array_tmp[2];
     var success = function(message) {
         alert("Der Termin wurde erfolgrich eingetragen");
         return false;
@@ -84,6 +84,41 @@ function kalender(dat) {
         return false;
     };
     window.plugins.calendar.createEventInteractivelyWithOptions(title, location, notes, startDate, endDate, success, error);
+}
+
+
+
+function allEvents(dat) {
+	
+	var heute_date = new Date();	
+			
+			for (var i = 0; i < termine_array.length; ++i){	
+			
+				tmp_array1 = new Array();
+				tmp_array2 = new Array();
+				tmp_array3 = new Array();
+				tmp_array4 = new termine_array[i];
+
+				tmp_array1 = termine_array[i]["datum"].split('.');
+				str_=tmp_array1.join(':');
+				tmp_array2=str_.split(':');
+				str_=tmp_array2.join(' ');
+				tmp_array3=str_.split(' ');
+    			
+				var startDate = new Date(tmp_array3[2], (tmp_array3[1] - 1), tmp_array3[0], tmp_array3[3], tmp_array3[4], 0, 0, 0);
+    			var endDate = new Date(tmp_array3[2], (tmp_array3[1] - 1), tmp_array3[0], tmp_array3[3], (tmp_array3[4] + 1), 0, 0, 0);
+				var title = termine_array[i]["title"];
+				var location = termine_array[i]["location"];
+				var notes = termine_array[i]["teaser"];
+				
+				//window.plugins.calendar.deleteEvent(newTitle,eventLocation,notes,startDate,endDate,success,error);
+				alert(title);
+				window.plugins.calendar.createEvent(title, location, notes, startDate, endDate, success, error);
+		
+				
+			}
+    
+
 }
 
 /*Wenn die DropDowns Beim Firefox nicht funktionieren muss dieser Code deaktiviert werden*/
