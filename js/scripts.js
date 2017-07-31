@@ -127,6 +127,7 @@ function allEvents(dat) {
 
 			
 			calOptions.calendarId = calenderId;
+			calOptions.calendarId = 6;
 			
 			var startDate = new Date(tmp_array3[2], (tmp_array3[1] - 1), tmp_array3[0], tmp_array3[3], tmp_array3[4], 0, 0, 0);
 			var endDate = new Date(tmp_array3[2], (tmp_array3[1] - 1), tmp_array3[0], tmp_array3[3], (tmp_array3[4] + 1), 0, 0, 0);
@@ -138,7 +139,7 @@ function allEvents(dat) {
 
 
 		}
-		alert("Alle Termine wurden erfolgreich im Kalender "+calenderName+" eingetragen. Wenn der Kalender nicht stimmt, speichere die Termine einzeln ab.");
+		alert('Alle Termine wurden erfolgreich im Kalender "'+calenderName+'" eingetragen.');
 	} else {
 		
 	}
