@@ -165,6 +165,12 @@
 		<plugin name="phonegap-plugin-push" source="npm" version="1.9.4">
 			<param name="SENDER_ID" value="245131791687" />
 		</plugin>
+		
+		<feature name="Calendar">
+			<param name="ios-package" value="Calendar" />
+			<param name="android-package" value="nl.xservices.plugins.Calendar" />
+		</feature>
+		
 
 
 		<plugin name="cordova-plugin-calendar" />

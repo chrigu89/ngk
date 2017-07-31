@@ -83,7 +83,7 @@ function kalender(dat) {
         alert("Sorry, es ist ein Fehler aufgetreten. Bitte wenden Sie sich an Christian Busse <christian.busse@apfel.gold>");
         return false;
     };
-    window.plugins.calendar.createEvent(title, location, notes, startDate, endDate, success, error);
+    window.plugins.calendar.createEventInteractivelyWithOptions(title, location, notes, startDate, endDate, success, error);
 }
 
 /*Wenn die DropDowns Beim Firefox nicht funktionieren muss dieser Code deaktiviert werden*/
