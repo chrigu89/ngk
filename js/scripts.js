@@ -177,7 +177,9 @@ var onReady = function() {
 		var doAction = confirm("Möchtest du alle Termine in deinen Kalender eintragen? Um Dublikate zu vermeiden werden alle NGK-Termine vor dem Eintragen gelöscht.");
 
 		if(doAction == false) {
+			
 		} else {
+			alert('true');
 			var heute_date = new Date();	
 
 			alert('vor for');
