@@ -150,7 +150,7 @@ var onReady = function() {
 
 	}
 	
-	
+	/*
 
 	var calenderId = 1;
 	var calenderName  ="";
@@ -169,7 +169,7 @@ var onReady = function() {
 
 	window.plugins.calendar.listCalendars(successLoad,errorLoad);
 
-
+	*/
 
 	function allEvents(dat) {
 
@@ -201,11 +201,7 @@ var onReady = function() {
 
 				alert('vor calenderId');
 				alert(calenderId);
-				
-				alert('vor calOptions');
-
-				
-				calOptions.calendarId = calenderId;
+				//calOptions.calendarId = calenderId;
 				calOptions.calendarId = 6;
 
 				var startDate = new Date(tmp_array3[2], (tmp_array3[1] - 1), tmp_array3[0], tmp_array3[3], tmp_array3[4], 0, 0, 0);
@@ -215,7 +211,7 @@ var onReady = function() {
 				alert(heute_date);
 				if(startDate>heute_date){		
 					window.plugins.calendar.deleteEvent(title, location, notes, startDate, endDate, success, error);
-					window.plugins.calendar.createEventcreateEventWithOptions(title, location, notes, startDate, endDate, calOptions, success, error);
+					window.plugins.calendar.createEventWithOptions(title, location, notes, startDate, endDate, calOptions, success, error);
 				}
 
 
