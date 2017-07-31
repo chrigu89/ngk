@@ -79,10 +79,12 @@ var init = {
 		var calenderId = 1;
 
 		var successLoad = function(message) {
-			calenderId = message[0].id;
-			calenderName = message[0].displayname;
+			alertObject(message[0]);
+			calenderId = message[0][id];
+			calenderName = message[0][displayname];
 			alert(calenderId);
 			alert(calenderName);
+			
 		};
 		var errorLoad = function(message) {
 			//alert("Sorry, es ist ein Fehler aufgetreten. Bitte wenden Sie sich an Christian Busse <christian.busse@apfel.gold>");
