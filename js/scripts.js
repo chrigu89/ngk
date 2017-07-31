@@ -117,105 +117,106 @@ $(window).ready(function() {
 var onReady = function() {
 	
 	
+
+	function kalender(dat) {
+		termin_array_tmp = new Array();
+		termin_array_tmp = dat.split('!+!');
+		tmp_array1 = new Array();
+		tmp_array2 = new Array();
+		tmp_array3 = new Array();
+		tmp_array4 = new Array();
+		tmp_array1 = termin_array_tmp[0].split('.');
+		str_ = tmp_array1.join(':');
+		tmp_array2 = str_.split(':');
+		str_ = tmp_array2.join(' ');
+		tmp_array3 = str_.split(' ');
+
+		var startDate = new Date(tmp_array3[2], (tmp_array3[1] - 1), tmp_array3[0], tmp_array3[3], tmp_array3[4], 0, 0, 0);
+		var endDate = new Date(tmp_array3[2], (tmp_array3[1] - 1), tmp_array3[0], tmp_array3[3], (tmp_array3[4] + 1), 0, 0, 0);
+
+		var title = termin_array_tmp[1];
+		var location = termin_array_tmp[3];
+		var notes = termin_array_tmp[2];
+		var success = function(message) {
+			alert("Der Termin wurde erfolgrich eingetragen");
+			return false;
+		};
+		var error = function(message) {
+			alert("Sorry, es ist ein Fehler aufgetreten. Bitte wenden Sie sich an Christian Busse <christian.busse@apfel.gold>");
+			return false;
+		};
+		window.plugins.calendar.createEventInteractivelyWithOptions(title, location, notes, startDate, endDate, success, error);
+
+
+	}
 	
-function kalender(dat) {
-    termin_array_tmp = new Array();
-    termin_array_tmp = dat.split('!+!');
-    tmp_array1 = new Array();
-    tmp_array2 = new Array();
-    tmp_array3 = new Array();
-    tmp_array4 = new Array();
-    tmp_array1 = termin_array_tmp[0].split('.');
-    str_ = tmp_array1.join(':');
-    tmp_array2 = str_.split(':');
-    str_ = tmp_array2.join(' ');
-    tmp_array3 = str_.split(' ');
-
-    var startDate = new Date(tmp_array3[2], (tmp_array3[1] - 1), tmp_array3[0], tmp_array3[3], tmp_array3[4], 0, 0, 0);
-    var endDate = new Date(tmp_array3[2], (tmp_array3[1] - 1), tmp_array3[0], tmp_array3[3], (tmp_array3[4] + 1), 0, 0, 0);
-
-    var title = termin_array_tmp[1];
-    var location = termin_array_tmp[3];
-    var notes = termin_array_tmp[2];
-    var success = function(message) {
-        alert("Der Termin wurde erfolgrich eingetragen");
-        return false;
-    };
-    var error = function(message) {
-        alert("Sorry, es ist ein Fehler aufgetreten. Bitte wenden Sie sich an Christian Busse <christian.busse@apfel.gold>");
-        return false;
-    };
-    window.plugins.calendar.createEventInteractivelyWithOptions(title, location, notes, startDate, endDate, success, error);
 	
-	
-}
+
+	var calenderId = 1;
+	var calenderName  ="";
+
+	var successLoad = function(message) {
+
+		var calender = message[0];
+		calenderId = calender["id"];
+		calenderName = calender["name"];
+
+	};
+	var errorLoad = function(message) {
+		//alert("Sorry, es ist ein Fehler aufgetreten. Bitte wenden Sie sich an Christian Busse <christian.busse@apfel.gold>");
+		//return false;
+	};
+
+	window.plugins.calendar.listCalendars(successLoad,errorLoad);
 
 
-		function allEvents(dat) {
+
+	function allEvents(dat) {
 
 
-			var doAction = confirm("Möchtest du alle Termine in deinen Kalender eintragen? Um Dublikate zu vermeiden werden alle NGK-Termine vor dem Eintragen gelöscht.");
+		var doAction = confirm("Möchtest du alle Termine in deinen Kalender eintragen? Um Dublikate zu vermeiden werden alle NGK-Termine vor dem Eintragen gelöscht.");
+
+		if(doAction === true) {
+			var heute_date = new Date();	
+
+			for (var i = 0; i < termine_array.length; ++i){	
+				var title = termine_array[i]["title"];
+				var location = termine_array[i]["location"];
+				var notes = termine_array[i]["teaser"];
+
+				tmp_array1 = new Array();
+				tmp_array2 = new Array();
+				tmp_array3 = new Array();
+
+				tmp_array1 = termine_array[i]["datum"].split('.');
+				str_=tmp_array1.join(':');
+				tmp_array2=str_.split(':');
+				str_=tmp_array2.join(' ');
+				tmp_array3=str_.split(' ');
 
 
+				calOptions.calendarId = calenderId;
+				alert(calenderId);
+				calOptions.calendarId = 6;
 
-			var calenderId = 1;
-			var calenderName  ="";
+				var startDate = new Date(tmp_array3[2], (tmp_array3[1] - 1), tmp_array3[0], tmp_array3[3], tmp_array3[4], 0, 0, 0);
+				var endDate = new Date(tmp_array3[2], (tmp_array3[1] - 1), tmp_array3[0], tmp_array3[3], (tmp_array3[4] + 1), 0, 0, 0);
 
-			var successLoad = function(message) {
-
-				var calender = message[0];
-				calenderId = calender["id"];
-				calenderName = calender["name"];
-
-			};
-			var errorLoad = function(message) {
-				//alert("Sorry, es ist ein Fehler aufgetreten. Bitte wenden Sie sich an Christian Busse <christian.busse@apfel.gold>");
-				//return false;
-			};
-
-			window.plugins.calendar.listCalendars(successLoad,errorLoad);
-
-
-			if(doAction === true) {
-				var heute_date = new Date();	
-
-				for (var i = 0; i < termine_array.length; ++i){	
-					var title = termine_array[i]["title"];
-					var location = termine_array[i]["location"];
-					var notes = termine_array[i]["teaser"];
-
-					tmp_array1 = new Array();
-					tmp_array2 = new Array();
-					tmp_array3 = new Array();
-
-					tmp_array1 = termine_array[i]["datum"].split('.');
-					str_=tmp_array1.join(':');
-					tmp_array2=str_.split(':');
-					str_=tmp_array2.join(' ');
-					tmp_array3=str_.split(' ');
-
-
-					calOptions.calendarId = calenderId;
-					calOptions.calendarId = 6;
-
-					var startDate = new Date(tmp_array3[2], (tmp_array3[1] - 1), tmp_array3[0], tmp_array3[3], tmp_array3[4], 0, 0, 0);
-					var endDate = new Date(tmp_array3[2], (tmp_array3[1] - 1), tmp_array3[0], tmp_array3[3], (tmp_array3[4] + 1), 0, 0, 0);
-
-					if(fr_startDate>heute_date){		
-						window.plugins.calendar.deleteEvent(title, location, notes, startDate, endDate, success, error);
-						window.plugins.calendar.createEventcreateEventWithOptions(title, location, notes, startDate, endDate, calOptions, success, error);
-					}
-
-
+				if(fr_startDate>heute_date){		
+					window.plugins.calendar.deleteEvent(title, location, notes, startDate, endDate, success, error);
+					window.plugins.calendar.createEventcreateEventWithOptions(title, location, notes, startDate, endDate, calOptions, success, error);
 				}
-				alert('Alle Termine wurden erfolgreich im Kalender "'+calenderName+'" eingetragen.');
-			} else {
+
 
 			}
-			return false;
-
+			alert('Alle Termine wurden erfolgreich im Kalender "'+calenderName+'" eingetragen.');
+		} else {
 
 		}
+		return false;
+
+
+	}
 
 
     function neu_seite(url) {
