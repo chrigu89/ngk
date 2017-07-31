@@ -74,25 +74,7 @@ var init = {
 
 
 		
-		
 
-		var calenderId = 1;
-		var calenderName  ="";
-		
-		var successLoad = function(message) {
-			
-			var calender = message[0];
-			calenderId = calender["id"];
-			calenderName = calender["name"];
-			
-		};
-		var errorLoad = function(message) {
-			//alert("Sorry, es ist ein Fehler aufgetreten. Bitte wenden Sie sich an Christian Busse <christian.busse@apfel.gold>");
-			//return false;
-		};
-
-		window.plugins.calendar.listCalendars(successLoad,errorLoad);
-		
 		
 		window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, onFail);  // TEMPORARY oder PERSISTENT
 

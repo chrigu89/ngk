@@ -104,9 +104,28 @@ function alertObject(obj){
 function allEvents(dat) {
 	
 	
-	var doAction = confirm("Möchtest du alle Termine in deinen Kalender eintragen? Um Dublikate zu vermeiden werden alle NGK-Termine vorab gelöscht.");
-	alert(calenderName);
-	alert(calenderId);
+	var doAction = confirm("Möchtest du alle Termine in deinen Kalender eintragen? Um Dublikate zu vermeiden werden alle NGK-Termine vor dem Eintragen gelöscht.");
+	
+		
+
+	var calenderId = 1;
+	var calenderName  ="";
+
+	var successLoad = function(message) {
+
+		var calender = message[0];
+		calenderId = calender["id"];
+		calenderName = calender["name"];
+
+	};
+	var errorLoad = function(message) {
+		//alert("Sorry, es ist ein Fehler aufgetreten. Bitte wenden Sie sich an Christian Busse <christian.busse@apfel.gold>");
+		//return false;
+	};
+	
+	window.plugins.calendar.listCalendars(successLoad,errorLoad);
+		
+	
 	if(doAction === true) {
 		var heute_date = new Date();	
 	
