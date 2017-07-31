@@ -95,7 +95,9 @@ function allEvents(dat) {
 	
 		
 	var success = function(message) {
-		alert(message);
+		alert(message.id);
+		alert(message.name);
+		var calenderId = message.id;
     };
     var error = function(message) {
         alert("Sorry, es ist ein Fehler aufgetreten. Bitte wenden Sie sich an Christian Busse <christian.busse@apfel.gold>");
@@ -132,7 +134,7 @@ function allEvents(dat) {
 			tmp_array3=str_.split(' ');
 
 			
-			calOptions.calendarId = 1;
+			calOptions.calendarId = calenderId;
 			
 			var startDate = new Date(tmp_array3[2], (tmp_array3[1] - 1), tmp_array3[0], tmp_array3[3], tmp_array3[4], 0, 0, 0);
 			var endDate = new Date(tmp_array3[2], (tmp_array3[1] - 1), tmp_array3[0], tmp_array3[3], (tmp_array3[4] + 1), 0, 0, 0);
