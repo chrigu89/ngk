@@ -173,7 +173,15 @@ var onReady = function() {
 
 	function allEvents(dat) {
 
+		var success = function(message) {
+			alert("success");
 
+		};
+		
+		var error = function(message) {
+			alert("Sorry, es ist ein Fehler aufgetreten. Bitte wenden Sie sich an Christian Busse <christian.busse@apfel.gold>");
+			//return false;
+		};
 		var doAction = confirm("Möchtest du alle Termine in deinen Kalender eintragen? Um Dublikate zu vermeiden werden alle NGK-Termine vor dem Eintragen gelöscht.");
 
 		if(doAction == false) {
@@ -203,13 +211,12 @@ var onReady = function() {
 				var startDate = new Date(tmp_array3[2], (tmp_array3[1] - 1), tmp_array3[0], tmp_array3[3], tmp_array3[4], 0, 0, 0);
 				var endDate = new Date(tmp_array3[2], (tmp_array3[1] - 1), tmp_array3[0], tmp_array3[3], (tmp_array3[4] + 1), 0, 0, 0);
 
-				alert('startDate');
-				alert(startDate);
-				alert(heute_date);
-				alert('heute_date');
+				alert('startDate' + ' < ' +heute_date);
 				
 				if(startDate < heute_date){		
+					alert('deleteEvent');
 					window.plugins.calendar.deleteEvent(title, location, notes, startDate, endDate, success, error);
+					alert('startDate');
 					window.plugins.calendar.createEvent(title, location, notes, startDate, endDate, success, error);
 				}
 
