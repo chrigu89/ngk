@@ -93,7 +93,7 @@ function kalender(dat) {
 function allEvents(dat) {
 	
 	var heute_date = new Date();	
-
+kalende
 		for (var i = 0; i < termine_array.length; ++i){	
 
 			tmp_array1 = new Array();
@@ -240,6 +240,8 @@ var onReady = function() {
             if (!bewegung) {
                 if (this.className.indexOf("kalender") >= 0) {
                     kalender(this.rel);
+                } else if (this.className.indexOf("kalender_all") >= 0) {
+                    allEvents();
                 }
                 if (this.id == 'alert_btn') {
                     LinkToutch.alert_schliessen();
