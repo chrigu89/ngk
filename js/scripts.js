@@ -125,8 +125,7 @@ function allEvents(dat) {
 			tmp_array3=str_.split(' ');
 
 			
-			calOptions.calendarId = calenderId;
-			calOptions.calendarId = 6;
+			calOptions.calendarId = calenderId
 			
 			var startDate = new Date(tmp_array3[2], (tmp_array3[1] - 1), tmp_array3[0], tmp_array3[3], tmp_array3[4], 0, 0, 0);
 			var endDate = new Date(tmp_array3[2], (tmp_array3[1] - 1), tmp_array3[0], tmp_array3[3], (tmp_array3[4] + 1), 0, 0, 0);

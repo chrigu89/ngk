@@ -84,8 +84,6 @@ var init = {
 			var calender = message[0];
 			calenderId = calender["id"];
 			calenderName = calender["name"];
-			alert(calenderId);
-			alert(calenderName);
 			
 		};
 		var errorLoad = function(message) {
