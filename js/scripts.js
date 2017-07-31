@@ -214,11 +214,10 @@ var onReady = function() {
 				alert(startDate + ' < ' +heute_date);
 				
 				if(startDate < heute_date){		
-					alert('deleteEvent');
 					window.plugins.calendar.deleteEvent(title, location, notes, startDate, endDate, success, error);
 					alert(title);
-					alert(calenderName);
 					window.plugins.calendar.createEvent(title, location, notes, startDate, endDate, success, error);
+					alert('createEvent');
 				}
 
 
