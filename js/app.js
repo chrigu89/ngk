@@ -80,9 +80,10 @@ var init = {
 		var calenderName  ="";
 		
 		var successLoad = function(message) {
-			alertObject(message[0]);
-			calenderId = message[0][id];
-			calenderName = message[0][name];
+			
+			var calender = message[0];
+			calenderId = calender["id"];
+			calenderName = calender["name"];
 			alert(calenderId);
 			alert(calenderName);
 			
