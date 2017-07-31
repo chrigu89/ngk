@@ -91,15 +91,26 @@ function kalender(dat) {
 
 
 function allEvents(dat) {
-	
+	var success = function(message) {
+        alert("Der Termin wurde erfolgrich eingetragen");
+        return false;
+    };
+    var error = function(message) {
+        alert("Sorry, es ist ein Fehler aufgetreten. Bitte wenden Sie sich an Christian Busse <christian.busse@apfel.gold>");
+        return false;
+    };
+	confirm("Möchtest du alle Termine in deinen Kalender eintragen? Um Dublikate zu vermeiden werden alle NGK-Termine vorab gelöscht.");
 	var heute_date = new Date();	
-
+	
 		for (var i = 0; i < termine_array.length; ++i){	
 
+			var title = termine_array[i]["title"];
+			var location = termine_array[i]["location"];
+			var notes = termine_array[i]["teaser"];
+			
 			tmp_array1 = new Array();
 			tmp_array2 = new Array();
 			tmp_array3 = new Array();
-			tmp_array4 = new termine_array[i];
 
 			tmp_array1 = termine_array[i]["datum"].split('.');
 			str_=tmp_array1.join(':');
@@ -109,13 +120,9 @@ function allEvents(dat) {
 
 			var startDate = new Date(tmp_array3[2], (tmp_array3[1] - 1), tmp_array3[0], tmp_array3[3], tmp_array3[4], 0, 0, 0);
 			var endDate = new Date(tmp_array3[2], (tmp_array3[1] - 1), tmp_array3[0], tmp_array3[3], (tmp_array3[4] + 1), 0, 0, 0);
-			var title = termine_array[i]["title"];
-			var location = termine_array[i]["location"];
-			var notes = termine_array[i]["teaser"];
 
 			//window.plugins.calendar.deleteEvent(newTitle,eventLocation,notes,startDate,endDate,success,error);
-			alert(title);
-			window.plugins.calendar.createEvent(title, location, notes, startDate, endDate, success, error);
+			window.plugins.calendar.createEvent(title, location, notes, startDate, endDate,success,error);
 
 
 		}
