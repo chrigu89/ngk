@@ -220,7 +220,8 @@ var onReady = function() {
 				tmp_array2=str_.split(':');
 				str_=tmp_array2.join(' ');
 				tmp_array3=str_.split(' ');
-
+				
+				var calOptions = window.plugins.calendar.getCalendarOptions();
 				//calOptions.calendarId = calenderId;
 				calOptions.calendarId = 6;
 
@@ -230,7 +231,7 @@ var onReady = function() {
 				if(startDate > heute_date){		
 					window.plugins.calendar.deleteEvent(title, location, notes, startDate, endDate, success, error);
 					sleep(150);
-					window.plugins.calendar.createEvent(title, location, notes, startDate, endDate, success, error);
+					window.plugins.calendar.createEventWithOptions(title, location, notes, startDate, endDate, calOptions, success, error);
 					sleep(150);
 					
 				}
