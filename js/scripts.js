@@ -193,14 +193,16 @@ var onReady = function() {
 		};
 		
 		var doAction = confirm("Möchtest du alle Termine in deinen Kalender eintragen? Um Dublikate zu vermeiden werden alle NGK-Termine vor dem Eintragen gelöscht.");
+		
+		$("#load_").delay(350).fadeIn(300, 'easeInQuart', function() {
+			$('#load_').addClass("loader_img");
+		});
+		sleep(200);
 
 		if(doAction == false) {
 			
 		} else {
- 			$("#load_").delay(350).fadeIn(300, 'easeInQuart', function() {
-				$('#load_').addClass("loader_img");
-			});
-			sleep(200);
+ 			
 			
 			for (var i = 0; i < termine_array.length; ++i){
 				var heute_date = new Date();	
@@ -227,8 +229,9 @@ var onReady = function() {
 
 				if(startDate > heute_date){		
 					window.plugins.calendar.deleteEvent(title, location, notes, startDate, endDate, success, error);
+					sleep(150);
 					window.plugins.calendar.createEvent(title, location, notes, startDate, endDate, success, error);
-					sleep(200);
+					sleep(150);
 					
 				}
 
@@ -236,11 +239,13 @@ var onReady = function() {
 			}
 			
 			alert('Alle Termine wurden erfolgreich im Kalender "'+calenderName+'" eingetragen.');
-			$("#load_").delay(350).fadeOut(300, 'easeInQuart', function() {
-				$('#load_').removeClass("loader_img");
-			});
+			
 
 		}
+		
+		$("#load_").delay(350).fadeOut(300, 'easeInQuart', function() {
+			$('#load_').removeClass("loader_img");
+		});
 		
 		return false;
 
