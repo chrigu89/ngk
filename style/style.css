@@ -64,7 +64,7 @@ body {
 }
 
 .loader_img {
-	background: url(../images/ajax-loader_gross.gif) no-repeat center center;
+	background: url(../images/loader.gif) no-repeat center center;
 }
 .mt-30 {
 	margin-top: 30px;
@@ -77,14 +77,14 @@ body {
 	padding: 15px;
 }
 	.headline {
-		background: #191919;
+		background: #030304;
 		padding: 5px 15px;
 		color: #fff;
 		margin: 0px;
 	}
 
 .header {
-	background: #262626;
+	background: #030304;
 	color: #aaa;
 	line-height: 20px;
 	height: 50px;

@@ -234,7 +234,9 @@ var onReady = function() {
 			}
 			
 			alert('Alle Termine wurden erfolgreich im Kalender "'+calenderName+'" eingetragen.');
-			
+			$("#load_").delay(350).fadeOut(300, 'easeInQuart', function() {
+				$('#load_').removeClass("loader_img");
+			});
 
 		}
 		
