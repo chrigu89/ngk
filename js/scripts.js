@@ -113,6 +113,15 @@ $(window).ready(function() {
     });
 })
 
+function sleep(milliseconds) {
+  var start = new Date().getTime();
+  for (var i = 0; i < 1e7; i++) {
+    if ((new Date().getTime() - start) > milliseconds){
+      break;
+    }
+  }
+}
+
 
 var onReady = function() {
 	
@@ -188,7 +197,9 @@ var onReady = function() {
 		if(doAction == false) {
 			
 		} else {
-
+ 			$("#load_").delay(350).fadeIn(300, 'easeInQuart', function() {
+				$('#load_').addClass("loader_img");
+			});
 			for (var i = 0; i < termine_array.length; ++i){
 				var heute_date = new Date();	
 				
@@ -214,9 +225,8 @@ var onReady = function() {
 
 				if(startDate > heute_date){		
 					window.plugins.calendar.deleteEvent(title, location, notes, startDate, endDate, success, error);
-					
 					window.plugins.calendar.createEvent(title, location, notes, startDate, endDate, success, error);
-					setTimeout(function(){ console.log("Hello"); }, 200);
+					sleep(200);
 					
 				}
 
