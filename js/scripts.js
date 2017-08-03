@@ -202,8 +202,9 @@ var onReady = function() {
 			
 			$("#load_").fadeIn(300, 'easeInQuart', function() {
 				$('#load_').addClass("loader_img");
-				sleep(150);
-
+				
+				setTimeout(function(){
+					
 				for (var i = 0; i < termine_array.length; ++i){
 					var heute_date = new Date();	
 
@@ -240,6 +241,8 @@ var onReady = function() {
 				}
 
 				alert('Alle Termine wurden erfolgreich im Kalender "'+calenderName+'" eingetragen.');
+					
+				}, 300);
 			
 			});
 
