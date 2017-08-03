@@ -214,7 +214,10 @@ var onReady = function() {
 
 				if(startDate > heute_date){		
 					window.plugins.calendar.deleteEvent(title, location, notes, startDate, endDate, success, error);
+					
 					window.plugins.calendar.createEvent(title, location, notes, startDate, endDate, success, error);
+					setTimeout(function(){ console.log("Hello"); }, 200);
+					
 				}
 
 
