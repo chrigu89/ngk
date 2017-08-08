@@ -6,15 +6,15 @@
 		xmlns:gap = "http://phonegap.com/ns/1.0"
 		xmlns:android = "http://schemas.android.com/apk/res/android"
 		id        = "de.design-busse.neussergk"
-		versionCode = "367"
-		version   = "1.6.7">
+		versionCode = "368"
+		version   = "1.6.8">
 		
 	<name>NGK1823</name>
 	<description>Termine auf's Handy, Twitter, News und mehr.. Neusser Grenadierkorps 1823</description>
 	<author href="https://apfel.gold" email="christian.busse@apfel.gold">Christian Busse</author>
 
 	<gap:config-file platform="ios" parent="CFBundleShortVersionString">
-		<string>367</string>
+		<string>368</string>
 	</gap:config-file>
 
 	<gap:platform name="ios" />
@@ -107,7 +107,7 @@
 		<platform name="ios">
 		  <!-- iOS 8.0+ -->
 		  <!-- iPhone 6 Plus  -->
-		  <icon src="gfx/icons/ios/Icon-App-60x60@3x" width="180" height="180" />
+		  <icon src="gfx/icons/ios/Icon-App-60x60@3x.png" width="180" height="180" />
 		  <!-- iOS 7.0+ -->
 		  <!-- iPhone / iPod Touch  -->
 		  <icon src="gfx/icons/ios/Icon-App-60x60@1x.png" width="60" height="60" />
