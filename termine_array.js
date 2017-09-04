@@ -112,7 +112,7 @@ termine_array = [
 		{
 			'datum'			: "25.08.2018 12:00 - 28.08.2018 23:59",
 			'title'			: "Neusser Bürger-Schützenfest",
-			'teaser'		: "",
+			'teaser'		: "25.08.2018 - 28.08.2018",
 			'location'		: "",
 		},
 		{
@@ -130,8 +130,8 @@ termine_array = [
 		{
 			'datum'			: "13.09.2018 00:00 - 19.09.2018 23:59",
 			'title'			: 'Steubenparade New York',
-			'teaser'		: "",
-			'location'		: "Marienhaus, Kapitelstraße 36",
+			'teaser'		: "13.09.2018 - 19.09.2018",
+			'location'		: "",
 		},
 		{
 			'datum'			: "18.11.2018 11:30",
