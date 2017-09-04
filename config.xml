@@ -155,6 +155,10 @@
 	<!-- allow XHR access to external sites -->
 		<preference name="permissions" value="none"/>
 		
+		
+		<allow-navigation href="*" />
+		<allow-intent href="*" />
+		
 		<access origin="http://*" />
 		<access origin="https://*" />
 		<access origin="debug.phonegap.com" /> <!-- see: http://community.phonegap.com/nitobi/topics/error_whitelist_rejection -->
