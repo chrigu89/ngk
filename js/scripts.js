@@ -176,8 +176,9 @@ var onReady = function() {
 			//alert("Sorry, es ist ein Fehler aufgetreten. Bitte wenden Sie sich an Christian Busse <christian.busse@apfel.gold>");
 			//return false;
 		};
-
-		window.plugins.calendar.listCalendars(successLoad,errorLoad);
+		
+		//window.plugins.calendar.listCalendars(successLoad,errorLoad);
+			
 
 		
 
