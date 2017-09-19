@@ -210,7 +210,7 @@ function onTermine() {
 			alert('Du hast die Rechte für den Kalender nicht freigegeben. Bitte überprüfe deine Sicherheitseinstellungen');
 			return false;
 			
-			else {
+		} else {
 			
 				window.plugins.calendar.listCalendars(function(message) {
 					$('#calenderIds select').html("");
@@ -226,14 +226,13 @@ function onTermine() {
 					alert("Sorry, es ist ein Fehler aufgetreten. Bitte wenden Sie sich an Christian Busse <christian.busse@apfel.gold>");
 				});
 			}
-		}
 
 	  }
-	)	
+	)
 	
 
 
-};
+}
 
 var changeStatus = function(status) {
 	var token = window.localStorage.getItem("token");

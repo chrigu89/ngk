@@ -251,20 +251,13 @@ var onReady = function() {
 
 				}, 300);
 
-			}
+			});
 
-		},function(message) {
-			alert("Sorry, es ist ein Fehler aufgetreten. Bitte wenden Sie sich an Christian Busse <christian.busse@apfel.gold>");
-		});
-
-		var error = function(message) {
-			alert("Sorry, es ist ein Fehler aufgetreten. Bitte wenden Sie sich an Christian Busse <christian.busse@apfel.gold>");
-			//return false;
-		};
 		
 		return false;
 
 
+		}
 	}
 
 
