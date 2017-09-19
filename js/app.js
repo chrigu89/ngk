@@ -185,7 +185,7 @@ var onSettings = function() {
 
 var onTermine = function() {
 	
-	window.plugins.calendar.hasReadWritePermission(
+	window.plugins.calendar.requestReadWritePermission(
 	  function(result) {
 			alert('result false');
 		// if this is 'false' you probably want to call 'requestReadWritePermission' now
@@ -194,7 +194,6 @@ var onTermine = function() {
 			return false;
 			
 		} else {
-			alert('result true');
 			$('#calenderIds').html("<select></select>");
 			window.plugins.calendar.listCalendars(function(message) {
 
