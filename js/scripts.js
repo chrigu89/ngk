@@ -181,15 +181,13 @@ var onReady = function() {
 			//return false;
 		};
 		
-		cordova.plugins.diagnostic.isCalendarAuthorized(function(authorized){
-			alert("App is " + (authorized ? "authorized" : "denied") + " access to calendar");
-			window.plugins.calendar.listCalendars(successLoad,errorLoad);
-		}, function(error){
-			alert("The following error occurred: "+error);
-		});
 	
-	
-			
+		window.plugins.calendar.hasReadWritePermission(
+		  function(result) {
+			// if this is 'false' you probably want to call 'requestReadWritePermission' now
+			alert(result);
+		  }
+		)	
 
 		
 
