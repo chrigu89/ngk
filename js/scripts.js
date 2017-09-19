@@ -7,6 +7,7 @@ function pdf(url) {
 	if (navigator.userAgent.match(/(Android)/)) {
 		//alert("Der Download wird gestartet - bitte einen Moment Geduld");
 		//downloadFile(url);
+		/* File System */
 		alert(externalCacheDirectory);
 		alert(url);
 		
@@ -181,10 +182,10 @@ var onReady = function() {
 		};
 		
 		cordova.plugins.diagnostic.isCalendarAuthorized(function(authorized){
-			console.log("App is " + (authorized ? "authorized" : "denied") + " access to calendar");
+			alert("App is " + (authorized ? "authorized" : "denied") + " access to calendar");
 			window.plugins.calendar.listCalendars(successLoad,errorLoad);
 		}, function(error){
-			console.error("The following error occurred: "+error);
+			alert("The following error occurred: "+error);
 		});
 	
 	
