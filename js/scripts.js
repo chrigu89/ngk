@@ -3,12 +3,16 @@ function external(url) {
 }
 
 function pdf(url) {
-	
+	alert(cordova.file.applicationDirectory);
+	alert(cordova.file.applicationStorageDirectory);
+	alert(cordova.file.dataDirectory);
 	if (navigator.userAgent.match(/(Android)/)) {
 
+		/* 
+		
+		FUNZT MIT CACHE FILES
 		var showLink = cordova.file.externalCacheDirectory + url;
 		var file = showLink.replace("file://", "");
-		/* FUNZT MIT CACHE FILES
 		alert(file);
 		cordova.plugins.fileOpener2.open(
 			file,
@@ -25,7 +29,7 @@ function pdf(url) {
 			}
 		); */
 		
-		showLink = cordova.file.applicationDirectory + url;
+		var showLink = cordova.file.applicationDirectory + url;
 		cordova.plugins.fileOpener2.open(
 			showLink,
 			'application/pdf', {
