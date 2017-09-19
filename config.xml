@@ -186,6 +186,7 @@
 		<plugin name="cordova-plugin-statusbar" />
 		<plugin name="cordova-plugin-device" />
 		<plugin name="cordova-plugin-whitelist" />
+		<plugin name="cordova-plugin-diagnostic"  />
 		
 		<!--
 			Kalender Freigabe
@@ -209,7 +210,7 @@
 		<preference name="StatusBarBackgroundColor" value="#000000" />
 		<preference name="StatusBarStyle" value="lightcontent" />
 		
-		<preference name="UIStatusBarHidden" value="true" />
+		<preference name="UIStatusBarHidden" value="yes" />
 		<preference name="UIViewControllerBasedStatusBarAppearance" value="false" />
 	
 

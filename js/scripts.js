@@ -177,7 +177,14 @@ var onReady = function() {
 			//return false;
 		};
 		
-		//window.plugins.calendar.listCalendars(successLoad,errorLoad);
+		cordova.plugins.diagnostic.isCalendarAuthorized(function(authorized){
+			console.log("App is " + (authorized ? "authorized" : "denied") + " access to calendar");
+			window.plugins.calendar.listCalendars(successLoad,errorLoad);
+		}, function(error){
+			console.error("The following error occurred: "+error);
+		});
+	
+	
 			
 
 		
