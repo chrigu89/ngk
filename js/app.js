@@ -213,7 +213,7 @@ function onTermine() {
 		} else {
 			
 				window.plugins.calendar.listCalendars(function(message) {
-					$('#calenderIds select').html("");
+					$('#calenderIds').html("<select></select>");
 					
 					message.forEach(function(entry) {
 						$('#calenderIds select').append($('<option>', {
@@ -222,9 +222,12 @@ function onTermine() {
 						}));
 					});
 					
+					$('.allEvents').show();
+					
 				},function(message) {
 					alert("Sorry, es ist ein Fehler aufgetreten. Bitte wenden Sie sich an Christian Busse <christian.busse@apfel.gold>");
 				});
+			
 			}
 
 	  }

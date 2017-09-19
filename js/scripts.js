@@ -183,7 +183,7 @@ var onReady = function() {
 	
 		
 
-	function allEvents(dat) {
+	function allEvents() {
 		var success = function(message) {
 			//alertObject(message);
 
@@ -192,7 +192,6 @@ var onReady = function() {
 
 
 		var calenderName = $('#calenderIds option:selected').text();
-		
 		var doAction = confirm('Möchtest du alle Termine in deinen Kalender "'+calenderName+'" eintragen? Um Dublikate zu vermeiden werden alle Termine mit gleichem Namen vor dem Eintragen gelöscht.');
 
 
@@ -222,7 +221,9 @@ var onReady = function() {
 					tmp_array2=str_.split(':');
 					str_=tmp_array2.join(' ');
 					tmp_array3=str_.split(' ');
-
+					
+					alert($('#calenderIds option:selected').val());
+					
 					var calOptions = window.plugins.calendar.getCalendarOptions();
 					calOptions.calendarId = $('#calenderIds option:selected').val();
 					//calOptions.calendarId = 6;
@@ -233,7 +234,7 @@ var onReady = function() {
 					if(startDate > heute_date){		
 						window.plugins.calendar.deleteEvent(title, location, notes, startDate, endDate, success, error);
 						sleep(150);
-						window.plugins.calendar.createEvent(title, location, notes, startDate, endDate, success, error);
+						window.plugins.calendar.createEventWithOptions(title, location, notes, startDate, endDate, calOptions, success, error);
 						sleep(150);
 
 					}
