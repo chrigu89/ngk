@@ -3,9 +3,7 @@ function external(url) {
 }
 
 function pdf(url) {
-	alert(cordova.file.applicationDirectory);
-	alert(cordova.file.applicationStorageDirectory);
-	alert(cordova.file.dataDirectory);
+	
 	if (navigator.userAgent.match(/(Android)/)) {
 
 		/* 
@@ -29,9 +27,11 @@ function pdf(url) {
 			}
 		); */
 		
-		var showLink = cordova.file.applicationDirectory + url;
+		var showLink = cordova.file.applicationStorageDirectory + url;
+		var file = showLink.replace("file://", "");
+		
 		cordova.plugins.fileOpener2.open(
-			showLink,
+			file,
 			'application/pdf', {
 				error: function(errorObj) {
 					onsole.log('Error status: ' + e.status + ' - Error message: ' + e.message);
@@ -44,40 +44,6 @@ function pdf(url) {
 				success: function() { }
 			}
 		);
-		
-		/*
-		showLink = cordova.file.applicationStorageDirectory + url;
-		cordova.plugins.fileOpener2.open(
-			showLink,
-			'application/pdf', {
-				error: function(errorObj) {
-					onsole.log('Error status: ' + e.status + ' - Error message: ' + e.message);
-					if(errorObj.status == 9) {
-						alert('Sorry - Sie besitzen kein Programm, um PDF Dateien anzusehen.');
-					} else {
-						alert('Error status: ' + errorObj.status + ' - Error message: ' + errorObj.message);
-					}
-				},
-				success: function() { }
-			}
-		);
-		
-		
-		showLink = cordova.file.dataDirectory + url;
-		cordova.plugins.fileOpener2.open(
-			showLink,
-			'application/pdf', {
-				error: function(errorObj) {
-					onsole.log('Error status: ' + e.status + ' - Error message: ' + e.message);
-					if(errorObj.status == 9) {
-						alert('Sorry - Sie besitzen kein Programm, um PDF Dateien anzusehen.');
-					} else {
-						alert('Error status: ' + errorObj.status + ' - Error message: ' + errorObj.message);
-					}
-				},
-				success: function() { }
-			}
-		);*/
 		
 		
     } else {
@@ -235,7 +201,7 @@ var onReady = function() {
 		
 
 		function allEvents(dat) {
-
+			alert('test');
 			var success = function(message) {
 				//alertObject(message);
 
@@ -253,6 +219,7 @@ var onReady = function() {
 			  }
 			)	
 			
+			alert('test2');
 			window.plugins.calendar.listCalendars(function(message) {
 				/*message.forEach(function(entry) {
 					//alert(entry["name"]);
@@ -269,6 +236,7 @@ var onReady = function() {
 				alert("Sorry, es ist ein Fehler aufgetreten. Bitte wenden Sie sich an Christian Busse <christian.busse@apfel.gold>");
 				//return false;
 			};
+			alert('test3');
 
 			var doAction = confirm('Möchtest du alle Termine in deinen Kalender "'+calenderName+'" eintragen? Um Dublikate zu vermeiden werden alle Termine mit gleichem Namen vor dem Eintragen gelöscht.');
 
