@@ -7,8 +7,10 @@ function pdf(url) {
 	if (navigator.userAgent.match(/(Android)/)) {
 
 		var showLink = cordova.file.externalCacheDirectory + url;
+		var file = showLink.replace("file://", "");
+		alert(file);
 		cordova.plugins.fileOpener2.open(
-			showLink,
+			file,
 			'application/pdf', {
 				error: function(errorObj) {
 					if(errorObj.status == 9) {
