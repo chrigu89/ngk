@@ -106,24 +106,6 @@ function onFileSystemSuccess(fileSystem) {
 //  Hole Root Verzeichnis
 function onGetFileSuccess(fileEntry) {
 	var path = fileEntry.toURL().replace('index.html', ''); // URL der offenen Datei!
-	/*
-		Download starten
-	
-	var fileTransfer = new FileTransfer();
-	fileEntry.remove();
-	fileTransfer.download(
-		'http://apps.apfel.gold/ngk/images/pdf/leitfaden.pdf',
-		path + 'leitfaden.pdf',
-		function(file) {
-			//alert('Download erfolgreich, datei wird geöffnet: ' + file.toURI());
-			showPDF(file.toURI());
-		},
-		function(error) {
-			alert('download error source ' + error.source);
-			alert('download error target ' + error.target);
-			alert('upload error code: ' + error.code);
-		}
-	);*/
 }
 
 // PDF Anzeigen
@@ -212,9 +194,9 @@ var onTermine = function() {
 			return false;
 			
 		} else {
-			
+				$('#calenderIds').html("<select></select>");
 				window.plugins.calendar.listCalendars(function(message) {
-					$('#calenderIds').html("<select></select>");
+					
 					
 					message.forEach(function(entry) {
 						$('#calenderIds select').append($('<option>', {
@@ -233,6 +215,7 @@ var onTermine = function() {
 
 	  }
 	)
+	return;
 	
 
 

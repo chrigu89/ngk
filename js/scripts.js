@@ -188,6 +188,10 @@ var onReady = function() {
 			//alertObject(message);
 
 		};
+		var error = function(message) {
+			alert(message);
+
+		};
 
 
 
@@ -202,7 +206,6 @@ var onReady = function() {
 
 			$("#load_").fadeIn(300, 'easeInQuart', function() {
 				$('#load_').addClass("loader_img");
-				alert(termine_array);
 				setTimeout(function(){
 					
 				for (var i = 0; i < termine_array.length; ++i){
@@ -225,7 +228,6 @@ var onReady = function() {
 					
 					var calOptions = window.plugins.calendar.getCalendarOptions();
 					calOptions.calendarId = $('#calenderIds option:selected').val();
-					//calOptions.calendarId = 6;
 
 					var startDate = new Date(tmp_array3[2], (tmp_array3[1] - 1), tmp_array3[0], tmp_array3[3], tmp_array3[4], 0, 0, 0);
 					var endDate = new Date(tmp_array3[2], (tmp_array3[1] - 1), tmp_array3[0], tmp_array3[3], (tmp_array3[4] + 1), 0, 0, 0);
