@@ -202,9 +202,9 @@ var onReady = function() {
 
 			$("#load_").fadeIn(300, 'easeInQuart', function() {
 				$('#load_').addClass("loader_img");
-
+				alert(termine_array);
 				setTimeout(function(){
-
+					
 				for (var i = 0; i < termine_array.length; ++i){
 					var heute_date = new Date();	
 
@@ -222,7 +222,6 @@ var onReady = function() {
 					str_=tmp_array2.join(' ');
 					tmp_array3=str_.split(' ');
 					
-					alert($('#calenderIds option:selected').val());
 					
 					var calOptions = window.plugins.calendar.getCalendarOptions();
 					calOptions.calendarId = $('#calenderIds option:selected').val();
@@ -234,7 +233,9 @@ var onReady = function() {
 					if(startDate > heute_date){		
 						window.plugins.calendar.deleteEvent(title, location, notes, startDate, endDate, success, error);
 						sleep(150);
-						window.plugins.calendar.createEventWithOptions(title, location, notes, startDate, endDate, calOptions, success, error);
+						//window.plugins.calendar.createEventWithOptions(title, location, notes, startDate, endDate, calOptions, success, error);
+						window.plugins.calendar.createEventInteractivelyWithOptions(title, location, notes, startDate, endDate, calOptions, success, error);
+						
 						sleep(150);
 
 					}
