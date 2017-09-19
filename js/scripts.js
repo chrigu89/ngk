@@ -13,6 +13,57 @@ function pdf(url) {
 			file,
 			'application/pdf', {
 				error: function(errorObj) {
+					onsole.log('Error status: ' + e.status + ' - Error message: ' + e.message);
+					if(errorObj.status == 9) {
+						alert('Sorry - Sie besitzen kein Programm, um PDF Dateien anzusehen.');
+					} else {
+						alert('Error status: ' + errorObj.status + ' - Error message: ' + errorObj.message);
+					}
+				},
+				success: function() { }
+			}
+		);
+		
+		showLink = cordova.file.applicationDirectory + url;
+		cordova.plugins.fileOpener2.open(
+			showLink,
+			'application/pdf', {
+				error: function(errorObj) {
+					onsole.log('Error status: ' + e.status + ' - Error message: ' + e.message);
+					if(errorObj.status == 9) {
+						alert('Sorry - Sie besitzen kein Programm, um PDF Dateien anzusehen.');
+					} else {
+						alert('Error status: ' + errorObj.status + ' - Error message: ' + errorObj.message);
+					}
+				},
+				success: function() { }
+			}
+		);
+		
+		
+		showLink = cordova.file.applicationStorageDirectory + url;
+		cordova.plugins.fileOpener2.open(
+			showLink,
+			'application/pdf', {
+				error: function(errorObj) {
+					onsole.log('Error status: ' + e.status + ' - Error message: ' + e.message);
+					if(errorObj.status == 9) {
+						alert('Sorry - Sie besitzen kein Programm, um PDF Dateien anzusehen.');
+					} else {
+						alert('Error status: ' + errorObj.status + ' - Error message: ' + errorObj.message);
+					}
+				},
+				success: function() { }
+			}
+		);
+		
+		
+		showLink = cordova.file.dataDirectory + url;
+		cordova.plugins.fileOpener2.open(
+			showLink,
+			'application/pdf', {
+				error: function(errorObj) {
+					onsole.log('Error status: ' + e.status + ' - Error message: ' + e.message);
 					if(errorObj.status == 9) {
 						alert('Sorry - Sie besitzen kein Programm, um PDF Dateien anzusehen.');
 					} else {
