@@ -200,7 +200,8 @@ var onSettings = function() {
 	return;
 };
 
-function onTermine() {
+
+var onTermine = function() {
 	
 
 	window.plugins.calendar.hasReadWritePermission(
@@ -235,7 +236,7 @@ function onTermine() {
 	
 
 
-}
+};
 
 var changeStatus = function(status) {
 	var token = window.localStorage.getItem("token");
