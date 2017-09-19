@@ -8,6 +8,7 @@ function pdf(url) {
 
 		var showLink = cordova.file.externalCacheDirectory + url;
 		var file = showLink.replace("file://", "");
+		/* FUNZT MIT CACHE FILES
 		alert(file);
 		cordova.plugins.fileOpener2.open(
 			file,
@@ -22,7 +23,7 @@ function pdf(url) {
 				},
 				success: function() { }
 			}
-		);
+		); */
 		
 		showLink = cordova.file.applicationDirectory + url;
 		cordova.plugins.fileOpener2.open(
@@ -40,7 +41,7 @@ function pdf(url) {
 			}
 		);
 		
-		
+		/*
 		showLink = cordova.file.applicationStorageDirectory + url;
 		cordova.plugins.fileOpener2.open(
 			showLink,
@@ -72,7 +73,7 @@ function pdf(url) {
 				},
 				success: function() { }
 			}
-		);
+		);*/
 		
 		
     } else {
