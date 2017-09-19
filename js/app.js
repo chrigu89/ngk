@@ -200,6 +200,41 @@ var onSettings = function() {
 	return;
 };
 
+var onTermine = function() {
+	
+
+	window.plugins.calendar.hasReadWritePermission(
+	  function(result) {
+		// if this is 'false' you probably want to call 'requestReadWritePermission' now
+		if(result === false) {
+			alert('Du hast die Rechte für den Kalender nicht freigegeben. Bitte überprüfe deine Sicherheitseinstellungen');
+			return false;
+			
+			else {
+			
+				window.plugins.calendar.listCalendars(function(message) {
+					$('#calenderIds select').html("");
+					
+					message.forEach(function(entry) {
+						$('#calenderIds select').append($('<option>', {
+							value: entry["id"],
+							text: entry["name"]
+						}));
+					});
+					
+				},function(message) {
+					alert("Sorry, es ist ein Fehler aufgetreten. Bitte wenden Sie sich an Christian Busse <christian.busse@apfel.gold>");
+				});
+			}
+		}
+
+	  }
+	)	
+	
+
+
+};
+
 var changeStatus = function(status) {
 	var token = window.localStorage.getItem("token");
 	

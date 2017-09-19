@@ -190,89 +190,66 @@ var onReady = function() {
 		};
 
 
-		window.plugins.calendar.hasReadWritePermission(
-		  function(result) {
-			// if this is 'false' you probably want to call 'requestReadWritePermission' now
-			if(result === false) {
-				alert('Du hast die Rechte für den Kalender nicht freigegeben. Bitte überprüfe deine Sicherheitseinstellungen');
-				return false;
-			}
 
-		  }
-		)	
-		var calenderId = 1;
-		var calenderName = "";
-
-		window.plugins.calendar.listCalendars(function(message) {
-			message.forEach(function(entry) {
-				alert(entry["name"]);
-			});
-			alert(message[0]["id"]);
-			calenderId = message[0]["id"];
-			calenderName = message[0]["name"];
-			
-			alert('test');
-			alert(calenderName);
-
-			var doAction = confirm('Möchtest du alle Termine in deinen Kalender "'+calenderName+'" eintragen? Um Dublikate zu vermeiden werden alle Termine mit gleichem Namen vor dem Eintragen gelöscht.');
+		var calenderName = $('#calenderIds option:selected').text();
+		
+		var doAction = confirm('Möchtest du alle Termine in deinen Kalender "'+calenderName+'" eintragen? Um Dublikate zu vermeiden werden alle Termine mit gleichem Namen vor dem Eintragen gelöscht.');
 
 
-			if(doAction == false) {
+		if(doAction == false) {
 
-			} else {
+		} else {
 
 
-				$("#load_").fadeIn(300, 'easeInQuart', function() {
-					$('#load_').addClass("loader_img");
+			$("#load_").fadeIn(300, 'easeInQuart', function() {
+				$('#load_').addClass("loader_img");
 
-					setTimeout(function(){
+				setTimeout(function(){
 
-					for (var i = 0; i < termine_array.length; ++i){
-						var heute_date = new Date();	
+				for (var i = 0; i < termine_array.length; ++i){
+					var heute_date = new Date();	
 
-						var title = termine_array[i]["title"];
-						var location = termine_array[i]["location"];
-						var notes = termine_array[i]["teaser"];
+					var title = termine_array[i]["title"];
+					var location = termine_array[i]["location"];
+					var notes = termine_array[i]["teaser"];
 
-						tmp_array1 = new Array();
-						tmp_array2 = new Array();
-						tmp_array3 = new Array();
+					tmp_array1 = new Array();
+					tmp_array2 = new Array();
+					tmp_array3 = new Array();
 
-						tmp_array1 = termine_array[i]["datum"].split('.');
-						str_=tmp_array1.join(':');
-						tmp_array2=str_.split(':');
-						str_=tmp_array2.join(' ');
-						tmp_array3=str_.split(' ');
+					tmp_array1 = termine_array[i]["datum"].split('.');
+					str_=tmp_array1.join(':');
+					tmp_array2=str_.split(':');
+					str_=tmp_array2.join(' ');
+					tmp_array3=str_.split(' ');
 
-						var calOptions = window.plugins.calendar.getCalendarOptions();
-						//calOptions.calendarId = calenderId;
-						//calOptions.calendarId = 6;
+					var calOptions = window.plugins.calendar.getCalendarOptions();
+					calOptions.calendarId = $('#calenderIds option:selected').val();
+					//calOptions.calendarId = 6;
 
-						var startDate = new Date(tmp_array3[2], (tmp_array3[1] - 1), tmp_array3[0], tmp_array3[3], tmp_array3[4], 0, 0, 0);
-						var endDate = new Date(tmp_array3[2], (tmp_array3[1] - 1), tmp_array3[0], tmp_array3[3], (tmp_array3[4] + 1), 0, 0, 0);
+					var startDate = new Date(tmp_array3[2], (tmp_array3[1] - 1), tmp_array3[0], tmp_array3[3], tmp_array3[4], 0, 0, 0);
+					var endDate = new Date(tmp_array3[2], (tmp_array3[1] - 1), tmp_array3[0], tmp_array3[3], (tmp_array3[4] + 1), 0, 0, 0);
 
-						if(startDate > heute_date){		
-							window.plugins.calendar.deleteEvent(title, location, notes, startDate, endDate, success, error);
-							sleep(150);
-							window.plugins.calendar.createEvent(title, location, notes, startDate, endDate, success, error);
-							sleep(150);
-
-						}
-
+					if(startDate > heute_date){		
+						window.plugins.calendar.deleteEvent(title, location, notes, startDate, endDate, success, error);
+						sleep(150);
+						window.plugins.calendar.createEvent(title, location, notes, startDate, endDate, success, error);
+						sleep(150);
 
 					}
 
-					alert('Alle Termine wurden erfolgreich im Kalender "'+calenderName+'" eingetragen.');
+
+				}
+
+				alert('Alle Termine wurden erfolgreich im Kalender "'+calenderName+'" eingetragen.');
 
 
-					$("#load_").fadeOut(300, 'easeInQuart', function() {
-						$('#load_').removeClass("loader_img");
-					});
-
-
-					}, 300);
-
+				$("#load_").fadeOut(300, 'easeInQuart', function() {
+					$('#load_').removeClass("loader_img");
 				});
+
+
+				}, 300);
 
 			}
 
