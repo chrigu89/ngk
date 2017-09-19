@@ -185,31 +185,32 @@ var onSettings = function() {
 
 var onTermine = function() {
 	
-
 	window.plugins.calendar.hasReadWritePermission(
 	  function(result) {
+			alert('result false');
 		// if this is 'false' you probably want to call 'requestReadWritePermission' now
 		if(result === false) {
 			alert('Du hast die Rechte für den Kalender nicht freigegeben. Bitte überprüfe deine Sicherheitseinstellungen');
 			return false;
 			
 		} else {
-				$('#calenderIds').html("<select></select>");
-				window.plugins.calendar.listCalendars(function(message) {
-					
-					
-					message.forEach(function(entry) {
-						$('#calenderIds select').append($('<option>', {
-							value: entry["id"],
-							text: entry["name"]
-						}));
-					});
-					
-					$('.allEvents').show();
-					
-				},function(message) {
-					alert("Sorry, es ist ein Fehler aufgetreten. Bitte wenden Sie sich an Christian Busse <christian.busse@apfel.gold>");
+			alert('result true');
+			$('#calenderIds').html("<select></select>");
+			window.plugins.calendar.listCalendars(function(message) {
+
+
+				message.forEach(function(entry) {
+					$('#calenderIds select').append($('<option>', {
+						value: entry["id"],
+						text: entry["name"]
+					}));
 				});
+
+				$('.allEvents').show();
+
+			},function(message) {
+				alert("Sorry, es ist ein Fehler aufgetreten. Bitte wenden Sie sich an Christian Busse <christian.busse@apfel.gold>");
+			});
 			
 			}
 

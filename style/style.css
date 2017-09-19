@@ -27,6 +27,11 @@ body {
 	line-height: 19px;
 
 }
+select {
+	height: 40px;
+	line-height:  40px;
+	width:  50%;
+}
 .fa-home:before {
     content: "";
 }

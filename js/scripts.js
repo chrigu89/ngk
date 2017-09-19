@@ -235,8 +235,8 @@ var onReady = function() {
 					if(startDate > heute_date){		
 						window.plugins.calendar.deleteEvent(title, location, notes, startDate, endDate, success, error);
 						sleep(150);
-						//window.plugins.calendar.createEventWithOptions(title, location, notes, startDate, endDate, calOptions, success, error);
-						window.plugins.calendar.createEventInteractivelyWithOptions(title, location, notes, startDate, endDate, calOptions, success, error);
+						window.plugins.calendar.createEventWithOptions(title, location, notes, startDate, endDate, calOptions, success, error);
+						//window.plugins.calendar.createEventInteractivelyWithOptions(title, location, notes, startDate, endDate, calOptions, success, error);
 						
 						sleep(150);
 
