@@ -189,8 +189,11 @@ var onReady = function() {
 			window.plugins.calendar.hasReadWritePermission(
 			  function(result) {
 				// if this is 'false' you probably want to call 'requestReadWritePermission' now
-				alert('Du hast die Rechte für den Kalender nicht freigegeben. Bitte überprüfe deine Sicherheitseinstellungen');
-				 return false;
+				if(result === false) {
+					alert('Du hast die Rechte für den Kalender nicht freigegeben. Bitte überprüfe deine Sicherheitseinstellungen');
+					return false;
+				}
+				 
 			  }
 			)	
 			
