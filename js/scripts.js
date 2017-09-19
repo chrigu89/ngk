@@ -157,7 +157,7 @@ var onReady = function() {
 		window.plugins.calendar.createEventInteractivelyWithOptions(title, location, notes, startDate, endDate, success, error);
 
 
-	}
+		}
 	
 	
 
