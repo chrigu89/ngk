@@ -176,31 +176,6 @@ var onReady = function() {
 		}
 	
 	
-
-
-		var calenderId = 1;
-		var calenderName  ="";
-
-		var successLoad = function(message) {
-
-			var calender = message[0];
-			calenderId = calender["id"];
-			calenderName = calender["name"];
-
-		};
-		var errorLoad = function(message) {
-			//alert("Sorry, es ist ein Fehler aufgetreten. Bitte wenden Sie sich an Christian Busse <christian.busse@apfel.gold>");
-			//return false;
-		};
-		
-	
-		window.plugins.calendar.hasReadWritePermission(
-		  function(result) {
-			// if this is 'false' you probably want to call 'requestReadWritePermission' now
-			alert(result);
-		  }
-		)	
-
 		
 
 		function allEvents(dat) {
@@ -209,7 +184,28 @@ var onReady = function() {
 				//alertObject(message);
 
 			};
+			
+			
+			window.plugins.calendar.hasReadWritePermission(
+			  function(result) {
+				// if this is 'false' you probably want to call 'requestReadWritePermission' now
+				alert('Du hast die Rechte für den Kalender nicht freigegeben. Bitte überprüfe deine Sicherheitseinstellungen');
+				 return false;
+			  }
+			)	
+			
+			window.plugins.calendar.listCalendars(function(message) {
+				message.forEach(function(entry) {
+					alert(entry["name"]);
+				});
+				var calender = message[0];
+				calenderId = calender["id"];
+				calenderName = calender["name"];
 
+			},function(message) {
+				alert("Sorry, es ist ein Fehler aufgetreten. Bitte wenden Sie sich an Christian Busse <christian.busse@apfel.gold>");
+			});
+			
 			var error = function(message) {
 				alert("Sorry, es ist ein Fehler aufgetreten. Bitte wenden Sie sich an Christian Busse <christian.busse@apfel.gold>");
 				//return false;
