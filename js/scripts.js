@@ -249,12 +249,12 @@ var onReady = function() {
 			)	
 			
 			window.plugins.calendar.listCalendars(function(message) {
-				message.forEach(function(entry) {
-					alert(entry["name"]);
-				});
+				/*message.forEach(function(entry) {
+					//alert(entry["name"]);
+				});*/
 				var calender = message[0];
-				calenderId = calender["id"];
-				calenderName = calender["name"];
+				var calenderId = calender["id"];
+				var calenderName = calender["name"];
 
 			},function(message) {
 				alert("Sorry, es ist ein Fehler aufgetreten. Bitte wenden Sie sich an Christian Busse <christian.busse@apfel.gold>");
