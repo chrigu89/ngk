@@ -8,8 +8,8 @@ function pdf(url) {
 		//alert("Der Download wird gestartet - bitte einen Moment Geduld");
 		//downloadFile(url);
 		/* File System */
-		alert(externalCacheDirectory);
 		alert(url);
+		alert(cordova.file.externalCacheDirectory);
 		
 		
     } else {
