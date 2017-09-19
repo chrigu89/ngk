@@ -5,11 +5,21 @@ function external(url) {
 function pdf(url) {
 	
 	if (navigator.userAgent.match(/(Android)/)) {
-		//alert("Der Download wird gestartet - bitte einen Moment Geduld");
-		//downloadFile(url);
-		/* File System */
-		alert(url);
-		alert(cordova.file.externalCacheDirectory);
+
+		var showLink = cordova.file.externalCacheDirectory + url;
+		cordova.plugins.fileOpener2.open(
+			showLink,
+			'application/pdf', {
+				error: function(errorObj) {
+					if(errorObj.status == 9) {
+						alert('Sorry - Sie besitzen kein Programm, um PDF Dateien anzusehen.');
+					} else {
+						alert('Error status: ' + errorObj.status + ' - Error message: ' + errorObj.message);
+					}
+				},
+				success: function() { }
+			}
+		);
 		
 		
     } else {
