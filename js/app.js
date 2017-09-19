@@ -188,14 +188,12 @@ var onTermine = function() {
 	setTimeout(function(){
 		window.plugins.calendar.hasReadWritePermission(
 		  function(result) {
-				alert('result false');
 			// if this is 'false' you probably want to call 'requestReadWritePermission' now
 			if(result === false) {
 				alert('Du hast die Rechte für den Kalender nicht freigegeben. Bitte überprüfe deine Sicherheitseinstellungen');
 				return false;
 
 			} else {
-				alert('result true');
 				$('#calenderIds').html("<select></select>");
 				window.plugins.calendar.listCalendars(function(message) {
 
@@ -217,7 +215,7 @@ var onTermine = function() {
 
 		  }
 		)
-	}, 700);
+	}, 1200);
 	return;
 	
 
