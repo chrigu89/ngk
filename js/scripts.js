@@ -16,7 +16,6 @@ function pdf(url) {
 			file,
 			'application/pdf', {
 				error: function(errorObj) {
-					onsole.log('Error status: ' + e.status + ' - Error message: ' + e.message);
 					if(errorObj.status == 9) {
 						alert('Sorry - Sie besitzen kein Programm, um PDF Dateien anzusehen.');
 					} else {
@@ -29,12 +28,12 @@ function pdf(url) {
 		
 		var showLink = cordova.file.applicationStorageDirectory + url;
 		var file = showLink.replace("file://", "");
-		
+		alert(file);
 		cordova.plugins.fileOpener2.open(
 			file,
 			'application/pdf', {
 				error: function(errorObj) {
-					onsole.log('Error status: ' + e.status + ' - Error message: ' + e.message);
+					alert('Error status: ' + e.status + ' - Error message: ' + e.message);
 					if(errorObj.status == 9) {
 						alert('Sorry - Sie besitzen kein Programm, um PDF Dateien anzusehen.');
 					} else {
@@ -201,7 +200,6 @@ var onReady = function() {
 		
 
 		function allEvents(dat) {
-			alert('test');
 			var success = function(message) {
 				//alertObject(message);
 
@@ -218,15 +216,15 @@ var onReady = function() {
 				 
 			  }
 			)	
+			var calenderId = 1;
+			var calenderName = "";
 			
-			alert('test2');
 			window.plugins.calendar.listCalendars(function(message) {
 				/*message.forEach(function(entry) {
 					//alert(entry["name"]);
 				});*/
-				var calender = message[0];
-				var calenderId = calender["id"];
-				var calenderName = calender["name"];
+				calenderId = message[0]["id"];
+				calenderName = message[0]["name"];
 
 			},function(message) {
 				alert("Sorry, es ist ein Fehler aufgetreten. Bitte wenden Sie sich an Christian Busse <christian.busse@apfel.gold>");
@@ -236,7 +234,8 @@ var onReady = function() {
 				alert("Sorry, es ist ein Fehler aufgetreten. Bitte wenden Sie sich an Christian Busse <christian.busse@apfel.gold>");
 				//return false;
 			};
-			alert('test3');
+			alert('test');
+			alert(calenderName);
 
 			var doAction = confirm('Möchtest du alle Termine in deinen Kalender "'+calenderName+'" eintragen? Um Dublikate zu vermeiden werden alle Termine mit gleichem Namen vor dem Eintragen gelöscht.');
 
