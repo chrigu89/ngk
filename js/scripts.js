@@ -5,7 +5,9 @@ function external(url) {
 function pdf(url) {
 	
 	if (navigator.userAgent.match(/(Android)/)) {
-
+		alert("Der Download wird gestartet - bitte einen Moment Geduld");
+		downloadFile(url);
+		
 		/* 
 		
 		FUNZT MIT CACHE FILES
@@ -25,24 +27,6 @@ function pdf(url) {
 				success: function() { }
 			}
 		); */
-		
-		var showLink = cordova.file.applicationStorageDirectory + url;
-		var file = showLink.replace("file://", "");
-		alert(file);
-		cordova.plugins.fileOpener2.open(
-			file,
-			'application/pdf', {
-				error: function(errorObj) {
-					alert('Error status: ' + e.status + ' - Error message: ' + e.message);
-					if(errorObj.status == 9) {
-						alert('Sorry - Sie besitzen kein Programm, um PDF Dateien anzusehen.');
-					} else {
-						alert('Error status: ' + errorObj.status + ' - Error message: ' + errorObj.message);
-					}
-				},
-				success: function() { }
-			}
-		);
 		
 		
     } else {
@@ -191,49 +175,42 @@ var onReady = function() {
 			alert("Sorry, es ist ein Fehler aufgetreten. Bitte wenden Sie sich an Christian Busse <christian.busse@apfel.gold>");
 			return false;
 		};
-		window.plugins.calendar.createEventInteractivelyWithOptions(title, location, notes, startDate, endDate, success, error);
+			window.plugins.calendar.createEventInteractivelyWithOptions(title, location, notes, startDate, endDate, success, error);
 
 
-		}
+	}
 	
 	
 		
 
-		function allEvents(dat) {
-			var success = function(message) {
-				//alertObject(message);
+	function allEvents(dat) {
+		var success = function(message) {
+			//alertObject(message);
 
-			};
-			
-			
-			window.plugins.calendar.hasReadWritePermission(
-			  function(result) {
-				// if this is 'false' you probably want to call 'requestReadWritePermission' now
-				if(result === false) {
-					alert('Du hast die Rechte für den Kalender nicht freigegeben. Bitte überprüfe deine Sicherheitseinstellungen');
-					return false;
-				}
-				 
-			  }
-			)	
-			var calenderId = 1;
-			var calenderName = "";
-			
-			window.plugins.calendar.listCalendars(function(message) {
-				/*message.forEach(function(entry) {
-					//alert(entry["name"]);
-				});*/
-				calenderId = message[0]["id"];
-				calenderName = message[0]["name"];
+		};
 
-			},function(message) {
-				alert("Sorry, es ist ein Fehler aufgetreten. Bitte wenden Sie sich an Christian Busse <christian.busse@apfel.gold>");
+
+		window.plugins.calendar.hasReadWritePermission(
+		  function(result) {
+			// if this is 'false' you probably want to call 'requestReadWritePermission' now
+			if(result === false) {
+				alert('Du hast die Rechte für den Kalender nicht freigegeben. Bitte überprüfe deine Sicherheitseinstellungen');
+				return false;
+			}
+
+		  }
+		)	
+		var calenderId = 1;
+		var calenderName = "";
+
+		window.plugins.calendar.listCalendars(function(message) {
+			message.forEach(function(entry) {
+				alert(entry["name"]);
 			});
+			alert(message[0]["id"]);
+			calenderId = message[0]["id"];
+			calenderName = message[0]["name"];
 			
-			var error = function(message) {
-				alert("Sorry, es ist ein Fehler aufgetreten. Bitte wenden Sie sich an Christian Busse <christian.busse@apfel.gold>");
-				//return false;
-			};
 			alert('test');
 			alert(calenderName);
 
@@ -298,10 +275,20 @@ var onReady = function() {
 				});
 
 			}
-			return false;
+
+		},function(message) {
+			alert("Sorry, es ist ein Fehler aufgetreten. Bitte wenden Sie sich an Christian Busse <christian.busse@apfel.gold>");
+		});
+
+		var error = function(message) {
+			alert("Sorry, es ist ein Fehler aufgetreten. Bitte wenden Sie sich an Christian Busse <christian.busse@apfel.gold>");
+			//return false;
+		};
+		
+		return false;
 
 
-		}
+	}
 
 
 	
