@@ -200,7 +200,7 @@ var onSettings = function() {
 	return;
 };
 
-var onTermine = function() {
+function onTermine() {
 	
 
 	window.plugins.calendar.hasReadWritePermission(
