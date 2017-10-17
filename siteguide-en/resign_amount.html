@@ -1,0 +1,258 @@
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0, maximum-scale=1.0"/>
+<title>Trelleborg Calculator</title>
+
+<link href="style/style.css" rel="stylesheet" type="text/css">
+
+
+
+<script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="js/jquery-ui-min.js" type="text/javascript"></script>
+<script src="js/scripts.js" type="text/javascript"></script>
+<script src="js/dichtetabelle_1.js" type="text/javascript"></script>
+
+</head>
+<body id="calc_b">
+
+<div id="alert_fens">
+<span id="alert_txt"></span>
+
+<a id="alert_btn">OK</a>
+
+</div>
+
+
+<a id="load_" class="loader_img">
+<div id="floatingCirclesG">
+	<div class="f_circleG" id="frotateG_01"></div>
+	<div class="f_circleG" id="frotateG_02"></div>
+	<div class="f_circleG" id="frotateG_03"></div>
+	<div class="f_circleG" id="frotateG_04"></div>
+	<div class="f_circleG" id="frotateG_05"></div>
+	<div class="f_circleG" id="frotateG_06"></div>
+	<div class="f_circleG" id="frotateG_07"></div>
+	<div class="f_circleG" id="frotateG_08"></div>
+</div>
+</a>
+<!--eingaben -->
+<div id="header">  
+<div id="topbar_unters"> <a rel="index.html" id="home_c"><img src="images/logo2.png" width="auto" height="100%"></a>
+
+ <a rel="calculator.html" id="calculator"><img src="images/icon/bendedleft.png"  width="auto" height="100%"></a>
+ <div id="zuruck_z_eingabe"><img src="images/icon/bendedleft.png"  width="auto" height="100%"></div>
+ 
+ 
+  </div>
+  <h1>Quantity calculation <span>for EPROPOX Resin Systems</span> </h1>
+</div>
+
+
+
+<div class="content" style="width:100%;  overflow:hidden; height:760px;">
+<div class="werte_eingaben">
+
+  <div class="txt mth_liner_basic_calc">
+
+    <form name="mth_liner_basic_calc" action="" method="post">
+    <div class="auswahl" id="mth_einheiten"> 
+    <span id="a_label">Units</span>   <a class="alert_" rel="
+You have the choice between metric (mm, kg, liter) or imperial units (in, pounds, gallons)"></a> 
+    <span id="a_wert">metric</span>
+    <select id="sel" name="einheiten"  tabindex="1">
+        <option value="metric">metric</option>
+        <option value="imperial">imperial</option>
+
+      
+      </select>
+      </div>
+         <div class="auswahl" id="liner_typ"> 
+    <span id="a_label">Liner Type</span>   <a class="alert_" rel="Enter here the liner type used. This selection affects the amount of resin factor."></a> 
+
+          <span id="a_wert_li">Please Select</span>
+   <div id="linertyp_select"> <select id="sel_l" name="linertyp"  tabindex="1">
+            <option value="Please Select">Please Select</option>
+    <!--    <option value="DrainLiner PVC">DrainLiner PVC</option> -->
+        
+        <!--<option value="DrainPlusLiner">DrainPlusLiner</option> -->
+        <option value="DrainPlusLiner PUR">DrainPlusLiner PUR</option>
+        <option value="DrainPlusLiner 2.0">DrainPlusLiner 2.0</option>
+  <!--   <option value="DrainPlusLiner 2.0">DrainPlusLiner 2.0</option> -->
+        <option value="DrainFlexLiner">DrainFlexLiner</option>
+      </select>
+      </select>
+      </div>
+     </div>
+         <div class="auswahl" id="mth_einheiten"> 
+    <span id="a_label">Resin system</span>   <a class="alert_" rel="Select the resin system used"></a> 
+
+          <span id="a_wert_h">Please Select</span>
+   <div id="harzsystem_select">  <select id="sel1" name="harzsystem"  tabindex="1">
+            <option value="Please Select">Please Select</option>
+        <option value="FC15">FC15</option>
+        <option value="FC30">FC30</option>
+      <option value="HC60">HC60</option>
+        <option value="HC120">HC120</option>
+        <option value="HC120+">HC120+</option>
+      <option value="HC2640">HC2640</option>
+      </select>
+      </div>
+      </div>
+     
+     
+     <div class="eing dm_hk">
+     <div class="e_label">Diameter  
+     <a class="alert_" rel="Specify inside diameter of the pipe to be rehabilitated"></a> </div>
+<div class="eing_mth">
+<input name="durchmesser_hauptkanal" type="text"  tabindex="2">
+     <span  class="mass">mm</span></div>
+     </div>
+ 
+
+        <div class="eing dm_sa">
+      <div class="e_label">Wall thickness
+         <a class="alert_" rel="Specify target wall thickness of the liner used. Certain liners allow only certain information."></a></div>
+     <div class="eing_mth"> 
+     <input name="durchmesser_seitenanschluss" type="text"  tabindex="3">
+      <span class="mass">mm</span>
+      </div>
+      </div>
+      
+      
+      
+      <div class="eing snl_sa">
+      <div class="e_label">Length
+      <a class="alert_" rel="Length of the liner to be installed."></a>
+      </div>
+      <div class="eing_mth">
+      <input name="sanierungslaenge_seitenanschluss" type="text"  tabindex="4">
+      <span class="mass">m</span>
+      </div>
+      </div>
+      
+      
+
+      
+    </form>
+  
+  </div>
+    <div class="berechnen_btn" id="berechnen">calculate</div>
+</div>
+<!--content --> <!--eingaben --> 
+
+<!--ergebnisse -->
+<div class="werte_ergebnisse content">
+
+<div class="txt" style="padding-top:5px;">
+<div id="eingaben_anz"><h2>Your entries:</h2>
+<table id="eingaben_anz_tb" width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td>Liner Type: </td>
+    <td id="aa1lt">&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Resin system: </td>
+    <td id="aa1hs">&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Diameter: </td>
+    <td id="aa1">&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Wall thickness: </td>
+    <td id="aa2">&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Length:</td>
+    <td id="aa3">&nbsp;</td>
+  </tr>
+</table>
+
+
+</div>
+<div id="harz_total">
+<h2>Resultant total amount of resin</h2>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="left" valign="middle" width="50%" rowspan="2">Resin mixture Total:</td>
+    <td align="right" valign="middle" width="50%" id=""><span id="liter">100</span> <span class="w30_vol">Liter</span></td>
+  </tr>
+  <tr>
+   
+    <td align="right" valign="middle" width="50%" id=""><span id="gewicht">100</span> <span class="w30_gew">Kg</span></td>
+  </tr>
+</table>
+
+</div>
+<div id="harz_volumen">
+<h2>Volume</h2>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+      <td align="left" valign="middle" class="pr_">
+   Resin
+</td>
+    <td align="left" valign="middle" >
+    Component<br>
+    <span class="kompnente_a">Error</span>
+
+</td>
+    <td align="right" valign="middle" id=""><span id="harz_l">100</span> <span class="w30_vol">Liter</span></td>
+  </tr>
+  <tr>
+         <td align="left" valign="middle" class="pr_"> 
+Hardener
+</td>
+       <td align="left" valign="middle">
+    Component<br>
+   <span class="kompnente_b">Error</span>
+</td>
+    <td align="right" valign="middle" width="50%" id=""><span id="haerter_l">100</span> <span class="w30_vol">Liter</span></td>
+  </tr>
+</table>
+</div>
+
+<div id="harz_gewicht">
+<h2>Weight</h2>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+      <td align="left" valign="middle" class="pr_">
+   Resin
+</td>
+    <td align="left" valign="middle" >
+    Component<br>
+    <span class="kompnente_a">Error</span>
+
+</td>
+    <td align="right" valign="middle" id=""><span id="harz_gew">100</span> <span class="w30_gew">Kg</span></td>
+  </tr>
+  <tr>
+         <td align="left" valign="middle" class="pr_">
+  Hardener
+</td>
+       <td align="left" valign="middle">
+    Component<br>
+   <span class="kompnente_b">Error</span>
+</td>
+    <td align="right" valign="middle" width="50%" id=""><span id="haerter_gew">100</span> <span class="w30_gew">Kg</span></td>
+  </tr>
+</table>
+</div>
+
+<div id="mth_1_wichtig">
+<h2 style="color:#C00;">IMPORTANT!</h2>
+Please read the technical data sheets for the liner and resin system in use!
+
+
+</div>
+
+ <div class="berechnen_btn" id="zurueck">Back to entry</div>
+</div>
+
+</div><!--ergebnisse -->
+</div>
+<!--content --> 
+<script type="text/javascript" src="resign_amount_js.js"></script>
+</body>
+</html>
