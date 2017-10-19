@@ -14,7 +14,7 @@ termine_array = [
 			'location'		: "S.S.V. Neuss 1962 e.V., Further Straße",
 		},
 		{
-			'datum'			: "17.11.2017 20:00",
+			'datum'			: "24.11.2017 20:00",
 			'title'			: 'NBSV-Jahreshauptversammlung',
 			'teaser'		: "Neusser Bürger-Schützen-Verein",
 			'location'		: "Sparkassen – Forum Haus II, Sparkasse Neuss Michaelstraße",
