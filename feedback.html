@@ -1,0 +1,208 @@
+<html>
+<head>
+	<title>Trelleborg Calculator</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0, maximum-scale=1.0"/>
+
+	<link href="style/style.css" rel="stylesheet" type="text/css">
+	<link href="style/swipe.css" rel="stylesheet" type="text/css">
+	
+	<script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+	<script src="js/jquery-ui-min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/jeasyui.js"></script>
+      <script src="js/scripts.js" type="text/javascript"></script>
+			<script type="text/javascript">
+	
+
+		$(function(){
+			
+			$('#feedback_form').form({
+				
+				success:function(data){
+					
+		
+					$( "#meldung" ).html( data );
+					$( "#form_txt" ).html( '<br><br><br>' );
+				}
+			});
+		});
+
+	</script> 
+	<script src="js/swipe.js" type="text/javascript"></script>
+	<script src="cordova.js" type="text/javascript"></script>
+
+</head>
+<body>
+<a id="logo" href="home.html"></a>
+<a id="load_" class="loader_img"></a>
+<div id="content">
+ 
+	<div id="sl_frame"><script src="_slider.js" type="text/javascript"></script></div>
+    <div id="meldung" class="txt" ></div>
+	<div class="txt" id="form_txt"> 
+	
+    <div id="meldung"></div>
+		<h4>Wie beurteilen Sie...</h4>
+		<form name="f_form" id="feedback_form" action="http://apps.design-busse.de/siteguide_de/feedback_daten.php" method="post" >
+		<input name="feedback_daten" type="hidden" value="">
+	
+		<div class="feedb_fr">
+			<div>Produkte/Systeme</div>
+		
+			<a class="feed" rel="produkte_systeme" id="sehrgut">sehrgut</a>
+			<a class="feed" rel="produkte_systeme" id="gut">gut</a>
+			<a class="feed" rel="produkte_systeme" id="maessig">mässig</a>
+			<a class="feed last" rel="produkte_systeme" id="schlecht">schlecht</a>
+			<div class="clr"></div>
+			
+		</div><!--feedb_fr -->
+		
+		
+		<div class="feedb_fr">
+			<div>Kundenservice</div>
+			
+			<a class="feed" rel="kundenservice" id="sehrgut">sehrgut</a>
+			<a class="feed" rel="kundenservice" id="gut">gut</a>
+			<a class="feed" rel="kundenservice" id="maessig">mässig</a>
+			<a class="feed last" rel="kundenservice" id="schlecht">schlecht</a>
+			<div class="clr"></div>
+		</div><!--feedb_fr -->
+		
+		
+		<div class="feedb_fr w50proz">
+			<div>Vermissen Sie Produkte/Services?</div>
+			
+			<a class="feed" rel="produkte_service" id="ja">Ja</a>
+			<a class="feed last" rel="produkte_service" id="nein">Nein</a>
+			
+			<div class="clr"></div>
+			</div><!--feedb_fr -->
+			<div id="p_s_eingabe" class="form_feld btop">
+			
+			<textarea name="vermisse_p_s" cols="" rows="">
+			</textarea>
+		</div>
+		
+		
+		<div class="feedb_fr">
+			<div>Beratung</div>
+			
+			<a class="feed" rel="beratung" id="sehrgut">sehrgut</a>
+			<a class="feed" rel="beratung" id="gut">gut</a>
+			<a class="feed" rel="beratung" id="maessig">mässig</a>
+			<a class="feed last" rel="beratung" id="schlecht">schlecht</a>
+			<div class="clr"></div>
+			</div><!--feedb_fr -->
+			
+			<div class="feedb_fr w50proz">
+			<div>Verbesserungsvorschläge</div>
+			
+			<a class="feed" rel="verb" id="ja">Ja</a>
+			<a class="feed last" rel="verb" id="nein">Nein</a>
+			
+			<div class="clr"></div>
+		</div><!--feedb_fr -->
+		
+		<div id="verbesser_eing" class="form_feld btop">
+			
+			<textarea name="verbesserungsvorschlaege" cols="" rows="">
+			</textarea>
+		</div>
+		
+		<div class="feedb_fr">
+			<div>Wie beurteilen Sie unsere APP?</div>
+			
+			<a class="feed" rel="app_beurteilung" id="sehrgut">sehrgut</a>
+			<a class="feed" rel="app_beurteilung" id="gut">gut</a>
+			<a class="feed" rel="app_beurteilung" id="maessig">mässig</a>
+			<a class="feed last" rel="app_beurteilung" id="schlecht">schlecht</a>
+			<div class="clr"></div>
+		
+		</div><!--feedb_fr -->
+	
+		<div class="form_feld btop mt20">
+			<div>Besonders gut gefallen hat mir:</div>
+			<textarea name="gut_gefallen" cols="" rows="">
+			</textarea>
+		</div>
+	
+		<div class="form_feld">
+			<div>Name:</div>
+			<input name="vn_name" type="text">
+		</div>
+		
+		<div class="form_feld">
+			<div>Email:*</div>
+			<input name="email" type="text">
+		</div>
+		
+
+		<div class="feedb_fr mt10">
+			<div>Wie alt sind Sie:</div>
+			
+			<a class="feed" rel="alter" id="20-30">20-30</a>
+			<a class="feed" rel="alter" id="30-40">30-40</a>
+			<a class="feed" rel="alter" id="40-50">40-50</a>
+			<a class="feed last" rel="alter" id="50+">50+</a>
+			<div class="clr"></div>
+		
+		</div><!--feedb_fr -->
+		
+		<div class="feedb_fr w50proz">
+			<div>Ihr Geschlecht:</div>
+			
+			<a class="feed" rel="geschlecht" id="Männlich">Männlich</a>
+			<a class="feed last" rel="geschlecht" id="Weiblich">Weiblich</a>
+			
+			<div class="clr"></div>
+		</div><!--feedb_fr -->
+		
+		<!--<input name="" type="submit" value="Senden"> -->
+
+
+         <button id="feedb_btn" name="" type="submit" value="">Senden</button>
+		</form>
+	
+	
+	</div>
+</div><!--content -->
+
+
+<div class="menu"> 
+  <script>
+  activ=4;
+  </script> 
+  <script src="_menu.js"></script>
+
+</div>
+
+
+<script type="text/javascript">
+
+$(window).load(function() {
+
+calc=false;
+})
+
+$(document).ready(function(e) {
+
+	    function disableselect(e){
+    return false
+    }
+    function reEnable(){
+    return true
+    }
+    document.onselectstart=new Function ("return false")
+    if (window.sidebar){
+		document.ontouchstart=disableselect
+		document.ontouchmove=disableselect
+		document.ontouchend=disableselect
+		document.onmousedown=disableselect
+    }
+});
+
+
+</script>
+
+</body>
+</html>
