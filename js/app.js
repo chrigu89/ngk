@@ -31,6 +31,7 @@ var init = {
 		document.addEventListener("online", onOnline, false);
 		document.addEventListener("offline", onOffline, false);
 		
+	alert('ready');
 		
 		var push = PushNotification.init({
 			android: {
@@ -73,9 +74,11 @@ var init = {
 		});
 
 		
+	alert('after push');
 		
 		window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, onFail);  // TEMPORARY oder PERSISTENT
 
+	alert('after after file');
 		onReady();
 
 	},

@@ -155,7 +155,6 @@
 	<!-- allow XHR access to external sites -->
 		<preference name="permissions" value="none"/>
 		
-		
 		<allow-navigation href="*" />
 		<allow-intent href="*" />
 		
