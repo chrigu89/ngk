@@ -179,7 +179,7 @@
 
 		<plugin name="cordova-plugin-calendar" />
 		<plugin name="cordova-plugin-file" />
-		<plugin name="cordova-plugin-file-transfer" spec="~1.6.1" />
+		<plugin name="cordova-plugin-file-transfer" />
 		<plugin name="cordova-plugin-file-opener2" />
 		<plugin name="cordova-plugin-inappbrowser" />
 		<plugin name="cordova-plugin-network-information" />
