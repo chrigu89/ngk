@@ -178,7 +178,7 @@
 
 
 		<plugin name="cordova-plugin-calendar" />
-		<plugin name="cordova-plugin-file" />
+		<plugin name="cordova-plugin-file" version="4.3.3" />
 		<plugin name="cordova-plugin-file-transfer" />
 		<plugin name="cordova-plugin-file-opener2" />
 		<plugin name="cordova-plugin-inappbrowser" />
