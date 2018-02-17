@@ -83,7 +83,7 @@
 		<!-- <preference name="ios-statusbarstyle" value="black-opaque" />  default, black-opaque or black-translucent (doesn't quite work, see docs) -->
 		<preference name="detect-data-types" value="true" /><!-- default:true, whether tel-numbers or dates should be turned to links by the system -->
 		<preference name="exit-on-suspend" value="false" />
-		<preference name="deployment-target" value="6.0" />
+		<preference name="deployment-target" value="8.0" />
 
 
 		<preference name="webviewbounce" value="false" /><!-- default:true -->
