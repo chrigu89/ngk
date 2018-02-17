@@ -23,6 +23,7 @@ var init = {
 	
 	onDeviceReady: function() {
 		
+	alert('ready 1st');
 		$.support.cors = true;
 		
 		console.log('init.onDeviceReady ❤ running on DEVICE');
