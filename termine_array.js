@@ -2,36 +2,6 @@ termine_array = new Array();
 
 termine_array = [
 		{
-			'datum'			: "12.09.2017 20:00",
-			'title'			: 'Chargiertenversammlung',
-			'teaser'		: "",
-			'location'		: "Marienhaus, Kapitelstraße 36",
-		},
-		{
-			'datum'			: "15.10.2017 09:30",
-			'title'			: 'Herbstkorpsschießen',
-			'teaser'		: "",
-			'location'		: "S.S.V. Neuss 1962 e.V., Further Straße",
-		},
-		{
-			'datum'			: "24.11.2017 20:00",
-			'title'			: 'NBSV-Jahreshauptversammlung',
-			'teaser'		: "Neusser Bürger-Schützen-Verein",
-			'location'		: "Sparkassen – Forum Haus II, Sparkasse Neuss Michaelstraße",
-		},
-		{
-			'datum'			: "19.11.2017 11:30",
-			'title'			: "Volkstrauertag",
-			'teaser'		: "",
-			'location'		: "Hauptfriedhof, Rheydter Straße",
-		},
-		{
-			'datum'			: "02.02.2018 20:00",
-			'title'			: 'NGK-Jahreshauptversammlung',
-			'teaser'		: "",
-			'location'		: "Marienhaus, Kapitelstraße 36",
-		},
-		{
 			'datum'			: "20.03.2018 20:00",
 			'title'			: 'Fackelbaubesprechung',
 			'teaser'		: "",
@@ -134,6 +104,12 @@ termine_array = [
 			'location'		: "",
 		},
 		{
+			'datum'			: "02.10.2018 17:00",
+			'title'			: 'Schützen-Wiesn - Oktoberfest mit BRINGS',
+			'teaser'		: "",
+			'location'		: "Festzelt auf dem Rennbahn Park",
+		},
+		{
 			'datum'			: "18.11.2018 11:30",
 			'title'			: 'Volkstrauertag',
 			'teaser'		: "",
@@ -144,6 +120,12 @@ termine_array = [
 			'title'			: 'Jahreshauptversammlung',
 			'teaser'		: "Neusser Bürger-Schützen-Verein",
 			'location'		: "Sparkassen – Forum Haus II, Sparkasse Neuss Michaelstraße",
+		},
+		{
+			'datum'			: "01.02.2019 20:00",
+			'title'			: 'NGK-Jahreshauptversammlung',
+			'teaser'		: "",
+			'location'		: "Marienhaus, Kapitelstraße 36",
 		},
 
 	];
