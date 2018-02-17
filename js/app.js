@@ -184,9 +184,11 @@ var onSettings = function() {
 
 
 var onTermine = function() {
-	
+	alert('tst');
 	setTimeout(function(){
+	alert('tst1');
 		window.plugins.calendar.hasReadWritePermission(
+	alert('tst2');
 		  function(result) {
 			// if this is 'false' you probably want to call 'requestReadWritePermission' now
 			if(result === false) {

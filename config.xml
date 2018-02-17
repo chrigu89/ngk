@@ -177,7 +177,7 @@
 		
 
 
-		<plugin name="cordova-plugin-calendar" />
+		<plugin name="cordova-plugin-calendar" version="4.6.0" />
 		<plugin name="cordova-plugin-file" source="npm" version="4.3.3" />
 		<plugin name="cordova-plugin-file-transfer" source="npm" version="1.6.3" />
 		<plugin name="cordova-plugin-file-opener2" />
