@@ -23,8 +23,6 @@ var init = {
 	
 	onDeviceReady: function() {
 		
-			alert("Test");
-	
 		$.support.cors = true;
 		
 		console.log('init.onDeviceReady ❤ running on DEVICE');
@@ -33,7 +31,6 @@ var init = {
 		document.addEventListener("online", onOnline, false);
 		document.addEventListener("offline", onOffline, false);
 		
-	alert("ready");
 		
 		var push = PushNotification.init({
 			android: {
@@ -76,11 +73,8 @@ var init = {
 		});
 
 		
-	alert('after push');
-		
 		window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, onFail);  // TEMPORARY oder PERSISTENT
 
-	alert('after after file');
 		onReady();
 
 	},
@@ -189,12 +183,9 @@ var onSettings = function() {
 
 
 var onTermine = function() {
-	alert("tst'");
 	setTimeout(function(){
-	alert("tst1");
 		window.plugins.calendar.hasReadWritePermission(
 		  function(result) {
-	alert("tst2");
 			// if this is 'false' you probably want to call 'requestReadWritePermission' now
 			if(result === false) {
 				alert('Du hast die Rechte für den Kalender nicht freigegeben. Bitte überprüfe deine Sicherheitseinstellungen');
