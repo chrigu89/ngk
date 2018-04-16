@@ -17,7 +17,7 @@ termine_array = [
 			'datum'			: "15.05.2018 20:00",
 			'title'			: 'Chargiertenversammlung',
 			'teaser'		: "",
-			'location'		: "Scheibenstand, Scheibendamm",
+			'location'		: "Marienhaus, Kapitelstraße 36",
 		},
 		{ 	
 			'datum'			: "24.06.2018 10:00",
