@@ -50,7 +50,7 @@ termine_array = [
 			'location'		: "Stadthalle Neuss",
 		},
 		{
-			'datum'			: "06.08.20186 20:00",
+			'datum'			: "06.08.2018 20:00",
 			'title'			: 'Zugführerbesprechung',
 			'teaser'		: "",
 			'location'		: "Marienhaus, Kapitelstaße 36",
