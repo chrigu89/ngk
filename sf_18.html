@@ -1,0 +1,188 @@
+<!doctype html>
+<head>
+	<title>Neuss Grenadierkorps von 1823</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="apple-mobile-web-app-capable" content="no">
+	<meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0, maximum-scale=1.0"/>
+
+	<link href="style/font-awesome.css" rel="stylesheet" type="text/css">
+	<link href="style/bootstrap.css" rel="stylesheet" type="text/css">
+	<link href="style/style.css" rel="stylesheet" type="text/css">
+	<link href="style/swipe.css" rel="stylesheet" type="text/css">
+	
+	<script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+	<script src="js/jquery-ui-min.js" type="text/javascript"></script>
+		
+	<script src="js/swipe.js" type="text/javascript"></script>
+	
+	
+	<script src="cordova.js"></script>
+	<script type="text/javascript" src="PushNotification.js"></script>
+	
+</head>
+<body>
+
+<div id="offline">
+	Sie sind zurzeit offline!
+</div>
+
+<a id="load_" class="loader_img"></a>
+<div id="content">
+	<div class="header">
+		<a class="toogle"><i class="fa fa-navicon"></i></a>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-10">
+					<p><small>von 1823</small><br>Neusser Grenadierkorps</p>
+				</div>
+			</div>
+		
+		</div>
+	</div>
+	
+	<div class="container-fluid">
+	<h2 class="headline">Wichtige Informationen</h2>
+		<div class="bg_grey mb-30">
+			<div class="row border_b">
+				<div class="col-xs-4"><a rel="files/2018/NBSV_Fest-und_Zugordnung_2018.pdf" class="onclick_pdf"><img src="files/2018/NBSV_Fest-und_Zugordnung_2018.jpg" class="logo"></a></div>
+				<div class="col-xs-8">
+					<h2 class="small"><strong>Fest- und Zugordnung</strong></h2> 
+					<p><a rel="files/2018/NBSV_Fest-und_Zugordnung_2018.pdf" class="onclick_pdf red"><i class="fa fa-file-pdf-o preview"></i> PDF ansehen</a></p>
+				</div>
+			</div>
+			<!-- <div class="row border_b"> -->
+				<!-- <div class="col-xs-3 col-sm-2"> -->
+				<!-- <a rel="files/2017/korpsbefehl.pdf" class="onclick_pdf"><img src="files/2017/korpsbefehl.jpg" class="logo"></a> -->
+				<!-- </div> -->
+								<!-- <div class="col-xs-9 col-sm-10"> -->
+					<!-- <h2 class="small"><strong>Korpsbefehl</strong></h2>  -->
+					<!-- <p><a rel="files/2017/korpsbefehl.pdf" class="onclick_pdf red"><i class="fa fa-file-pdf-o preview"></i> PDF ansehen</a></p> -->
+				<!-- </div> -->
+			<!-- </div> -->
+			
+			<!-- <div class="row border_b"> -->
+				<!-- <div class="col-xs-3 col-sm-2"><a rel="files/2017/Fackelausmarsch.pdf" class="onclick_pdf"><img src="files/2017/Fackelausmarsch.jpg" class="logo"></a></div> -->
+				<!-- <div class="col-xs-9 col-sm-10"> -->
+						<!-- <h2 class="small"><strong>Fackelausmarsch &amp; Aufstellung </strong></h2>  -->
+						<!-- <p>Oberst- u. Königsehrenabend, Fackelzugordnung, Schützenfest</p> -->
+						<!-- <p><a rel="files/2017/Fackelausmarsch.pdf" class="onclick_pdf red"><i class="fa fa-file-pdf-o preview"></i> PDF ansehen</a></p> -->
+				<!-- </div> -->
+			<!-- </div> -->
+			<!-- <div class="row border_b"> -->
+				<!-- <div class="col-xs-3 col-sm-2"><a rel="files/2017/Zugordnungen.pdf" class="onclick_pdf"><img src="images/logo.png" class="logo"></a></div> -->
+				<!-- <div class="col-xs-9 col-sm-10"> -->
+						<!-- <h2 class="small"><strong>Zugordnung</strong></h2>  -->
+						<!-- <p>Oberst- u. Königsehrenabend, Fackelzugordnung, Schützenfest</p> -->
+						<!-- <p><a rel="files/2017/Zugordnungen.pdf" class="onclick_pdf red"><i class="fa fa-file-pdf-o preview"></i> PDF ansehen</a></p> -->
+				<!-- </div> -->
+			<!-- </div> -->
+		</div>
+	
+		<h2 class="headline">Zugwege</h2>
+		<div class="bg_grey mb-30">
+			<!--<div class="row border_b">
+				<div class="col-xs-3 col-sm-2"><a rel="files/2017/oberstehrenabend.jpg" class="onclick_image"><img src="files/2017/oberstehrenabend.jpg" class="logo"></a></div>
+				<div class="col-xs-9 col-sm-10">
+						<h2 class="small"><strong>Oberstehrenabend gegen 21.30 Uhr</strong><br><small>Wegstrecke ~ 1.9 km</small></h2> 
+						<p><a rel="files/2017/oberstehrenabend.jpg" class="onclick_image red"><i class="fa fa-chevron-right preview"></i> ansehen</a></p>
+				</div>
+			</div>-->
+			<!-- <div class="row border_b"> -->
+				<!-- <div class="col-xs-3 col-sm-2"><a rel="files/2017/koenigsehrenabend.jpg" class="onclick_image"><img src="files/2017/koenigsehrenabend.jpg" class="logo"></a></div> -->
+				<!-- <div class="col-xs-9 col-sm-10"> -->
+						<!-- <h2 class="small"><strong>Königsehrenabend gegen 21.30 Uhr</strong><br><small>Wegstrecke ~ 2.1 km</small></h2>  -->
+						<!-- <p>Abmarsch Parkplatz Stadthalle über Augustinusstraße, Ober-, Zoll-, Friedrich-, Breite Straße, Drususallee (stadteinwärts links, hier 1. Ablöschpunkt für Pechfackeln an der Einmündung der Kirchstraße), Hamtorplatz, Sebastianusstraße, Büchel, Vorbeimarsch gegenüber der Einhorn-Apotheke, Büchel 21  (hierhinter 2. Ablöschpunkt für Pechfackeln)</p> -->
+						<!-- <p><a rel="files/2017/koenigsehrenabend.jpg" class="onclick_image red"><i class="fa fa-chevron-right preview"></i> ansehen</a></p> -->
+				<!-- </div> -->
+			<!-- </div> -->
+			
+			<div class="row border_b">
+				<div class="col-xs-12">
+						<h2 class="small"><strong>Samstag 20:45 Uhr Fackelzug</strong><br><small>Wegstrecke 3.40 km</strong></h2> 
+						<p>ab Niedertor über Niederstraße, Büchel, Markt (Gegenzug), Oberstraße,
+							Windmühlengasse, Mühlenstraße, Zollstraße, Friedrichstraße, Breite
+							Straße, Drususallee (stadteinwärts links), Benno-Nußbaum-Platz, Büttgerstraße,
+							Kapitelstraße, Krefelder Straße (Ende an der Einmündung Königstraße).</p>
+						<p><a rel="files/2018/fackelzug.jpg"
+							class="onclick_image red"><i class="fa fa-chevron-right preview"></i> ansehen</a></a></p>
+				</div>
+			</div>
+			
+			
+			<div class="row border_b">
+				<div class="col-xs-12">
+						<h2 class="small"><strong>Sonntag 16:15 Uhr Festzug</strong><br>Wegstrecke 4.00 km</h2> 
+						<p>ab Markt, Büchel, Niederstraße, Erftstraße, Gartenstraße, Büttger Straße, Benno-
+							Nussbaum-Platz, Drususallee (stadtauswärts rechts), Kaiser-Friedrich-Straße,
+							Hochstraße, Breite Straße, Friedrichstraße, Zollstraße, Mühlenstraße, Windmühlengasse,
+							Oberstraße, Am Kehlturm (linke Fahrbahn), Hessentordamm, Hessentorbrücke,
+							Hammer Landstraße, Schützenwiese, Festzelt.</p>
+						<p><a rel="files/2018/sonntag-nachmittag.jpg"
+							class="onclick_image red"><i class="fa fa-chevron-right preview"></i> ansehen</a></p>
+				</div>
+			</div>
+			<div class="row border_b">
+				<div class="col-xs-12">
+						<h2 class="small"><strong>Montag 15:45 Uhr Festzug</strong><br>Wegstrecke 3.40 km</h2> 
+						<p>ab Markt über Büchel, Glockhammer, Rheinstraße, Hafenstraße, Salzstraße, Königstraße,
+							Krefelder Straße, Erftstraße, Platz am Niedertor, Gartenstraße, Breite Straße, Drususallee
+							(stadteinwärts links), Benno-Nussbaum-Platz, Erftstraße, Zollstraße, Am Kehlturm (linke Fahrbahn),
+							Hessentordamm, Hessentorbrücke, Hammer
+							Landstraße, Schützenwiese, Festzelt.
+							Anschließend Platzkonzert, Preisvogelschießen, Preisschießen der ehemaligen
+							Schützenkönige, Ringstechen, Tanz, Kinderbelustigungen.</p>
+						<p><a rel="files/2018/montag-nachmittag.jpg"
+							class="onclick_image red"><i class="fa fa-chevron-right preview"></i> ansehen</a></p>
+				</div>
+			</div>
+			<div class="row border_b">
+				<div class="col-xs-12">
+						<h2 class="small"><strong>Montag 19:30 Uhr Rückzug</strong><br>Wegstrecke 2.14 km</h2> 
+						<p>ab Markt, Büchel, Sebastianusstraße, Drususallee
+						(stadtauswärts rechts), Breite Straße,
+						Friedrichstraße, Zollstraße, Vorbeimarsch am
+						Oberst, Am Kehlturm (linke Fahrbahn), Hessentordamm, Hessentorbrücke, Hammer
+						Landstraße, Schützenwiese für die Korps, die nach dorthin ziehen.</p>
+						<p><a rel="files/2018/montag-abend.jpg"
+							class="onclick_image red"><i class="fa fa-chevron-right preview"></i> ansehen</a></p>
+				</div>
+			</div>
+			<div class="row border_b">
+				<div class="col-xs-12">
+						<h2 class="small"><strong>Dienstag 15:15 Uhr Festzug</strong><br>Wegstrecke 2.80 km</h2> 
+						<p>ab Markt, Büchel, Niederstraße, Erftstraße, Platz am Niedertor, Gartenstraße, Büttger
+							Straße, Benno-Nussbaum-Platz, Drususallee (stadtauswärts rechts), Breite Straße,
+							Friedrichstraße, Zollstraße, Am Kehlturm (linke Fahrbahn), Hessentordamm, Hessentorbrücke,
+							Hammer Landstraße, Schützenwiese, Festzelt.
+							Anschließend Platzkonzert, Preisvogelschießen, Ringstechen, Tanz im Festzelt, Kinderbelustigungen,
+							Ermittlung des Reitersiegers, des Artilleriesiegers und des Edelknabenkönigs.</p>
+						<p><a rel="files/2018/dienstag-nachmittag.jpg"
+							class="onclick_image red"><i class="fa fa-chevron-right preview"></i> ansehen</a></p>
+				</div>
+			</div>
+			<div class="row border_b">
+				<div class="col-xs-12">
+						<h2 class="small"><strong>Dienstag 20:30 Uhr Abendumzug</strong><br> Wegstrecke2.08 km</h2> 
+						<p>ab Markt, dann Büchel, Sebastianusstraße, Benno-Nußbaum-Platz, Büttger Straße, Kirchstraße, Drususallee (stadtauswärts rechts), Breite
+							Straße, Friedrichstraße, Zollstraße, Hymgasse, hier Beginn Vorbeimarsch auf dem Markt.</p>
+						<p><a rel="files/2018/dienstag-abend.jpg"
+							class="onclick_image red"><i class="fa fa-chevron-right preview"></i> ansehen</a></p>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	
+	 
+</div><!--content -->
+
+<div id="navigation">
+	<script type="text/javascript"> activ=2; </script> 
+	<script type="text/javascript" src="_menu.js"></script>
+</div>
+
+<script src="js/app.js"></script>
+<script src="js/scripts.js"></script>
+
+</body>
+</html>
