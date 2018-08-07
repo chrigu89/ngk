@@ -190,7 +190,7 @@ termine_array = [
 			'location'		: "Stadthalle Neuss",
 		},
 		{
-			'datum'			: "19.08.2019 11:00",
+			'datum'			: "18.08.2019 11:00",
 			'title'			: 'Promenadenkonzert des NGK',
 			'teaser'		: "",
 			'location'		: "Platz am Weißen Haus",
@@ -210,7 +210,7 @@ termine_array = [
 		{
 			'datum'			: "24.08.2019 12:00 - 27.08.2019 23:59",
 			'title'			: "Neusser Bürger-Schützenfest",
-			'teaser'		: "24.08.2018 - 24.08.2018",
+			'teaser'		: "24.08.2018 - 27.08.2018",
 			'location'		: "",
 		},
 		{
