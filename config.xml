@@ -72,7 +72,7 @@
 
 
 	<!-- GENERAL -->
-		<preference name="phonegap-version" value="cli-6.5.0" /> <!-- Alte Version 3.7.0 -->
+		<preference name="phonegap-version" value="cli-7.0.1" /> <!-- Alte Version 3.7.0 -->
 		<preference name="orientation" value="default" /><!-- landscape, portrait, default (both) -->
 		<preference name="fullscreen" value="true" /><!-- true, false, supported for iOS6 and Android -->
 
@@ -166,12 +166,10 @@
 		<preference name="android-build-tool" value="gradle" />
 		
 		<platform name="android">
-			<resource-file src="google-services.json" target="google-services.json" />
+			<resource-file src="app/google-services.json" target="google-services.json" />
 		</platform>
 		
-		<plugin name="phonegap-plugin-push" source="npm" version="2.2.3">
-			<param name="SENDER_ID" value="245131791687" />
-		</plugin>
+		<plugin name="phonegap-plugin-push" source="npm" version="2.2.3"></plugin>
 		
 		<feature name="Calendar">
 			<param name="ios-package" value="Calendar" />

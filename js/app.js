@@ -43,7 +43,7 @@ var init = {
 			},
 			windows: {}
 		});
-		
+		alert('test 1');
 		push.on('registration', function(data) {
 			alert(data.registrationId);
 			final_token = data.registrationId;
