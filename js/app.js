@@ -42,9 +42,7 @@ var init = {
 			},
 			windows: {}
 		});
-		alert('test 11');
 		push.on('registration', function(data) {
-			alert(data.registrationId);
 			final_token = data.registrationId;
 			window.localStorage.setItem("token", final_token);
 			var os = 1;

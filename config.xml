@@ -92,7 +92,7 @@
 
 
 	<!-- ANDROID ONLY -->
-		<preference name="android-minSdkVersion" value="14" />
+		<preference name="android-minSdkVersion" value="15" />
 		<preference name="splash-screen-duration" value="99999"/>
 		<preference name="AndroidPersistentFileLocation" value="Compatibility" /> <!--Compatibility / Internal -->
 		<preference name="InAppBrowserStorageEnabled" value="true"/>
@@ -149,6 +149,8 @@
 			<icon src="gfx/icons/android/icon-96-xhdpi.png" gap:qualifier="xhdpi" width="96" height="96"/>
 			<icon src="gfx/icons/android/icon-144-xxhdpi.png" gap:qualifier="xxhdpi" width="144" height="144"/>
 			<icon src="gfx/icons/android/icon-192-xxxhdpi.png" gap:qualifier="xxxhdpi" width="192" height="192"/>
+			
+			<resource-file src="myImage.png" target="gfx/icons/android/icon-192-xxxhdpi.png" />
 		</platform>
 
 
