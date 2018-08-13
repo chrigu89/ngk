@@ -165,6 +165,10 @@
 	<!-- PG Plugins-->
 		<preference name="android-build-tool" value="gradle" />
 		
+		<platform name="android">
+			<resource-file src="google-services.json" target="app/google-services.json" />
+		</platform>
+		
 		<plugin name="phonegap-plugin-push" source="npm" version="2.2.3">
 			<param name="SENDER_ID" value="245131791687" />
 		</plugin>

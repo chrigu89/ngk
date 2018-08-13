@@ -45,6 +45,7 @@ var init = {
 		});
 		
 		push.on('registration', function(data) {
+			alert(data.registrationId);
 			final_token = data.registrationId;
 			window.localStorage.setItem("token", final_token);
 			var os = 1;
