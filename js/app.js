@@ -25,14 +25,12 @@ var init = {
 		
 		$.support.cors = true;
 		
-		alert('test');
 		console.log('init.onDeviceReady ❤ running on DEVICE');
 		init.run();
 
 		document.addEventListener("online", onOnline, false);
 		document.addEventListener("offline", onOffline, false);
 		
-		alert('test 1');
 		var push = PushNotification.init({
 			android: {
 				senderID: "245131791687"

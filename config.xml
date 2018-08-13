@@ -169,7 +169,8 @@
 			<resource-file src="google-services.json" target="google-services.json" />
 		</platform>
 		
-		<plugin name="phonegap-plugin-push" source="npm" version="2.2.3"></plugin>
+		
+		<plugin name="phonegap-plugin-push" spec="2.0.0" />
 		
 		<feature name="Calendar">
 			<param name="ios-package" value="Calendar" />
