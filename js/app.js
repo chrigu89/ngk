@@ -58,7 +58,7 @@ var init = {
 			
 			$.ajax({
 				type: 'GET',
-				url: 'http://apps.apfel.gold/ngk/ios/api.php?rquest=set_device',
+				url: 'https://apps.apfel.gold/ngk/ios/api.php?rquest=set_device',
 				data:  { os: os, token: final_token },
 				crossDomain: true,
 				cache: false,
@@ -162,7 +162,7 @@ var onSettings = function() {
 	$.ajax({
 		type: 'GET',
 		dataType: "json",
-		url: 'http://apps.apfel.gold/ngk/ios/api.php?rquest=get_user',
+		url: 'https://apps.apfel.gold/ngk/ios/api.php?rquest=get_user',
 		data:  { token: token },
 		crossDomain: true,
 		cache: false,
@@ -225,7 +225,7 @@ var changeStatus = function(status) {
 	
 	$.ajax({
 		type: 'GET',
-		url: 'http://apps.apfel.gold/ngk/ios/api.php?rquest=change_status',
+		url: 'https://apps.apfel.gold/ngk/ios/api.php?rquest=change_status',
 		data:  { token: token, status: status },
 		crossDomain: true,
 		cache: false,
