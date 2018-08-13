@@ -25,13 +25,14 @@ var init = {
 		
 		$.support.cors = true;
 		
+		alert('test');
 		console.log('init.onDeviceReady ❤ running on DEVICE');
 		init.run();
 
 		document.addEventListener("online", onOnline, false);
 		document.addEventListener("offline", onOffline, false);
 		
-		
+		alert('test 1');
 		var push = PushNotification.init({
 			android: {
 				senderID: "245131791687"
@@ -43,7 +44,7 @@ var init = {
 			},
 			windows: {}
 		});
-		alert('test 1');
+		alert('test 11');
 		push.on('registration', function(data) {
 			alert(data.registrationId);
 			final_token = data.registrationId;
