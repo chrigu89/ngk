@@ -150,7 +150,7 @@
 			<icon src="gfx/icons/android/icon-144-xxhdpi.png" gap:qualifier="xxhdpi" width="144" height="144"/>
 			<icon src="gfx/icons/android/icon-192-xxxhdpi.png" gap:qualifier="xxxhdpi" width="192" height="192"/>
 			
-			<resource-file src="icon-192-xxxhdpi.png" target="gfx/icons/android/icon-192-xxxhdpi.png" />
+			<resource-file src="image/logo.png" target="app/src/main/res/drawable/notification_icon.png" />
 		</platform>
 
 
