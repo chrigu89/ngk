@@ -465,3 +465,20 @@ blockquote {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
+
+.register {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+.register li {
+	margin: 0px 0 10px 0;
+	padding: 0px;
+	list-style: none;
+}
+.register li a {
+	color: #000;
+}
+.register li a small{
+	font-style: italic;
+}
