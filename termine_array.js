@@ -220,7 +220,7 @@ termine_array = [
 			'location'		: "Stadthalle Neuss",
 		},
 		{
-			'datum'			: "10.09.2018 20:00",
+			'datum'			: "10.09.2019 20:00",
 			'title'			: 'Chargiertenversammlung',
 			'teaser'		: "",
 			'location'		: "Marienhaus, Kapitelstraße 36",
