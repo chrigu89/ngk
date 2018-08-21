@@ -144,6 +144,26 @@ function sleep(milliseconds) {
 }
 
 
+function fontSmallest() {
+	jQuery('ol.song, ol.song li, ol.song p').css('font-size', '13px');
+	jQuery('ol.song, ol.song li, ol.song p').css('line-height', '18px');
+	return false;
+ 
+}
+function fontInherit() {
+	jQuery('ol.song, ol.song li, ol.song p').css('font-size', '15px');
+	jQuery('ol.song, ol.song li, ol.song p').css('line-height', '21px');
+	return false;
+ 
+}
+function fontBiggest() {
+	jQuery('ol.song, ol.song li, ol.song p').css('font-size', '17px');
+	jQuery('ol.song, ol.song li, ol.song p').css('line-height', '24px');
+	return false;
+ 
+}
+
+
 var onReady = function() {
 	
 	
@@ -355,6 +375,12 @@ var onReady = function() {
                     if (this.id != 'load_' && this.id != 'alert_btn' && this.href == '') {
                         if (this.className.indexOf('onclick_external') >= 0) {
                             external(this.rel);
+                        } else if (this.className.indexOf('fontBiggest') >= 0) {
+                            fontBiggest();
+                        } else if (this.className.indexOf('fontInherit') >= 0) {
+                            fontInherit();
+                        } else if (this.className.indexOf('fontSmallest') >= 0) {
+                            fontSmallest();
                         } else if (this.className.indexOf('onclick_image') >= 0) {
                             image(this.rel);
                         } else if (this.className.indexOf('onclick_external') >= 0) {
@@ -385,5 +411,6 @@ var onReady = function() {
 
 
 }
+
 
 $(document).ready(onReady);
