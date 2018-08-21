@@ -19,6 +19,10 @@
 	<description>Termine auf's Handy, Twitter, News und mehr.. Neusser Grenadierkorps 1823</description>
 	<author href="https://apfel.gold" email="christian.busse@apfel.gold">Christian Busse</author>
 
+	<edit-config target="NSCalendarsUsageDescription" file="*-Info.plist" mode="overwrite">
+		<string>Mit dem Kalenderzugriff erhaltet ihr die Schnellfunktion, alle Termine per Klick in den Kalender zu übertragen. Diese Funktion ist kein muss und die Berechtigung kann abgelehnt werden.</string>
+	</edit-config>
+
 	<gap:platform name="ios" />
 	<gap:platform name="android" />
 		 
@@ -108,6 +112,7 @@
 		<icon src="icon.png" gap:role="default" />
 
 		<platform name="ios">
+		  <icon src="gfx/icons/ios/Icon-App-1024x1024.png" width="1024" height="1024" />
 		  <!-- iOS 8.0+ -->
 		  <!-- iPhone 6 Plus  -->
 		  <icon src="gfx/icons/ios/Icon-App-60x60@3x.png" width="180" height="180" />
