@@ -506,10 +506,37 @@ blockquote {
 
 .fontSmallest {
 	font-size: 13px;
+	background: #F00;
+	color: #fff !important;
+	display: inline-block;
+	margin: 0 5px;
+	height: 30px;
+	float: right;
+	text-align: center;
+	width: 30px;
+	line-height: 30px;
 }
 .fontInherit {
 	font-size: 17px;
+	background: #F00;
+	color: #fff !important;
+	display: inline-block;
+	margin: 0 5px;
+	height: 30px;
+	float: right;
+	text-align: center;
+	width: 30px;
+	line-height: 30px;
 }
 .fontBiggest {
 	font-size: 21px;
+	background: #F00;
+	color: #fff !important;
+	display: inline-block;
+	margin: 0 5px;
+	float: right;
+	height: 30px;
+	text-align: center;
+	width: 30px;
+	line-height: 30px;
 }
