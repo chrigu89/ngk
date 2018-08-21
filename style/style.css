@@ -449,7 +449,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 blockquote {
-	font-size: 12px;
+	font-size: 11px;
+    padding: 10px;
+    margin: 20px 0;
+    border-left: 0px solid #eee;
+    background: #eee;
 }
 
 .pre {
@@ -481,4 +485,18 @@ blockquote {
 }
 .register li a small{
 	font-style: italic;
+}
+
+.song {
+	margin: 0px;
+	padding: 0px 0 0 15px;
+}
+.song li {
+	margin: 0px 0 15px 0;
+	padding: 0px;
+	font-size: 13px;
+}
+.song li p {
+	margin: 5px 0 5px 10px;
+	font-size: 13px;
 }
