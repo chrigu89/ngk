@@ -6,22 +6,15 @@
 		xmlns:gap = "http://phonegap.com/ns/1.0"
 		xmlns:android = "http://schemas.android.com/apk/res/android"
 		id        = "de.design_busse.neussergk"
-		android-versionCode = "20000"
 		versionCode = "20000"
+		ios-CFBundleVersion = "2.0.0"
+		android-versionCode = "2.0.0"
 		version   = "2.0.0"
 		>
 		
 	<name>NGK1823</name>
 	<description>Termine auf's Handy, Twitter, News und mehr.. Neusser Grenadierkorps 1823</description>
 	<author href="https://apfel.gold" email="christian.busse@apfel.gold">Christian Busse</author>
-
-	<gap:config-file platform="ios" parent="CFBundleShortVersionString">
-		<string>20000</string>
-	</gap:config-file>
-	
-	<edit-config target="CFBundleShortVersionString" file="*-Info.plist" 20000mode="overwrite">
-		<string>20000</string>
-	</edit-config>
 
 	<gap:platform name="ios" />
 	<gap:platform name="android" />
@@ -79,7 +72,6 @@
 
 	<!-- GENERAL -->
 		<preference name="phonegap-version" value="cli-7.0.1" /> <!-- Alte Version 3.7.0 -->
-		<preference name='pgb-builder-version' value='1' />
 		<preference name="orientation" value="default" /><!-- landscape, portrait, default (both) -->
 		<preference name="fullscreen" value="true" /><!-- true, false, supported for iOS6 and Android -->
 
