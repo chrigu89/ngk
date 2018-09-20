@@ -6,9 +6,9 @@
 		xmlns:gap = "http://phonegap.com/ns/1.0"
 		xmlns:android = "http://schemas.android.com/apk/res/android"
 		id        = "de.design_busse.neussergk"
-		version   = "2.0.2"
-		android-versionCode = "20002"
-		ios-CFBundleVersion = "2.0.2"
+		version   = "2.0.3"
+		android-versionCode = "20003"
+		ios-CFBundleVersion = "2.0.3"
 		>
 		
 	<edit-config target="CFBundleShortVersionString" file="*-Info.plist" mode="overwrite">
@@ -99,7 +99,7 @@
 
 
 	<!-- ANDROID ONLY -->
-		<preference name="android-minSdkVersion" value="15" />
+		<preference name="android-minSdkVersion" value="26" />
 		<preference name="splash-screen-duration" value="99999"/>
 		<preference name="AndroidPersistentFileLocation" value="Compatibility" /> <!--Compatibility / Internal -->
 		<preference name="InAppBrowserStorageEnabled" value="true"/>
