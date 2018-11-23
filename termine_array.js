@@ -158,6 +158,12 @@ termine_array = [
 			'teaser'		: "Neusser Bürger-Schützen-Verein",
 			'location'		: "Sparkassen – Forum Haus II, Sparkasse Neuss Michaelstraße",
 		},
+		{
+			'datum'			: "31.01.2020 20:00",
+			'title'			: 'NGK-Jahreshauptversammlung',
+			'teaser'		: "",
+			'location'		: "Marienhaus, Kapitelstraße 36",
+		},
 
 	];
 
