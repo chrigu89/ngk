@@ -11,7 +11,7 @@
 		>
 		
 	<edit-config target="CFBundleShortVersionString" file="*-Info.plist" mode="overwrite">
-		<string>20060</string>
+		<string>20070</string>
 	</edit-config>
 
 	<name>NGK1823</name>
