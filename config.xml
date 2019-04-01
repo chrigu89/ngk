@@ -5,9 +5,9 @@
 		xmlns:gap = "http://phonegap.com/ns/1.0"
 		xmlns:android = "http://schemas.android.com/apk/res/android"
 		id        = "de.design_busse.neussergk"
-		version   = "2.0.6"
-		android-versionCode = "20060"
-		ios-CFBundleVersion = "2.0.6"
+		version   = "2.0.7"
+		android-versionCode = "20070"
+		ios-CFBundleVersion = "2.0.7"
 		>
 		
 	<edit-config target="CFBundleShortVersionString" file="*-Info.plist" mode="overwrite">
@@ -189,12 +189,6 @@
 		
 		
 		<plugin name="phonegap-plugin-push" spec="2.0.0" />
-		
-		<feature name="Calendar">
-			<param name="ios-package" value="Calendar" />
-			<param name="android-package" value="nl.xservices.plugins.Calendar" />
-		</feature>
-
 		<plugin name="cordova-plugin-calendar" version="4.6.0" />
 		
 		<!-- <plugin name="cordova-plugin-file" version="6.0.1"  /> -->
