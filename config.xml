@@ -78,8 +78,7 @@
 
 
 	<!-- GENERAL -->
-		<!-- <preference name="phonegap-version" value="cli-7.0.1" /> -->
-		<preference name="phonegap-version" value="cli-6.5.0" /> <!-- https://build.phonegap.com/current-support -->
+		<preference name="phonegap-version" value="cli-7.1.0" /> <!-- https://build.phonegap.com/current-support -->
 		<preference name="orientation" value="default" /><!-- landscape, portrait, default (both) -->
 		<preference name="fullscreen" value="true" /><!-- true, false, supported for iOS6 and Android -->
 
