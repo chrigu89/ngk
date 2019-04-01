@@ -78,7 +78,7 @@
 
 
 	<!-- GENERAL -->
-		<preference name="phonegap-version" value="cli-7.0.1" /> <!-- Alte Version 3.7.0 -->
+		<preference name="phonegap-version" value="cli-8.0.0" /> <!-- https://build.phonegap.com/current-support -->
 		<preference name="orientation" value="default" /><!-- landscape, portrait, default (both) -->
 		<preference name="fullscreen" value="true" /><!-- true, false, supported for iOS6 and Android -->
 
@@ -166,7 +166,7 @@
 		
 		<access origin="http://*" />
 		<access origin="https://*" />
-		<access origin="debug.phonegap.com" /> <!-- see: http://community.phonegap.com/nitobi/topics/error_whitelist_rejection -->
+		<access origin="debug.phonegap.com" />
 		
 	<!-- PG Plugins-->
 		<preference name="android-build-tool" value="gradle" />
