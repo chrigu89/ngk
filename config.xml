@@ -175,7 +175,7 @@
 		</platform>
 		
 		
-		<plugin name="phonegap-plugin-push" spec="2.0.0" />
+		<!-- <plugin name="phonegap-plugin-push" spec="2.0.0" /> -->
 		
 		<feature name="Calendar">
 			<param name="ios-package" value="Calendar" />
@@ -191,6 +191,7 @@
 		<plugin name="cordova-plugin-network-information" spec="*" />
 		<plugin name="cordova-plugin-statusbar" spec="*" />
 		<plugin name="cordova-plugin-device" spec="*" />
+		<!-- <plugin name="cordova-plugin-whitelist" spec="*" /> -->
 		
 		<!--
 			Kalender Freigabe
