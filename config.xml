@@ -187,11 +187,11 @@
 		<!-- <plugin name="cordova-plugin-file-transfer" source="npm" version="1.6.3" /> -->
 		<!-- <plugin name="cordova-plugin-file-opener2" version="2.2.0" /> -->
 		
-		<!-- <plugin name="cordova-plugin-inappbrowser" spec="*" /> -->
-		<!-- <plugin name="cordova-plugin-network-information" spec="*" /> -->
-		<!-- <plugin name="cordova-plugin-statusbar" spec="*" /> -->
-		<!-- <plugin name="cordova-plugin-device" spec="*" /> -->
-		<!-- <plugin name="cordova-plugin-whitelist" spec="*" /> -->
+		<plugin name="cordova-plugin-inappbrowser" spec="*" />
+		<plugin name="cordova-plugin-network-information" spec="*" />
+		<plugin name="cordova-plugin-statusbar" spec="*" />
+		<plugin name="cordova-plugin-device" spec="*" />
+		<plugin name="cordova-plugin-whitelist" spec="*" />
 		
 		<!--
 			Kalender Freigabe
