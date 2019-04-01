@@ -18,9 +18,21 @@
 	<description>Termine auf's Handy, Twitter, News und mehr.. Neusser Grenadierkorps 1823</description>
 	<author href="https://apfel.gold" email="christian.busse@apfel.gold">Christian Busse</author>
 
+
+	<!--
+		Kalender Freigabe
+	-->
+	
 	<edit-config target="NSCalendarsUsageDescription" file="*-Info.plist" mode="overwrite">
 		<string>Mit dem Kalenderzugriff erhaltet ihr die Schnellfunktion, alle Termine per Klick in den Kalender zu übertragen. Diese Funktion ist kein muss und die Berechtigung kann abgelehnt werden.</string>
 	</edit-config>
+	
+	<platform name="ios">
+		<config-file parent="NSCalendarsUsageDescription" platform="ios" target="*-Info.plist">
+			<string>Mit dem Kalenderzugriff erhaltet ihr die Schnellfunktion, alle Termine per Klick in den Kalender zu übertragen. Diese Funktion ist kein muss und die Berechtigung kann abgelehnt werden.</string>
+		</config-file>
+	</platform>
+		
 
 	<gap:platform name="ios" />
 	<gap:platform name="android" />
@@ -100,7 +112,7 @@
 	<!-- ANDROID ONLY -->
 		<preference name="android-build-tool" value="gradle" />
 		<preference name="android-minSdkVersion" value="15" />
-		<!-- <preference name="android-targetSdkVersion" value="27" /> -->
+		<preference name="android-targetSdkVersion" value="27" />
 		<preference name="splash-screen-duration" value="99999"/>
 		<preference name="AndroidPersistentFileLocation" value="Compatibility" /> <!--Compatibility / Internal -->
 		<preference name="InAppBrowserStorageEnabled" value="true"/>
@@ -195,21 +207,6 @@
 		<plugin name="cordova-plugin-device" spec="*" />
 		<plugin name="cordova-plugin-whitelist" spec="*" />
 		
-		<!--
-			Kalender Freigabe
-		-->
-		
-		<platform name="ios">
-			<config-file parent="NSCalendarsUsageDescription" platform="ios" target="*-Info.plist">
-				<string>Advertisement would like to create a calendar event.</string>
-			</config-file>
-			<config-file parent="NSPhotoLibraryUsageDescription" platform="ios" target="*-Info.plist">
-				<string>Advertisement would like to store a photo.</string>
-			</config-file>
-			<config-file parent="NSBluetoothPeripheralUsageDescription" platform="ios" target="*-Info.plist">
-				<string>Advertisement would like to use bluetooth.</string>
-			</config-file>
-		</platform>
 
 	<!-- IOS -->
 		
