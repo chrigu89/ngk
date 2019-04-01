@@ -5,7 +5,7 @@ function external(url) {
 function pdf(url) {
 	
 	if (navigator.userAgent.match(/(Android)/)) {
-        var ref = window.open(url.toURL(), '_blank', 'location=yes,enableViewPortScale=yes');
+        var ref = window.open("http://docs.google.com/gview?embedded=true&url=" + "http://apps.apfel.gold/ngk/" + url, '_blank', 'location=yes,enableViewPortScale=yes');
 		
 		// alert("Der Download wird gestartet - bitte einen Moment Geduld");
 		// downloadFile(url);
