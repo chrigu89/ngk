@@ -98,7 +98,7 @@
 
 
 	<!-- ANDROID ONLY -->
-		<preference name="android-minSdkVersion" value="16" />
+		<preference name="android-minSdkVersion" value="15" />
 		<preference name="splash-screen-duration" value="99999"/>
 		<preference name="AndroidPersistentFileLocation" value="Compatibility" /> <!--Compatibility / Internal -->
 		<preference name="InAppBrowserStorageEnabled" value="true"/>
@@ -186,11 +186,12 @@
 		<plugin name="cordova-plugin-file" source="npm" version="4.3.3" />
 		<plugin name="cordova-plugin-file-transfer" source="npm" version="1.6.3" />
 		<plugin name="cordova-plugin-file-opener2" version="2.2.0" />
-		<plugin name="cordova-plugin-inappbrowser" />
-		<plugin name="cordova-plugin-network-information" />
-		<plugin name="cordova-plugin-statusbar" />
-		<plugin name="cordova-plugin-device" />
-		<plugin name="cordova-plugin-whitelist" version="1.2.1" />
+		
+		<plugin name="cordova-plugin-inappbrowser" spec="*" />
+		<plugin name="cordova-plugin-network-information" spec="*" />
+		<plugin name="cordova-plugin-statusbar" spec="*" />
+		<plugin name="cordova-plugin-device" spec="*" />
+		<plugin name="cordova-plugin-whitelist" spec="*" />
 		
 		<!--
 			Kalender Freigabe
