@@ -175,14 +175,14 @@
 		</platform>
 		
 		
-		<!-- <plugin name="phonegap-plugin-push" spec="2.0.0" /> -->
+		<plugin name="phonegap-plugin-push" spec="2.0.0" />
 		
 		<feature name="Calendar">
 			<param name="ios-package" value="Calendar" />
 			<param name="android-package" value="nl.xservices.plugins.Calendar" />
 		</feature>
 
-		<!-- <plugin name="cordova-plugin-calendar" version="4.6.0" /> -->
+		<plugin name="cordova-plugin-calendar" version="4.6.0" />
 		<!-- <plugin name="cordova-plugin-file" source="npm" version="4.3.3" /> -->
 		<!-- <plugin name="cordova-plugin-file-transfer" source="npm" version="1.6.3" /> -->
 		<!-- <plugin name="cordova-plugin-file-opener2" version="2.2.0" /> -->
