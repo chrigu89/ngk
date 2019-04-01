@@ -183,9 +183,10 @@
 		</feature>
 
 		<plugin name="cordova-plugin-calendar" version="4.6.0" />
-		<!-- <plugin name="cordova-plugin-file" source="npm" version="4.3.3" /> -->
-		<!-- <plugin name="cordova-plugin-file-transfer" source="npm" version="1.6.3" /> -->
-		<!-- <plugin name="cordova-plugin-file-opener2" version="2.2.0" /> -->
+		
+		<plugin name="cordova-plugin-file"  />
+		<plugin name="cordova-plugin-file-transfer" />
+		<plugin name="cordova-plugin-file-opener2" />
 		
 		<plugin name="cordova-plugin-inappbrowser" spec="*" />
 		<plugin name="cordova-plugin-network-information" spec="*" />
