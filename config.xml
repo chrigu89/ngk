@@ -186,7 +186,7 @@
 		
 		<plugin name="cordova-plugin-file"  />
 		<!-- <plugin name="cordova-plugin-file-transfer" /> -->
-		<plugin name="cordova-plugin-file-opener2" />
+		<!-- <plugin name="cordova-plugin-file-opener2" /> -->
 		
 		<plugin name="cordova-plugin-inappbrowser" spec="*" />
 		<plugin name="cordova-plugin-network-information" spec="*" />
