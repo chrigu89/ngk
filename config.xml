@@ -186,7 +186,9 @@
 		<platform name="android">
 			<resource-file src="google-services.json" target="google-services.json" />
 		</platform>
-		
+		<!-- <platform name="ios"> -->
+			<!-- <resource-file src="GoogleService-Info.plist" /> -->
+		<!-- </platform> -->
 		
 		<plugin name="phonegap-plugin-push" spec="2.0.0" />
 		<plugin name="cordova-plugin-calendar" version="4.6.0" />
@@ -195,7 +197,9 @@
 		<!-- <plugin name="cordova-plugin-file-transfer" version="1.7.1" /> -->
 		<!-- <plugin name="cordova-plugin-file-opener2" version="2.0.19"  /> -->
 		
+		<plugin name="cordova-support-google-services" spec="*" />
 		<plugin name="cordova-plugin-firebase" spec="*" />
+		<plugin name="cordova-plugin-firebase-analytics" spec="*" />
 		<plugin name="cordova-plugin-inappbrowser" spec="*" />
 		<plugin name="cordova-plugin-network-information" spec="*" />
 		<plugin name="cordova-plugin-statusbar" spec="*" />
