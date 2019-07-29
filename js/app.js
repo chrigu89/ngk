@@ -215,7 +215,7 @@ var onNews = function() {
 	$.ajax({
 		type: 'GET',
 		dataType: "json",
-		url: 'http://neusser-grenadierkorps.de/webapp/api.php',
+		url: 'https://neusser-grenadierkorps.de/webapp/api.php',
 		data:  { "action": "news" },
 		crossDomain: true,
 		cache: false,
@@ -242,7 +242,7 @@ var onTwitter = function() {
 	$.ajax({
 		type: 'GET',
 		dataType: "json",
-		url: 'http://neusser-grenadierkorps.de/webapp/api.php',
+		url: 'https://neusser-grenadierkorps.de/webapp/api.php',
 		data:  { "action": "twitter" },
 		crossDomain: true,
 		cache: false,
