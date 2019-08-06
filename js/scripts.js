@@ -317,6 +317,7 @@ var onReady = function() {
     tatsch = false;
     var LinkToutch = {
 
+        bewegung = false;
         elements: ['a'],
         setup: function() {
             for (j = 0; j < LinkToutch.elements.length + 1; j++) {
@@ -341,13 +342,11 @@ var onReady = function() {
         touchstart: function() {
 
             $(this).addClass("a_hover");
-			alert(touchstart);
             bewegung = false;
 
         },
         touchmove: function(event) {
             bewegung = true;
-			alert('touchmove');
             $(".a_hover").removeClass("a_hover");
 
         },
