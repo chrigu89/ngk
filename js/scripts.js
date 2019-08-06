@@ -51,7 +51,7 @@ function downloadFile(url){
 				var fileTransfer = new FileTransfer();
 				fileEntry.remove();
 				fileTransfer.download(
-					"http://apps.apfel.gold/ngk/" + url,
+					"https://apps.apfel.gold/ngk/" + url,
 					sPath  + url,
 					function(theFile) {
 						showLink = theFile.toURI();
