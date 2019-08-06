@@ -313,11 +313,9 @@ var onReady = function() {
     });
 
     //LinkToutch--------------------------------------------------------------------------------------------
-    bewegung = false;
-    tatsch = false;
+    LinkToutch.bewegung = false;
     var LinkToutch = {
 
-        bewegung: false,
         elements: ['a'],
         setup: function() {
             for (j = 0; j < LinkToutch.elements.length + 1; j++) {
@@ -342,19 +340,20 @@ var onReady = function() {
         touchstart: function() {
 
             $(this).addClass("a_hover");
-            bewegung = false;
+            LinkToutch.bewegung = false;
 
         },
         touchmove: function(event) {
-            bewegung = true;
+            LinkToutch.bewegung = true;
             $(".a_hover").removeClass("a_hover");
+			
 
         },
 
         touchend: function() {
             $(this).removeClass("a_hover");
 
-            if (bewegung === false) {
+            if (LinkToutch.bewegung === false) {
                 if (this.className.indexOf("kalender") >= 0) {
                     kalender(this.rel);
                 } else if (this.className.indexOf("allEvents") >= 0) {
