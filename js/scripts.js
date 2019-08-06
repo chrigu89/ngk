@@ -317,7 +317,7 @@ var onReady = function() {
     tatsch = false;
     var LinkToutch = {
 
-        bewegung = false;
+        bewegung: false,
         elements: ['a'],
         setup: function() {
             for (j = 0; j < LinkToutch.elements.length + 1; j++) {
