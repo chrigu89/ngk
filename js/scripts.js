@@ -315,7 +315,6 @@ var onReady = function() {
     //LinkToutch--------------------------------------------------------------------------------------------
     var LinkToutch = {
 
-		LinkToutch.bewegung: false,
         elements: ['a'],
         setup: function() {
             for (j = 0; j < LinkToutch.elements.length + 1; j++) {
@@ -340,11 +339,11 @@ var onReady = function() {
         touchstart: function() {
 
             $(this).addClass("a_hover");
-            LinkToutch.bewegung = false;
+            bewegung = false;
 
         },
         touchmove: function(event) {
-            LinkToutch.bewegung = true;
+            bewegung = true;
             $(".a_hover").removeClass("a_hover");
 			
 
@@ -353,7 +352,7 @@ var onReady = function() {
         touchend: function() {
             $(this).removeClass("a_hover");
 
-            if (LinkToutch.bewegung === false) {
+            if (bewegung === false) {
                 if (this.className.indexOf("kalender") >= 0) {
                     kalender(this.rel);
                 } else if (this.className.indexOf("allEvents") >= 0) {
