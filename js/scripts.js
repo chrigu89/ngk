@@ -341,11 +341,13 @@ var onReady = function() {
         touchstart: function() {
 
             $(this).addClass("a_hover");
+			alert(touchstart);
             bewegung = false;
 
         },
         touchmove: function(event) {
             bewegung = true;
+			alert('touchmove');
             $(".a_hover").removeClass("a_hover");
 
         },
@@ -353,7 +355,7 @@ var onReady = function() {
         touchend: function() {
             $(this).removeClass("a_hover");
 
-            if (!bewegung) {
+            if (bewegung === false) {
                 if (this.className.indexOf("kalender") >= 0) {
                     kalender(this.rel);
                 } else if (this.className.indexOf("allEvents") >= 0) {
