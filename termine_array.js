@@ -147,17 +147,30 @@ termine_array = [
 			'location'		: "Marienhaus, Kapitelstraße 36",
 		},
 		{ 	
-			'datum'			: "28.06.2020 10:00",
+			'datum'			: "21.06.2020 10:00",
 			'title'			: 'Patronatstag',
 			'teaser'		: "Heilige Messe - St. Marien Umzug zum Foyer Rheinisches Landestheater musikalischer Frühschoppen Siegerehrung Korpsschießen, Ehrungen, Zuganmeldung Schützenfest 2018",
 			'location'		: "St. Marien",
 		},
 		
 		{
+			'datum'			: "18.07.2020 19:00",
+			'title'			: 'Bürgerversammlung',
+			'teaser'		: "",
+			'location'		: "Stadthalle Neuss",
+		},	
+		
+		{
 			'datum'			: "01.08.2020 19:00",
 			'title'			: 'Majorsehrenabend',
 			'teaser'		: "Stadthalle Neuss, Große Korpsversammlung Jubilarehrung, anschl. Heimgeleit des Majors und Biwak am Grenadier-Schützen-Denkmal ",
 			'location'		: "Stadthalle Neuss",
+		},	
+		{
+			'datum'			: "03.08.2020 19:00",
+			'title'			: 'Marschübung (bei Bedarf)',
+			'teaser'		: "",
+			'location'		: "Parkplatz Rennbahn / Globe Theater",
 		},	
 		{
 			'datum'			: "08.08.2020 18:30",
@@ -184,6 +197,12 @@ termine_array = [
 			'location'		: "Platz am Weißen Haus",
 		},		
 		{
+			'datum'			: "24.08.2020 18:00",
+			'title'			: 'Fackelbesichtigung',
+			'teaser'		: "",
+			'location'		: "Fackelbauhalle Zietzschmannhalle",
+		},
+		{
 			'datum'			: "28.08.2020 17:00",
 			'title'			: 'Kirmesplatz Eröffnung',
 			'teaser'		: "",
@@ -206,6 +225,18 @@ termine_array = [
 			'title'			: 'Chargiertenversammlung',
 			'teaser'		: "",
 			'location'		: "Marienhaus, Kapitelstraße 36",
+		},
+		{
+			'datum'			: "15.11.2020 11:30",
+			'title'			: 'Volkstrauertag',
+			'teaser'		: "",
+			'location'		: "Hauptfriedhof, Rheydter Straße",
+		},
+		{
+			'datum'			: "20.11.2020 20:00",
+			'title'			: 'Jahreshauptversammlung',
+			'teaser'		: "Neusser Bürger-Schützen-Verein",
+			'location'		: "Sparkassen – Forum Haus II, Sparkasse Neuss Michaelstraße",
 		},
 
 	];
