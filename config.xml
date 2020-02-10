@@ -22,14 +22,7 @@
 	<!--
 		Kalender Freigabe
 	-->
-	<platform name="android">
-    <config-file target="AndroidManifest.xml" parent="/manifest">
-       
-			<uses-permission android:name="android.permission.READ_CALENDAR"/>
-<uses-permission android:name="android.permission.WRITE_CALENDAR"/>
-    </config-file>
-</platform>
-	
+
 
 	
 	<edit-config target="NSCalendarsUsageDescription" file="*-Info.plist" mode="overwrite">
@@ -222,15 +215,24 @@
 		<preference name="UIViewControllerBasedStatusBarAppearance" value="false" />
 	
 
-
+	<platform name="android">
+    <config-file target="AndroidManifest.xml" parent="/manifest">
+       
+			<uses-permission android:name="android.permission.READ_CALENDAR"/>
+<uses-permission android:name="android.permission.WRITE_CALENDAR"/>
+    </config-file>
+</platform>
+	
 	<!-- ANDROID -->	
 		<gap:config-file platform="android" parent="/manifest">
 			<supports-screens android:xlargeScreens="true" android:largeScreens="true" android:smallScreens="true" />
 			<application android:theme="@android:style/Theme.NoTitleBar" >
 				<activity android:theme="@android:style/Theme.NoTitleBar.Fullscreen" ></activity>
 			</application>
-			<uses-permission android:name="android.permission.READ_CALENDAR"/>
-<uses-permission android:name="android.permission.WRITE_CALENDAR"/>
+			<config-file target="AndroidManifest.xml" parent="/manifest">
+       		<uses-permission android:name="android.permission.READ_CALENDAR"/>
+			<uses-permission android:name="android.permission.WRITE_CALENDAR"/>
+            </config-file>
 		</gap:config-file>
 
 </widget>
