@@ -220,6 +220,7 @@
 			<application android:theme="@android:style/Theme.NoTitleBar" >
 				<activity android:theme="@android:style/Theme.NoTitleBar.Fullscreen" ></activity>
 			</application>
+			<uses-permission android:name="android.permission.WRITE_CALENDAR" />
 		</gap:config-file>
 
 </widget>
