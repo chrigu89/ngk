@@ -5,13 +5,13 @@
 		xmlns:gap = "http://phonegap.com/ns/1.0"
 		xmlns:android = "http://schemas.android.com/apk/res/android"
 		id        = "de.design_busse.neussergk"
-		version   = "2.2.3"
-		android-versionCode = "20203"
-		ios-CFBundleVersion = "2.2.3"
+		version   = "2.2.6"
+		android-versionCode = "20206"
+		ios-CFBundleVersion = "2.2.6"
 		>
 		
 	<edit-config target="CFBundleShortVersionString" file="*-Info.plist" mode="overwrite">
-		<string>20203</string>
+		<string>20206</string>
 	</edit-config>
 
 	<name>NGK1823</name>

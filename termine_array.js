@@ -129,18 +129,6 @@ termine_array = [
 			'location'		: "Marienhaus, Kapitelstraße 36",
 		},
 		{
-			'datum'			: "31.03.2020 20:00",
-			'title'			: 'Fackelbaubesprechung',
-			'teaser'		: "",
-			'location'		: "Marienhaus, Kapitelstraße 36",
-		},
-		{
-			'datum'			: "18.04.2020 13:00",
-			'title'			: 'Korpsschießen',
-			'teaser'		: "",
-			'location'		: "Scheibenstand, Scheibendamm",
-		},
-		{
 			'datum'			: "12.05.2020 20:00",
 			'title'			: 'Chargiertenversammlung',
 			'teaser'		: "",
