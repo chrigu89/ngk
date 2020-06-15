@@ -1,37 +1,39 @@
 {
   "project_info": {
-    "project_number": "6224745733",
-    "firebase_url": "https://trelleborg-siteguide.firebaseio.com",
-    "project_id": "trelleborg-siteguide",
-    "storage_bucket": "trelleborg-siteguide.appspot.com"
+    "project_number": "245131791687",
+    "firebase_url": "https://fleet-breaker-658.firebaseio.com",
+    "project_id": "fleet-breaker-658",
+    "storage_bucket": "fleet-breaker-658.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:6224745733:android:d7ac930ef60f0ac0",
+        "mobilesdk_app_id": "1:245131791687:android:c980bf58ece28c5d",
         "android_client_info": {
-          "package_name": "com.trelleborg.siteguide"
+          "package_name": "de.design_busse.neussergk"
         }
       },
       "oauth_client": [
         {
-          "client_id": "6224745733-14voj516gp2is7qusi3nno0vbu9319fu.apps.googleusercontent.com",
+          "client_id": "245131791687-td0pidrs6bmscfjm7hopo0jugtor5r1v.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDGUUqVTRd8nRw-8zenB1rT9L3MI6uoJ8c"
+          "current_key": "AIzaSyCCMa2kK6R2PPqam-5BwEgVjddo4jLe-cg"
         }
       ],
       "services": {
+        "analytics_service": {
+          "status": 1
+        },
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "6224745733-14voj516gp2is7qusi3nno0vbu9319fu.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
         }
       }
     }
