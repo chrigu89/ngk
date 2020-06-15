@@ -1,0 +1,192 @@
+<div id="dp_bestellform_fehler_meld" style="display:none;">
+  <bdo>Es ist ein Fehler aufgetreten.</bdo>
+  <span style="display:block;">
+  <bdo>Bitte versuchen Sie es später erneut.</bdo>
+  </span></div>
+<form name="dp_bestellform" action="https://apps.apfel.gold/siteguide20/send/request.php" method="post">
+  <input name="en_de" id="" type="hidden" value="deutsch">
+  <input name="eingabe_berechnung" id="" type="hidden" value="deutsch">
+  <h2 class="nur_calc_display" style="display:none;">
+    <bdo>Bestellformular</bdo>
+  </h2>
+  
+  <!--input begin -->
+  <div class="eing v_name">
+    <div class="e_label">
+      <bdo>Vorname</bdo>
+      <a class="alert_ e_error" rel="Bitte geben Sie Ihren Vornamen ein." data-en="Please enter your first name."></a></div>
+    <div class="validation_ok"></div>
+    <div class="eing_dp">
+      <input name="v_name" id="" type="text" tabindex="5">
+    </div>
+  </div>
+  <!--input end --> 
+  <!--input begin -->
+  <div class="eing n_name">
+    <div class="e_label">
+      <bdo>Nachname</bdo>
+      <a class="alert_ e_error" rel="Bitte geben Sie Ihren Nachnamen ein." data-en="Please enter your last name."></a></div>
+    <div class="validation_ok"></div>
+    <div class="eing_dp">
+      <input name="n_name" id="" type="text" tabindex="6">
+    </div>
+  </div>
+  <!--input end --> 
+  <!--input begin -->
+  <div class="eing firma">
+    <div class="e_label">
+      <bdo>Firma</bdo>
+    </div>
+    <div class="eing_dp">
+      <input name="firma" id="" type="text" tabindex="7">
+    </div>
+  </div>
+  <!--input end -->
+  
+  <div id="kn_auswahl_platz">
+    <div id="kn_auswahl" class="feedb_fr w50proz">
+      <div>
+        <bdo>Haben Sie eine Kundennummer?</bdo>
+      </div>
+      <a class="feed f_active" rel="option_kundennummer" id="ja">
+      <bdo>Ja</bdo>
+      </a> <a class="feed last" rel="option_kundennummer" id="nein">
+      <bdo>Nein</bdo>
+      </a>
+      <div class="clr"></div>
+    </div>
+    <!--feedb_fr -->
+    <div id="p_s_eingabe" class="form_feld btop">
+      <textarea name="vermisse_p_s" cols="" rows="">
+			</textarea>
+    </div>
+    <div id="kundennummer_dp_bestellform"> 
+      
+      <!--input begin -->
+      <div class="eing knr">
+        <div class="e_label">
+          <bdo>Kundennummer</bdo>
+          <a class="alert_ e_error" rel="Bitte geben Sie Ihre Kundennummer ein." data-en="Please enter your customer number."></a></div>
+        <div class="validation_ok"></div>
+        <div class="eing_dp">
+          <input name="knr" id="" type="text" tabindex="8">
+        </div>
+      </div>
+      <!--input end --> 
+      
+    </div>
+    <!--kundennummer_dp_bestellform -->
+    
+    <div id="adresse_dp_bestellform">
+      <div class="f_table"> 
+        <!--input begin -->
+        <div class="eing strasse">
+          <div class="e_label">
+            <bdo>Straße</bdo>
+            <a class="alert_ e_error" rel="Bitte geben Sie Ihre Straße ein." data-en="Please enter your street."></a></div>
+          <div class="validation_ok"></div>
+          <div class="eing_dp">
+            <input name="strasse" id="" type="text" tabindex="9">
+          </div>
+        </div>
+        <!--input end --> 
+        <!--input begin -->
+        <div class="eing hnr">
+          <div class="e_label">
+            <bdo>Nr.</bdo>
+            <a class="alert_ e_error" rel="Bitte geben Sie Ihre Hausnummer ein."  data-en="Please enter your house number."></a></div>
+          <div class="validation_ok"></div>
+          <div class="eing_dp">
+            <input name="hnr" id="" type="text" tabindex="10">
+          </div>
+        </div>
+        <!--input end --> 
+      </div>
+      <!--f_table -->
+      
+      <div class="f_table"> 
+        <!--input begin -->
+        <div class="eing plz">
+          <div class="e_label">
+            <bdo>PLZ</bdo>
+            <a class="alert_ e_error" rel="Bitte geben Sie Ihre Postleitzahl ein." data-en="Please enter your zip code."></a></div>
+          <div class="validation_ok"></div>
+          <div class="eing_dp">
+            <input name="plz" id="" type="text" tabindex="11">
+          </div>
+        </div>
+        <!--input end --> 
+        <!--input begin -->
+        <div class="eing ort">
+          <div class="e_label">Ort <a class="alert_ e_error" rel="Bitte geben Sie Ihren Wohnort ein." data-en="Please enter your place of residence."></a></div>
+          <div class="validation_ok"></div>
+          <div class="eing_dp">
+            <input name="ort" id="" type="text" tabindex="12">
+          </div>
+        </div>
+        <!--input end --> 
+      </div>
+      <!--f_table --> 
+      
+    </div>
+    <!--adresse_dp_bestellform --> 
+    
+  </div>
+  <!--kn_auswahl_platz --> 
+  
+  <!--input begin -->
+  <div class="eing land">
+    <div class="e_label">
+      <bdo>Land</bdo>
+      <a class="alert_ e_error" rel="Bitte geben Sie Ihr Land ein." data-en="Please enter your country."></a></div>
+    <div class="validation_ok"></div>
+    <div class="eing_dp">
+      <input name="land" id="" type="text" tabindex="5">
+    </div>
+  </div>
+  <!--input end --> 
+  
+  <!--input begin -->
+  <div class="eing telefon">
+    <div class="e_label">
+      <bdo>Telefon</bdo>
+      <a class="alert_ e_error" rel="Bitte geben Sie Ihre Telefonnummer ein." data-en="Please enter your telephone Number."></a></div>
+    <div class="validation_ok"></div>
+    <div class="eing_dp">
+      <input name="telefon" id="" type="text" tabindex="13">
+    </div>
+  </div>
+  <!--input end --> 
+  
+  <!--input begin -->
+  <div class="eing email">
+    <div class="e_label">
+      <bdo>E-Mail</bdo>
+      <a class="alert_ e_error" rel="Die E-Mailadresse enthält Fehler! Bitte geben Sie eine korrekte E-Mailadresse ein." data-en="The email address contains errors! Please enter a valid email adress."></a></div>
+    <div class="validation_ok"></div>
+    <div class="eing_dp">
+      <input name="email" id="" type="text" tabindex="14">
+    </div>
+  </div>
+  <!--input end --> 
+  
+  <!--input begin -->
+  <div class="eing txt_area nachricht nur_calc_display"  style="display:none;">
+    <div class="e_label">
+      <bdo>Nachricht</bdo>
+    </div>
+    <div class="eing_dp">
+      <textarea name="nachricht" tabindex="15"></textarea>
+    </div>
+  </div>
+  <!--input end -->
+  <button class="berechnen_btn nur_calc_display"  tabindex="16" type="submit" style="display:none;">
+  <bdo>Absenden</bdo>
+  </button>
+  <div id="erf_versendet" style="display:none; text-align:center;">
+    <bdo>Ihre Anfrage wurde erfolgreich versendet.</bdo>
+  </div>
+</form>
+<div id="bst_script">
+
+</div>
