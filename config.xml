@@ -5,9 +5,9 @@
 		xmlns:gap = "http://phonegap.com/ns/1.0"
 		xmlns:android = "http://schemas.android.com/apk/res/android"
 		id        = "de.design_busse.neussergk"
-		version   = "2.2.8"
-		android-versionCode = "20208"
-		ios-CFBundleVersion = "2.2.8"
+		version   = "2.2.9"
+		android-versionCode = "20209"
+		ios-CFBundleVersion = "2.2.9"
 		>
 		
 	<edit-config target="CFBundleShortVersionString" file="*-Info.plist" mode="overwrite">
@@ -33,6 +33,14 @@
 		<config-file parent="NSCalendarsUsageDescription" platform="ios" target="*-Info.plist">
 			<string>Mit dem Kalenderzugriff erhaltet ihr die Schnellfunktion, alle Termine per Klick in den Kalender zu übertragen. Diese Funktion ist kein muss und die Berechtigung kann abgelehnt werden.</string>
 		</config-file>
+		
+		<preference name="WKWebViewOnly" value="true" />
+
+		<feature name="CDVWKWebViewEngine">
+			<param name="ios-package" value="CDVWKWebViewEngine" />
+		</feature>
+
+		<preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
 	</platform>
 		
 
@@ -193,12 +201,8 @@
 		
 		<plugin name="phonegap-plugin-push" spec="2.0.0" />
 		<plugin name="cordova-plugin-calendar" version="4.6.0" />
-		
-		<!-- <plugin name="cordova-plugin-file" version="6.0.1"  /> -->
-		<!-- <plugin name="cordova-plugin-file-transfer" version="1.7.1" /> -->
-		<!-- <plugin name="cordova-plugin-file-opener2" version="2.0.19"  /> -->
-		
-		<plugin name="cordova-plugin-inappbrowser" spec="*" />
+		<plugin name="cordova-plugin-wkwebview-engine" source="npm" version="3.1.0" />
+		<plugin name="cordova-plugin-inappbrowser" source="npm" version="3.1.0" />
 		<plugin name="cordova-plugin-network-information" spec="*" />
 		<plugin name="cordova-plugin-statusbar" spec="*" />
 		<plugin name="cordova-plugin-device" spec="*" />
