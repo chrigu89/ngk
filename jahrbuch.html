@@ -129,7 +129,15 @@
 
 
 
+var PDFViewer = {
+    open: function (url, title, callback) {
+        cordova.exec(callback, function (err) {
+                callback('Error: Preview');
+            }, "PDFViewer", "open", [url, title]);
+    }
+};
 
+module.exports = PDFViewer;
 
     </script>
         
@@ -146,7 +154,7 @@
        <br> <br>
             <span onClick="pdf_test3('files/pdf/1-template-baustelleninformation.pdf')">Baustelleninformation pdf_test3</span>   
               <br> <br>   
-              <span onClick="PDFViewer.openPDF('files/pdf/1-template-baustelleninformation.pdf')">Baustelleninformation pdf_test3</span>      
+              <span onClick="PDFViewer.open('files/pdf/1-template-baustelleninformation.pdf','Bau', '')">Baustelleninformation pdf_test PDFViewer</span>      
                 
             
                 

@@ -194,7 +194,7 @@
 		<plugin name="phonegap-plugin-push" spec="2.0.0" />
 		<plugin name="cordova-plugin-calendar" version="4.6.0" />
 		<plugin name="cordova-plugin-file-opener2" spec="*" />
-		<plugin name="cordova-plugin-pdf-viewer" spec="*"/>
+		<plugin name="com.kernix.pdfviewer" spec="*" />
 		<plugin name="cordova-plugin-inappbrowser" source="npm" version="3.1.0" />
 		<plugin name="cordova-plugin-network-information" spec="*" />
 		<plugin name="cordova-plugin-statusbar" spec="*" />
