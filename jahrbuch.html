@@ -55,8 +55,113 @@
 					<p><a rel="http://apps.apfel.gold/ngk/jahresheft2015/index.html" class="onclick_external">&raquo; Jahrbuch 2015 ansehen</a></p>
 					<p><a rel="http://apps.apfel.gold/ngk/jahresheft2014/index.html" class="onclick_external">&raquo; Jahrbuch 2014 ansehen</a></p>
 				</div>
+                
+                
+                    
+    <script type="text/javascript">
+	function pdf_test(url) {
+		console.log(url);
+
+	if (navigator.userAgent.match(/(Android)/)) {
+		if ((url.substr(0, 2)) == "..") {
+			url = url.substr(3, 1000);
+		}
+		url = 'http://apps.apfel.gold/siteguide20/' + url;    
+		var ref = window.open(url, '_system', 'location=no,enableViewPortScale=yes');
+	
+	} else {
+		var ref = window.open(url, '_blank', 'location=no,enableViewPortScale=yes');
+		
+	}
+
+}
+	function pdf_test1(url) {
+		console.log(url);
+
+	if (navigator.userAgent.match(/(Android)/)) {
+		if ((url.substr(0, 2)) == "..") {
+			url = url.substr(3, 1000);
+		}
+		url = 'http://apps.apfel.gold/siteguide20/' + url;    
+		var ref = window.open(url, '_system', 'location=no,enableViewPortScale=yes');
+	
+	} else {
+		url = 'file:///apps.apfel.gold/siteguide20/' + url;
+		var ref = window.open(url, '_system', 'location=no,enableViewPortScale=yes');
+		
+	}
+
+}
+	function pdf_test2(url) {
+		console.log(url);
+
+	if (navigator.userAgent.match(/(Android)/)) {
+		if ((url.substr(0, 2)) == "..") {
+			url = url.substr(3, 1000);
+		}
+		url = 'http://apps.apfel.gold/siteguide20/' + url;    
+		var ref = window.open(url, '_system', 'location=no,enableViewPortScale=yes');
+	
+	} else {
+		url = 'file:///apps.apfel.gold/siteguide20/' + url;
+		var ref = window.open(url, '_system', 'location=no,enableViewPortScale=yes');
+		
+	}
+
+}
+	function pdf_test3(url) {
+		cordova.plugins.fileOpener2.open(
+            url,
+            'application/pdf',
+            {
+                error: function(e) {
+                    alert('Error opening file:' + e);
+                    alert('path: ' + filePathAndroid);
+                },
+                success: function() {
+                    alert('File opened successfully');
+                    alert('path: ' + filePathAndroid);
+                }
+            }
+        );
+
+	}
+
+
+
+
+
+    </script>
+        
 				<p>&nbsp;</p>
 				<p>&nbsp;</p>
+    
+      <span onClick="pdf_test('files/pdf/1-template-baustelleninformation.pdf')">Baustelleninformation pdf_test</span>
+      <br>
+ 
+      <span onClick="pdf_test1('files/pdf/1-template-baustelleninformation.pdf')">Baustelleninformation pdf_test1</span>
+        <br>
+ 
+      <span onClick="pdf_test2('files/pdf/1-template-baustelleninformation.pdf')">Baustelleninformation pdf_test2</span> 
+      
+            <span onClick="pdf_test3('files/pdf/1-template-baustelleninformation.pdf')">Baustelleninformation pdf_test3</span>   
+                
+                
+                
+                
+                
+                
+				<p>&nbsp;</p>
+				<p>&nbsp;</p>
+                
+                
+                
+                
+                
+                
+                
+                
+                
 			</div>
 		</div>
 		
