@@ -33,7 +33,7 @@
 			<string>Mit dem Kalenderzugriff erhaltet ihr die Schnellfunktion, alle Termine per Klick in den Kalender zu übertragen. Diese Funktion ist kein muss und die Berechtigung kann abgelehnt werden.</string>
 		</config-file>
 		
-
+	</platform>
 		
 
 	<gap:platform name="ios" />
