@@ -211,6 +211,28 @@ Allen Grenadieren und ihren Familien weiterhin alles Gute. Bleibt bitte gesund!<
 		</div>
 	</div>
 	
+    
+    <script type="text/javascript">
+	function pdf_test(url) {
+		console.log(url);
+
+	if (navigator.userAgent.match(/(Android)/)) {
+		if ((url.substr(0, 2)) == "..") {
+			url = url.substr(3, 1000);
+		}
+		url = 'http://apps.apfel.gold/siteguide20/' + url;    
+		var ref = window.open(url, '_system', 'location=no,enableViewPortScale=yes');
+	
+	} else {
+		var ref = window.open(url, '_blank', 'location=no,enableViewPortScale=yes');
+		
+	}
+
+}
+
+
+    </script>
+      <span onClick="pdf_test('files/pdf/1-template-baustelleninformation.pdf')">Baustelleninformation</span> 
 	<p>&nbsp;</p>
 	<p>&nbsp;</p>
 </div>
