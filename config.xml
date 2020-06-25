@@ -13,7 +13,6 @@
 	<edit-config target="CFBundleShortVersionString" file="*-Info.plist" mode="overwrite">
 		<string>20210</string>
 	</edit-config>
-
 	<name>NGK1823</name>
 	<description>Termine auf's Handy, Twitter, News und mehr.. Neusser Grenadierkorps 1823</description>
 	<author href="https://apfel.gold" email="christian.busse@apfel.gold">Christian Busse</author>
