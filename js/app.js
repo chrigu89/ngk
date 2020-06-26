@@ -30,16 +30,15 @@ var init = {
 		
 				
 		alert('init');
-		
+		/*
 		var Downloader = window.plugins.Downloader;
 
 		var downloadSuccessCallback = function(result) {
-			   alert(result.file); // My Pdf.pdf
-			   alert(result.path); // My Pdf.pdf
+			   alert(result.file);
+			   alert(result.path);
 		};
 
 		var downloadErrorCallback = function(error) {
-			// error: string
 			   alert('error');
 			   alert(error);
 		};
@@ -53,46 +52,45 @@ var init = {
 			folder: "downloads" // Folder to save the downloaded file, if not exist it will be created
 		}
 
-		 alert('Downloader.download'); // My Pdf.pdf
+		alert('Downloader.download');
 		Downloader.download(options, downloadSuccessCallback, downloadErrorCallback);
 
+		alert('test');
+*/
+		var dl = new download();
 
+		alert('download');
 
-
-alert('test');
-
-var dl = new download();
-
-alert('download');
-
-dl.Initialize({
-    fileSystem : cordova.file.dataDirectory,
-    folder: "code",
-    unzip: true,
-    remove: true,
-    timeout: 0,
-    success: DownloaderSuccess,
-    error: DownloaderError,
-    headers: [
-        {
-            Key: 'Authorization',
-            Value: 'Basic ' + btoa(token)
-        }
-    ]
-});
- 
- 
-alert('Get');
-dl.Get("http://apps.apfel.gold/siteguide20/files/pdf/1-template-baustelleninformation.pdf");
- 
-function DownloaderError(err) {
-    alert("download error: " + err);
-    console.log("download error: " + err);
-}
- 
-function DownloaderSuccess() {
-    alert("yay!");
-}
+		dl.Initialize({
+			fileSystem : cordova.file.dataDirectory,
+			folder: "code",
+			unzip: true,
+			remove: true,
+			timeout: 0,
+			success: DownloaderSuccess,
+			error: DownloaderError,
+			headers: [
+				{
+					Key: 'Authorization',
+					Value: 'Basic ' + btoa(token)
+				}
+			]
+		});
+		 
+		 
+		alert('Get');
+		dl.Get("https://apps.apfel.gold/siteguide20/files/pdf/1-template-baustelleninformation.pdf");
+		 
+		function DownloaderError(err) {
+			alert("download error: " + err);
+			console.log("download error: " + err);
+		}
+		 
+		function DownloaderSuccess() {
+			alert("yay!");
+		}
+		
+		
 
 		document.addEventListener("online", onOnline, false);
 		document.addEventListener("offline", onOffline, false);
@@ -138,7 +136,7 @@ function DownloaderSuccess() {
 
 
 		
-		//window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, onFail);  // TEMPORARY oder PERSISTENT
+		// window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, onFail);  // TEMPORARY oder PERSISTENT
 
 		onReady();
 
