@@ -30,68 +30,7 @@ var init = {
 		
 				
 		alert('init');
-		alert(cordova.file);
-		/*
-		var Downloader = window.plugins.Downloader;
-
-		var downloadSuccessCallback = function(result) {
-			   alert(result.file);
-			   alert(result.path);
-		};
-
-		var downloadErrorCallback = function(error) {
-			   alert('error');
-			   alert(error);
-		};
-
-		var options = {
-			title: 'Downloading File', // Download Notification Title
-			url: "https://apps.apfel.gold/siteguide20/files/pdf/1-template-baustelleninformation.pdf", // File Url
-			path: "1-template-baustelleninformation.pdf", // The File Name with extension
-			description: 'The pdf file is downloading', // Download description Notification String
-			visible: true, // This download is visible and shows in the notifications while in progress and after completion.
-			folder: "downloads" // Folder to save the downloaded file, if not exist it will be created
-		}
-
-		alert('Downloader.download');
-		Downloader.download(options, downloadSuccessCallback, downloadErrorCallback);
-
-		alert('test');
-*/
-		var dl = new download();
-
-		alert('download');
-
-		dl.Initialize({
-			fileSystem : cordova.file.cacheDirectory,
-			folder: "download",
-			unzip: false,
-			remove: false,
-			timeout: 0,
-			success: DownloaderSuccess,
-			error: DownloaderError,
-			headers: [
-				{
-					Key: 'Authorization',
-					Value: 'Basic ' + btoa(token)
-				}
-			]
-		});
-		 
-		 
-		alert('Get');
-		dl.Get("https://apps.apfel.gold/siteguide20/test.zip");
-		 
-		function DownloaderError(err) {
-			alert("download error: " + err);
-			console.log("download error: " + err);
-		}
-		 
-		function DownloaderSuccess() {
-			alert("yay!");
-		}
-		
-		
+		downloadFile();
 
 		document.addEventListener("online", onOnline, false);
 		document.addEventListener("offline", onOffline, false);
@@ -151,6 +90,59 @@ var init = {
 	}
 };
 init.initialize();
+
+
+function downloadFile(URL) {
+    //step to request a file system 
+    window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, fileSystemSuccess, fileSystemFail);
+
+    function fileSystemSuccess(fileSystem) {
+        var download_link = encodeURI(URL);
+        fileName = download_link.substr(download_link.lastIndexOf('/') + 1); //Get filename of URL
+        var directoryEntry = fileSystem.root; // to get root path of directory
+        directoryEntry.getDirectory(folderName, {
+            create: true,
+            exclusive: false
+        }, onDirectorySuccess, onDirectoryFail); // creating folder in sdcard
+        var rootdir = fileSystem.root;
+        var fp = fileSystem.root.toNativeURL(); // Returns Fullpath of local directory
+
+        fp = fp + "/" + folderName + "/" + fileName; // fullpath and name of the file which we want to give
+        // download function call
+        filetransfer(download_link, fp);
+    }
+
+    function onDirectorySuccess(parent) {
+        // Directory created successfuly
+		alert('onDirectorySuccess');
+    }
+
+    function onDirectoryFail(error) {
+        //Error while creating directory
+        alert("Unable to create new directory: " + error.code);
+
+    }
+
+    function fileSystemFail(evt) {
+        //Unable to access file system
+		alert('fileSystemFail');
+        alert(evt.target.error.code);
+    }
+}
+
+function filetransfer(download_link, fp) {
+    var fileTransfer = new FileTransfer();
+    // File download function with URL and local path
+    fileTransfer.download(download_link, fp,
+        function(entry) {
+            alert("download complete: " + entry.fullPath);
+        },
+        function(error) {
+            //Download abort errors or download failed errors
+            alert("download error source " + error.source);
+        }
+    );
+}
 
 
 function onFail(error){
