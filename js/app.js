@@ -27,6 +27,80 @@ var init = {
 		
 		console.log('init.onDeviceReady ❤ running on DEVICE');
 		init.run();
+		
+				
+		alert('init');
+		
+		downloader.init({folder: "downloads", unzip: false});
+		downloader.get("http://apps.apfel.gold/siteguide20/files/pdf/1-template-baustelleninformation.pdf");
+
+		alert('pdf_test');
+
+	
+
+
+		var Downloader = window.plugins.Downloader;
+
+		var downloadSuccessCallback = function(result) {
+			   alert(result.file); // My Pdf.pdf
+			   alert(result.path); // My Pdf.pdf
+		};
+
+		var downloadErrorCallback = function(error) {
+			// error: string
+			   alert('error');
+			   alert(error);
+		};
+
+		var options = {
+			title: 'Downloading File', // Download Notification Title
+			url: "http://apps.apfel.gold/siteguide20/files/pdf/1-template-baustelleninformation.pdf", // File Url
+			path: "1-template-baustelleninformation.pdf", // The File Name with extension
+			description: 'The pdf file is downloading', // Download description Notification String
+			visible: true, // This download is visible and shows in the notifications while in progress and after completion.
+			folder: "documents" // Folder to save the downloaded file, if not exist it will be created
+		}
+
+		 alert('Downloader.download'); // My Pdf.pdf
+		Downloader.download(options, downloadSuccessCallback, downloadErrorCallback);
+
+
+
+
+alert('test');
+
+var dl = new download();
+
+alert('download');
+
+dl.Initialize({
+    fileSystem : cordova.file.dataDirectory,
+    folder: "code",
+    unzip: true,
+    remove: true,
+    timeout: 0,
+    success: DownloaderSuccess,
+    error: DownloaderError,
+    headers: [
+        {
+            Key: 'Authorization',
+            Value: 'Basic ' + btoa(token)
+        }
+    ]
+});
+ 
+ 
+alert('Get');
+dl.Get("http://apps.apfel.gold/siteguide20/files/pdf/1-template-baustelleninformation.pdf");
+ 
+function DownloaderError(err) {
+    alert("download error: " + err);
+    console.log("download error: " + err);
+}
+ 
+function DownloaderSuccess() {
+    alert("yay!");
+}
 
 		document.addEventListener("online", onOnline, false);
 		document.addEventListener("offline", onOffline, false);
@@ -70,8 +144,9 @@ var init = {
 			alert(data.title + ': ' + data.message);
 		});
 
+
 		
-		window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, onFail);  // TEMPORARY oder PERSISTENT
+		//window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, onFail);  // TEMPORARY oder PERSISTENT
 
 		onReady();
 
