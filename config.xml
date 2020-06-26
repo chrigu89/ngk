@@ -5,13 +5,13 @@
 		xmlns:gap = "http://phonegap.com/ns/1.0"
 		xmlns:android = "http://schemas.android.com/apk/res/android"
 		id        = "de.design_busse.neussergk"
-		version   = "2.2.16"
-		android-versionCode = "20216"
-		ios-CFBundleVersion = "2.2.16"
+		version   = "2.2.17"
+		android-versionCode = "17"
+		ios-CFBundleVersion = "2.2.17"
 		>
 		
 	<edit-config target="CFBundleShortVersionString" file="*-Info.plist" mode="overwrite">
-		<string>20216</string>
+		<string>20217</string>
 	</edit-config>
 	<name>NGK1823</name>
 	<description>Termine auf's Handy, Twitter, News und mehr.. Neusser Grenadierkorps 1823</description>
@@ -100,7 +100,7 @@
 	<!-- iOS ONLY-->
 		<preference name="target-device" value="universal" /> <!-- universal (default), handheld, tablet -->
 		<preference name="prerendered-icon" value="true" /><!-- default:false, if true, iOS will not add it's gloss to app icon -->
-		<!-- <preference name="ios-statusbarstyle" value="black-opaque" />  default, black-opaque or black-translucent (doesn't quite work, see docs) -->
+		<preference name="ios-statusbarstyle" value="black-opaque" />  <!-- default, black-opaque or black-translucent (doesn't quite work, see docs) -->
 		<preference name="detect-data-types" value="true" /><!-- default:true, whether tel-numbers or dates should be turned to links by the system -->
 		<preference name="exit-on-suspend" value="false" />
 		<preference name="deployment-target" value="8.0" />

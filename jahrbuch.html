@@ -59,13 +59,10 @@
                 
                     
     <script type="text/javascript">
-	function pdf_test(url) {
-		
-		downloader.get("http://apps.apfel.gold/siteguide20/files/pdf/1-template-baustelleninformation.pdf");
 
-	}
-/*
-var Downloader = window.plugins.Downloader;
+
+
+var downloader = window.plugins.Downloader;
 
 var downloadSuccessCallback = function(folder) {
        // folder: string where the file has been downloaded
@@ -85,16 +82,24 @@ var options = {
     path: "1-template-baustelleninformation.pdf", // The File Name with extension
 }
 
-Downloader.download(options, downloadSuccessCallback, downloadErrorCallback);
-*/
+downloader.download(options, downloadSuccessCallback, downloadErrorCallback);
+
+
+
+	function pdf_test(url) {
+		alert('pdf_test');
+		downloader.get("http://apps.apfel.gold/siteguide20/files/pdf/1-template-baustelleninformation.pdf");
+
+	}
 downloader.init({folder: "downloads"});
+
 
     </script>
         
 				<p>&nbsp;</p>
 				<p>&nbsp;</p>
     
-			  <span onClick="pdf_test('files/pdf/1-template-baustelleninformation.pdf')">Baustelleninformation pdf_test</span>
+			  <span onClick="pdf_test()">Baustelleninformation pdf_test</span>
 			  
                 
 				<p>&nbsp;</p>
