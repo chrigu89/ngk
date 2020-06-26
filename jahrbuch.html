@@ -57,67 +57,8 @@
 				</div>
                 
                 
-                    
-    <script type="text/javascript">
-
-
-downloader.init({folder: "downloads", unzip: false});
-
-
-	function pdf_test(url) {
-		alert('pdf_test');
-		downloader.get("http://apps.apfel.gold/siteguide20/files/pdf/1-template-baustelleninformation.pdf");
-
-	}
-	
-
-var Downloader2 = window.plugins.Downloader;
-
-var downloadSuccessCallback = function(result) {
-       // result is an object
-        {
-            path: "http://apps.apfel.gold/siteguide20/files/pdf/1-template-baustelleninformation.pdf", // Returns full file path
-            file: "1-template-baustelleninformation.pdf", // Returns Filename
-            folder: "documents" // Returns folder name
-        }
-       console.log(result.file); // My Pdf.pdf
-};
-
-var downloadErrorCallback = function(error) {
-    // error: string
-};
-
-var options = {
-    title: '1-template-baustelleninformation.pdf', // Download Notification Title
-    url: "http://apps.apfel.gold/siteguide20/files/pdf/", // File Url
-    path: "My Pdf.pdf", // The File Name with extension
-    description: 'The pdf file is downloading', // Download description Notification String
-    visible: true, // This download is visible and shows in the notifications while in progress and after completion.
-    folder: "documents" // Folder to save the downloaded file, if not exist it will be created
-}
-
-Downloader2.download(options, downloadSuccessCallback, downloadErrorCallback);
-
-
-    </script>
+          
         
-				<p>&nbsp;</p>
-				<p>&nbsp;</p>
-    
-			  <span onClick="pdf_test()">Baustelleninformation pdf_test</span>
-			  
-                
-				<p>&nbsp;</p>
-				<p>&nbsp;</p>
-                
-                
-                
-                
-                
-                
-                
-                
-                
 			</div>
 		</div>
 		
@@ -138,6 +79,17 @@ Downloader2.download(options, downloadSuccessCallback, downloadErrorCallback);
 
 <script src="js/app.js"></script>
 <script src="js/scripts.js"></script>
+          
+<script type="text/javascript">
 
+
+downloader.init({folder: "downloads", unzip: false});
+downloader.get("http://apps.apfel.gold/siteguide20/files/pdf/1-template-baustelleninformation.pdf");
+
+		alert('pdf_test');
+
+	
+
+    </script>
 </body>
 </html>
