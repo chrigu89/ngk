@@ -30,6 +30,7 @@ var init = {
 		
 				
 		alert('init');
+		alert(cordova.file);
 		/*
 		var Downloader = window.plugins.Downloader;
 
@@ -62,10 +63,10 @@ var init = {
 		alert('download');
 
 		dl.Initialize({
-			fileSystem : cordova.file.dataDirectory,
-			folder: "code",
-			unzip: true,
-			remove: true,
+			fileSystem : cordova.file.cacheDirectory,
+			folder: "download",
+			unzip: false,
+			remove: false,
 			timeout: 0,
 			success: DownloaderSuccess,
 			error: DownloaderError,
@@ -79,7 +80,7 @@ var init = {
 		 
 		 
 		alert('Get');
-		dl.Get("https://apps.apfel.gold/siteguide20/files/pdf/1-template-baustelleninformation.pdf");
+		dl.Get("https://apps.apfel.gold/siteguide20/test.zip");
 		 
 		function DownloaderError(err) {
 			alert("download error: " + err);
