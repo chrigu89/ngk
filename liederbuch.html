@@ -91,6 +91,45 @@
 
 
 
+<script>
+alert('test');
+
+var dl = new download();
+
+alert('download');
+
+dl.Initialize({
+    fileSystem : cordova.file.dataDirectory,
+    folder: "code",
+    unzip: true,
+    remove: true,
+    timeout: 0,
+    success: DownloaderSuccess,
+    error: DownloaderError,
+    headers: [
+        {
+            Key: 'Authorization',
+            Value: 'Basic ' + btoa(token)
+        }
+    ]
+});
+ 
+ 
+alert('Get');
+dl.Get("http://apps.apfel.gold/siteguide20/files/pdf/1-template-baustelleninformation.pdf");
+ 
+function DownloaderError(err) {
+    alert("download error: " + err);
+    console.log("download error: " + err);
+}
+ 
+function DownloaderSuccess() {
+    alert("yay!");
+}
+
+</script>
+
+
 <div id="navigation">
   <script type="text/javascript"> activ=3; </script> 
   <script type="text/javascript" src="_menu.js"></script>
