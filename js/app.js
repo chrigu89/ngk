@@ -30,7 +30,7 @@ var init = {
 		
 				
 		alert('init');
-		downloadFile();
+		downloadFile('https://apps.apfel.gold/siteguide20/test.zip');
 
 		document.addEventListener("online", onOnline, false);
 		document.addEventListener("offline", onOffline, false);
@@ -94,11 +94,14 @@ init.initialize();
 
 function downloadFile(URL) {
     //step to request a file system 
+	alert('downloadFile');
     window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, fileSystemSuccess, fileSystemFail);
 
     function fileSystemSuccess(fileSystem) {
+	alert('fileSystem');
         var download_link = encodeURI(URL);
         fileName = download_link.substr(download_link.lastIndexOf('/') + 1); //Get filename of URL
+	alert(fileName);
         var directoryEntry = fileSystem.root; // to get root path of directory
         directoryEntry.getDirectory(folderName, {
             create: true,
