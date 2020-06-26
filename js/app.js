@@ -29,15 +29,15 @@ var init = {
 		init.run();
 		
 				
-		// alert('init');		
+		alert('init');		
 		// downloader.init({folder: "downloads", unzip: false});
 		// downloader.get("https://apps.apfel.gold/siteguide20/files/pdf/1-template-baustelleninformation.pdf");
 
+		var Downloader = window.plugins.Downloader;
 /*
 		alert('pdf_test');
 
 
-		var Downloader = window.plugins.Downloader;
 
 		var downloadSuccessCallback = function(result) {
 			   alert(result.file); 

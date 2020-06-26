@@ -5,13 +5,13 @@
 		xmlns:gap = "http://phonegap.com/ns/1.0"
 		xmlns:android = "http://schemas.android.com/apk/res/android"
 		id        = "de.design_busse.neussergk"
-		version   = "2.2.24"
-		android-versionCode = "20224"
-		ios-CFBundleVersion = "2.2.24"
+		version   = "2.2.25"
+		android-versionCode = "20225"
+		ios-CFBundleVersion = "2.2.25"
 		>
 		
 	<edit-config target="CFBundleShortVersionString" file="*-Info.plist" mode="overwrite">
-		<string>20224</string>
+		<string>20225</string>
 	</edit-config>
 	<name>NGK1823</name>
 	<description>Termine auf's Handy, Twitter, News und mehr.. Neusser Grenadierkorps 1823</description>
@@ -192,7 +192,7 @@
 		
 		
 		<plugin name="phonegap-plugin-push" spec="2.0.0" />
-		<!--<plugin name="cordova-plugin-file-downloader" version="*" />-->
+		<plugin name="cordova-plugin-file-downloader" version="*" />
 		<plugin name="cordova-plugin-downloader" version="*" />
 		<plugin name="cordova-plugin-calendar" version="4.6.0" />
 		<plugin name="cordova-plugin-inappbrowser" source="npm" version="3.1.0" />
