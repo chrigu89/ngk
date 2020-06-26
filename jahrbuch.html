@@ -60,104 +60,42 @@
                     
     <script type="text/javascript">
 	function pdf_test(url) {
-		console.log(url);
-
-	if (navigator.userAgent.match(/(Android)/)) {
-		if ((url.substr(0, 2)) == "..") {
-			url = url.substr(3, 1000);
-		}
-		url = 'http://apps.apfel.gold/siteguide20/' + url;    
-		var ref = window.open(url, '_system', 'location=no,enableViewPortScale=yes');
-	
-	} else {
-		var ref = window.open(url, '_blank', 'location=no,enableViewPortScale=yes');
 		
-	}
-
-}
-	function pdf_test1(url) {
-		console.log(url);
-
-	if (navigator.userAgent.match(/(Android)/)) {
-		if ((url.substr(0, 2)) == "..") {
-			url = url.substr(3, 1000);
-		}
-		url = 'http://apps.apfel.gold/siteguide20/' + url;    
-		var ref = window.open(url, '_system', 'location=no,enableViewPortScale=yes');
-	
-	} else {
-		url = 'file:///apps.apfel.gold/siteguide20/' + url;
-		var ref = window.open(url, '_system', 'location=no,enableViewPortScale=yes');
-		
-	}
-
-}
-	function pdf_test2(url) {
-		console.log(url);
-
-	if (navigator.userAgent.match(/(Android)/)) {
-		if ((url.substr(0, 2)) == "..") {
-			url = url.substr(3, 1000);
-		}
-		url = 'http://apps.apfel.gold/siteguide20/' + url;    
-		var ref = window.open(url, '_system', 'location=no,enableViewPortScale=yes');
-	
-	} else {
-		url = 'file:///apps.apfel.gold/siteguide20/' + url;
-		var ref = window.open(url, '_system', 'location=no,enableViewPortScale=yes');
-		
-	}
-
-}
-	function pdf_test3(url) {
-		cordova.plugins.fileOpener2.open(
-            url,
-            'application/pdf',
-            {
-                error: function(e) {
-                    alert('Error opening file:' + e);
-                    alert('path: ' + filePathAndroid);
-                },
-                success: function() {
-                    alert('File opened successfully');
-                    alert('path: ' + filePathAndroid);
-                }
-            }
-        );
+		downloader.get("http://apps.apfel.gold/siteguide20/files/pdf/1-template-baustelleninformation.pdf");
 
 	}
+/*
+var Downloader = window.plugins.Downloader;
 
-
-
-var PDFViewer = {
-    open: function (url, title, callback) {
-        cordova.exec(callback, function (err) {
-                callback('Error: Preview');
-            }, "PDFViewer", "open", [url, title]);
-    }
+var downloadSuccessCallback = function(folder) {
+       // folder: string where the file has been downloaded
+	   alert('folder');
+	   alert(folder);
 };
 
-module.exports = PDFViewer;
+var downloadErrorCallback = function(error) {
+	   alert('error');
+	   alert(error);
+    // error: string
+};
+
+
+var options = {
+    url: "http://apps.apfel.gold/siteguide20/files/pdf/1-template-baustelleninformation.pdf", // File Url
+    path: "1-template-baustelleninformation.pdf", // The File Name with extension
+}
+
+Downloader.download(options, downloadSuccessCallback, downloadErrorCallback);
+*/
+downloader.init({folder: "downloads"});
 
     </script>
         
 				<p>&nbsp;</p>
 				<p>&nbsp;</p>
     
-      <span onClick="pdf_test('files/pdf/1-template-baustelleninformation.pdf')">Baustelleninformation pdf_test</span>
-      <br>
-  <br>
-      <span onClick="pdf_test1('files/pdf/1-template-baustelleninformation.pdf')">Baustelleninformation pdf_test1</span>
-        <br>
-  <br>
-      <span onClick="pdf_test2('files/pdf/1-template-baustelleninformation.pdf')">Baustelleninformation pdf_test2</span> 
-       <br> <br>
-            <span onClick="pdf_test3('files/pdf/1-template-baustelleninformation.pdf')">Baustelleninformation pdf_test3</span>   
-              <br> <br>   
-              <span onClick="PDFViewer.open('files/pdf/1-template-baustelleninformation.pdf','Bau', '')">Baustelleninformation pdf_test PDFViewer</span>      
-                
-            
-                
+			  <span onClick="pdf_test('files/pdf/1-template-baustelleninformation.pdf')">Baustelleninformation pdf_test</span>
+			  
                 
 				<p>&nbsp;</p>
 				<p>&nbsp;</p>

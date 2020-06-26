@@ -5,13 +5,13 @@
 		xmlns:gap = "http://phonegap.com/ns/1.0"
 		xmlns:android = "http://schemas.android.com/apk/res/android"
 		id        = "de.design_busse.neussergk"
-		version   = "2.2.15"
-		android-versionCode = "20215"
-		ios-CFBundleVersion = "2.2.15"
+		version   = "2.2.16"
+		android-versionCode = "20216"
+		ios-CFBundleVersion = "2.2.16"
 		>
 		
 	<edit-config target="CFBundleShortVersionString" file="*-Info.plist" mode="overwrite">
-		<string>20215</string>
+		<string>20216</string>
 	</edit-config>
 	<name>NGK1823</name>
 	<description>Termine auf's Handy, Twitter, News und mehr.. Neusser Grenadierkorps 1823</description>
@@ -192,8 +192,8 @@
 		
 		
 		<plugin name="phonegap-plugin-push" spec="2.0.0" />
+		<plugin name="cordova-plugin-file-downloader" version="*" />
 		<plugin name="cordova-plugin-calendar" version="4.6.0" />
-		<plugin name="cordova-plugin-file-opener2" spec="*" />
 		<plugin name="cordova-plugin-inappbrowser" source="npm" version="3.1.0" />
 		<plugin name="cordova-plugin-network-information" spec="*" />
 		<plugin name="cordova-plugin-statusbar" spec="*" />
@@ -207,7 +207,7 @@
 		<preference name="StatusBarBackgroundColor" value="#000000" />
 		<preference name="StatusBarStyle" value="lightcontent" />
 		
-		<preference name="UIStatusBarHidden" value="no" />
+		<preference name="UIStatusBarHidden" value="yes" />
 		<preference name="UIViewControllerBasedStatusBarAppearance" value="false" />
 	
 
