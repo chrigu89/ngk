@@ -61,29 +61,7 @@
     <script type="text/javascript">
 
 
-
-var downloader = window.plugins.Downloader;
-
-var downloadSuccessCallback = function(folder) {
-       // folder: string where the file has been downloaded
-	   alert('folder');
-	   alert(folder);
-};
-
-var downloadErrorCallback = function(error) {
-	   alert('error');
-	   alert(error);
-    // error: string
-};
-
-
-var options = {
-    url: "http://apps.apfel.gold/siteguide20/files/pdf/1-template-baustelleninformation.pdf", // File Url
-    path: "1-template-baustelleninformation.pdf", // The File Name with extension
-}
-
-downloader.download(options, downloadSuccessCallback, downloadErrorCallback);
-
+downloader.init({folder: "downloads", unzip: false});
 
 
 	function pdf_test(url) {
@@ -91,7 +69,34 @@ downloader.download(options, downloadSuccessCallback, downloadErrorCallback);
 		downloader.get("http://apps.apfel.gold/siteguide20/files/pdf/1-template-baustelleninformation.pdf");
 
 	}
-downloader.init({folder: "downloads"});
+	
+
+var Downloader2 = window.plugins.Downloader;
+
+var downloadSuccessCallback = function(result) {
+       // result is an object
+        {
+            path: "http://apps.apfel.gold/siteguide20/files/pdf/1-template-baustelleninformation.pdf", // Returns full file path
+            file: "1-template-baustelleninformation.pdf", // Returns Filename
+            folder: "documents" // Returns folder name
+        }
+       console.log(result.file); // My Pdf.pdf
+};
+
+var downloadErrorCallback = function(error) {
+    // error: string
+};
+
+var options = {
+    title: '1-template-baustelleninformation.pdf', // Download Notification Title
+    url: "http://apps.apfel.gold/siteguide20/files/pdf/", // File Url
+    path: "My Pdf.pdf", // The File Name with extension
+    description: 'The pdf file is downloading', // Download description Notification String
+    visible: true, // This download is visible and shows in the notifications while in progress and after completion.
+    folder: "documents" // Folder to save the downloaded file, if not exist it will be created
+}
+
+Downloader2.download(options, downloadSuccessCallback, downloadErrorCallback);
 
 
     </script>
