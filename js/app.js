@@ -33,7 +33,7 @@ var init = {
 		// downloader.init({folder: "downloads", unzip: false});
 		// downloader.get("https://apps.apfel.gold/siteguide20/files/pdf/1-template-baustelleninformation.pdf");
 
-
+/*
 		alert('pdf_test');
 
 
@@ -45,7 +45,6 @@ var init = {
 		};
 
 		var downloadErrorCallback = function(error) {
-			// error: string
 			   alert('error');
 			   alert(error);
 		};
@@ -56,14 +55,14 @@ var init = {
 			path: "1-template-baustelleninformation.pdf", // The File Name with extension
 			description: 'The pdf file is downloading', // Download description Notification String
 			visible: true, // This download is visible and shows in the notifications while in progress and after completion.
-			folder: "documents" // Folder to save the downloaded file, if not exist it will be created
+			folder: "downloads" // Folder to save the downloaded file, if not exist it will be created
 		}
 
 		 alert('Downloader.download'); // My Pdf.pdf
 		Downloader.download(options, downloadSuccessCallback, downloadErrorCallback);
+*/
 
 
-/*
 
 alert('test');
 
@@ -89,7 +88,7 @@ dl.Initialize({
  
  
 alert('Get');
-dl.Get("http://apps.apfel.gold/siteguide20/files/pdf/1-template-baustelleninformation.pdf");
+dl.Get("https://apps.apfel.gold/siteguide20/files/pdf/1-template-baustelleninformation.pdf");
  
 function DownloaderError(err) {
     alert("download error: " + err);
