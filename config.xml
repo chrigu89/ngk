@@ -5,13 +5,13 @@
 		xmlns:gap = "http://phonegap.com/ns/1.0"
 		xmlns:android = "http://schemas.android.com/apk/res/android"
 		id        = "de.design_busse.neussergk"
-		version   = "2.2.35"
-		android-versionCode = "20235"
-		ios-CFBundleVersion = "2.2.35"
+		version   = "2.2.36"
+		android-versionCode = "20236"
+		ios-CFBundleVersion = "2.2.36"
 		>
 		
 	<edit-config target="CFBundleShortVersionString" file="*-Info.plist" mode="overwrite">
-		<string>20235</string>
+		<string>20236</string>
 	</edit-config>
 	<name>NGK1823</name>
 	<description>Termine auf's Handy, Twitter, News und mehr.. Neusser Grenadierkorps 1823</description>
@@ -26,6 +26,12 @@
 		<config-file parent="NSCalendarsUsageDescription" platform="ios" target="*-Info.plist">
 			<string>Mit dem Kalenderzugriff erhaltet ihr die Schnellfunktion, alle Termine per Klick in den Kalender zu übertragen. Diese Funktion ist kein muss und die Berechtigung kann abgelehnt werden.</string>
 		</config-file>
+		
+		<preference name="WKWebViewOnly" value="true"/>
+		<preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine"/>
+		<feature name="CDVWKWebViewEngine">
+			<param name="ios-package" value="CDVWKWebViewEngine"/>
+		</feature>
 		
 	</platform>
 		
