@@ -54,15 +54,12 @@ termine_array = [
 			'teaser'		: "Heilige Messe - St. Marien Umzug zum Foyer Rheinisches Landestheater musikalischer Frühschoppen Siegerehrung Korpsschießen, Ehrungen, Zuganmeldung Schützenfest 2018",
 			'location'		: "St. Marien",
 		},
-		/*
 		{
-			'datum'			: "13.07.2021 19:00",
+			'datum'			: "17.07.2021 19:00",
 			'title'			: 'Bürgerversammlung',
 			'teaser'		: "",
 			'location'		: "Stadthalle Neuss",
 		},	
-		
-		*/
 		{
 			'datum'			: "31.07.2021 19:00",
 			'title'			: 'Majorsehrenabend',
@@ -140,14 +137,12 @@ termine_array = [
 			'teaser'		: "",
 			'location'		: "Hauptfriedhof, Rheydter Straße",
 		},
-		/*
 		{
-			'datum'			: "22.11.2021 20:00",
+			'datum'			: "19.11.2021 20:00",
 			'title'			: 'Jahreshauptversammlung',
 			'teaser'		: "Neusser Bürger-Schützen-Verein",
 			'location'		: "Sparkassen – Forum Haus II, Sparkasse Neuss Michaelstraße",
 		},
-		*/
 
 	];
 
