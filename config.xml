@@ -5,13 +5,13 @@
 		xmlns:gap = "http://phonegap.com/ns/1.0"
 		xmlns:android = "http://schemas.android.com/apk/res/android"
 		id        = "de.design_busse.neussergk"
-		version   = "2.2.60"
-		android-versionCode = "20260"
-		ios-CFBundleVersion = "2.2.60"
+		version   = "2.2.61"
+		android-versionCode = "20261"
+		ios-CFBundleVersion = "2.2.61"
 		>
 		
 	<edit-config target="CFBundleShortVersionString" file="*-Info.plist" mode="overwrite">
-		<string>20260</string>
+		<string>20261</string>
 	</edit-config>
 	<name>NGK1823</name>
 	<description>Termine auf's Handy, Twitter, News und mehr.. Neusser Grenadierkorps 1823</description>
