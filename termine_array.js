@@ -51,7 +51,7 @@ termine_array = [
 		{ 	
 			'datum'			: "27.06.2021 10:00",
 			'title'			: 'Patronatstag',
-			'teaser'		: "Heilige Messe - St. Marien Umzug zum Foyer Rheinisches Landestheater musikalischer Frühschoppen Siegerehrung Korpsschießen, Ehrungen, Zuganmeldung Schützenfest 2018",
+			'teaser'		: "Heilige Messe - St. Marien Umzug zum Foyer Rheinisches Landestheater musikalischer Frühschoppen Siegerehrung Korpsschießen, Ehrungen, Zuganmeldung Schützenfest",
 			'location'		: "St. Marien",
 		},
 		{
